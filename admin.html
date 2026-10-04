@@ -4229,6 +4229,185 @@ function PricingSection({
   }))));
 }
 
+/* ---------- section: one place to switch every customer-facing extra on or off ---------- */
+
+function FeaturesSection({
+  cfg,
+  mutate
+}) {
+  const F = cfg.features || {};
+  const setF = (k, v) => mutate(c => {
+    c.features[k] = v;
+  });
+  const T = ({
+    label,
+    hint,
+    k
+  }) => /*#__PURE__*/React.createElement(ToggleRow, {
+    label: label,
+    hint: hint,
+    on: F[k] !== false,
+    onChange: v => setF(k, v)
+  });
+  const settingsScreen = cfg.screens.find(x => (x.blocks || []).some(b => b.type === 'settings'));
+  const sIdx = settingsScreen ? cfg.screens.indexOf(settingsScreen) : -1;
+  const sBlock = settingsScreen ? settingsScreen.blocks.find(b => b.type === 'settings') : null;
+  const setS = (k, v) => mutate(c => {
+    const b = c.screens[sIdx].blocks.find(x => x.type === 'settings');
+    b[k] = v;
+  });
+  const S = ({
+    label,
+    k
+  }) => /*#__PURE__*/React.createElement(ToggleRow, {
+    label: label,
+    on: sBlock[k] !== false,
+    onChange: v => setS(k, v)
+  });
+  const navHide = (cfg.brand.nav || {}).hide || 'tap';
+  return /*#__PURE__*/React.createElement("div", {
+    className: "space-y-6"
+  }, /*#__PURE__*/React.createElement(Card, {
+    title: "במחשבון",
+    hint: "כל המתגים כאן מחוברים לאותן הגדרות בשאר הלשוניות"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-2 sm:grid-cols-2"
+  }, /*#__PURE__*/React.createElement(T, {
+    label: "מחיר חי בתחתית",
+    hint: "מופיע אחרי שבוחרים שעות או ק״מ",
+    k: "livePrice"
+  }), /*#__PURE__*/React.createElement(T, {
+    label: "השוואת כל הרכבים",
+    hint: "אחרי החישוב",
+    k: "compareCars"
+  }), /*#__PURE__*/React.createElement(ToggleRow, {
+    label: "שאלת שעת איסוף והחזרה",
+    hint: "והצעה של הכי משתלם",
+    on: F.askTimes === true,
+    onChange: v => setF('askTimes', v)
+  }), /*#__PURE__*/React.createElement(T, {
+    label: "הצעת חבילות במחשבון",
+    k: "packageSuggestions"
+  }), /*#__PURE__*/React.createElement(T, {
+    label: "שעות מוזלות",
+    k: "happyHour"
+  }), F.happyHour !== false && F.askTimes !== true && /*#__PURE__*/React.createElement(ToggleRow, {
+    label: "שעות מוזלות אוטומטיות",
+    hint: "לפי השעה עכשיו. כבוי = הלקוח מסמן בעצמו",
+    on: (F.happyMode || 'auto') === 'auto',
+    onChange: v => setF('happyMode', v ? 'auto' : 'manual')
+  }), /*#__PURE__*/React.createElement(T, {
+    label: "ביטול השתתפות עצמית",
+    k: "waiver"
+  }), F.waiver !== false && /*#__PURE__*/React.createElement(ToggleRow, {
+    label: "ביטול השתתפות גם לנהג חדש/צעיר",
+    on: F.youngWaiver === true,
+    onChange: v => setF('youngWaiver', v)
+  }), /*#__PURE__*/React.createElement(ToggleRow, {
+    label: "כפתורי פלוס ומינוס לשעות וק״מ",
+    hint: "כבוי = שדה הקלדה בלבד",
+    on: (F.amountStyle || 'stepper') === 'stepper',
+    onChange: v => setF('amountStyle', v ? 'stepper' : 'plain')
+  }), /*#__PURE__*/React.createElement(T, {
+    label: "המלצת חיסכון",
+    k: "recommendations"
+  }), /*#__PURE__*/React.createElement(T, {
+    label: "מעבר אוטומטי למסלול משתלם",
+    k: "autoUpgrade"
+  }), /*#__PURE__*/React.createElement(T, {
+    label: "הבהרה בתחתית התוצאה",
+    k: "disclaimer"
+  }), /*#__PURE__*/React.createElement(ToggleRow, {
+    label: "כפתור מעבר לאפליקציה הרשמית",
+    hint: "אחרי החישוב. את הכפתור עצמו עורכים במחירון ורכבים",
+    on: !!(F.resultCta && F.resultCta.enabled),
+    onChange: v => mutate(c => {
+      c.features.resultCta = {
+        ...(c.features.resultCta || {
+          label: 'להזמנה באפליקציה הרשמית',
+          icon: '📲',
+          style: 'primary',
+          action: {
+            type: 'app',
+            value: ''
+          }
+        }),
+        enabled: v
+      };
+    })
+  }))), /*#__PURE__*/React.createElement(Card, {
+    title: "באפליקציה"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-2 sm:grid-cols-2"
+  }, /*#__PURE__*/React.createElement(T, {
+    label: "מעבר בין מסכים בהחלקה",
+    k: "swipe"
+  }), /*#__PURE__*/React.createElement(ToggleRow, {
+    label: "הסתרת התפריט התחתון בנגיעה/גלילה",
+    hint: "את סוג ההסתרה בוחרים במסכים ותפריט",
+    on: navHide !== 'never',
+    onChange: v => mutate(c => {
+      c.brand.nav = {
+        ...(c.brand.nav || {}),
+        hide: v ? 'tap' : 'never'
+      };
+    })
+  }), /*#__PURE__*/React.createElement(T, {
+    label: "הסתרת רקע לבן בתמונות במצב כהה",
+    k: "darkImageFix"
+  }), settingsScreen && /*#__PURE__*/React.createElement(ToggleRow, {
+    label: "מסך ההגדרות",
+    hint: settingsScreen.title || 'הגדרות',
+    on: !settingsScreen.hidden,
+    onChange: v => mutate(c => {
+      c.screens[sIdx].hidden = !v;
+    })
+  }), /*#__PURE__*/React.createElement(T, {
+    label: "שאלת נהג חדש/צעיר",
+    k: "youngDriver"
+  }))), /*#__PURE__*/React.createElement(Card, {
+    title: "במסך ההגדרות של הלקוח",
+    hint: settingsScreen ? 'מה הלקוח יכול לשנות לעצמו' : ''
+  }, !sBlock ? /*#__PURE__*/React.createElement("p", {
+    className: "rounded-xl bg-amber-50 px-3 py-2 text-xs font-semibold text-amber-800"
+  }, "עדיין אין מסך הגדרות. מוסיפים אותו במסכים ותפריט ← \"+ מסך חדש\" ← הגדרות.") : /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-2 sm:grid-cols-2"
+  }, /*#__PURE__*/React.createElement(S, {
+    label: "בהיר / כהה",
+    k: "showTheme"
+  }), /*#__PURE__*/React.createElement(S, {
+    label: "סוג נהג",
+    k: "showDriver"
+  }), /*#__PURE__*/React.createElement(S, {
+    label: "גודל טקסט",
+    k: "showTextSize"
+  }), /*#__PURE__*/React.createElement(S, {
+    label: "רכב מועדף",
+    k: "showFav"
+  }), /*#__PURE__*/React.createElement(S, {
+    label: "שעות וק״מ בפתיחה",
+    k: "showDefaults"
+  }), /*#__PURE__*/React.createElement(S, {
+    label: "ביטול השתתפות תמיד מסומן",
+    k: "showWaiver"
+  }), /*#__PURE__*/React.createElement(S, {
+    label: "כיבוי הודעות מבצעים",
+    k: "showPromos"
+  }), /*#__PURE__*/React.createElement(S, {
+    label: "חישובים אחרונים",
+    k: "showHistory"
+  }), /*#__PURE__*/React.createElement(S, {
+    label: "שיתוף האפליקציה",
+    k: "showShare"
+  }), /*#__PURE__*/React.createElement(S, {
+    label: "גרסה ובדיקת עדכונים",
+    k: "showVersion"
+  }), /*#__PURE__*/React.createElement(S, {
+    label: "איפוס הגדרות",
+    k: "showReset"
+  }))));
+}
+
 /* ---------- section: texts ---------- */
 
 function TextsSection({
@@ -6831,6 +7010,10 @@ const SECTIONS = [{
   label: 'פופאפים',
   icon: '💬'
 }, {
+  key: 'features',
+  label: 'מה מוצג ללקוח',
+  icon: '🎛️'
+}, {
   key: 'publish',
   label: 'הפצה ועדכונים',
   icon: '📲'
@@ -6958,7 +7141,7 @@ function Admin() {
     popupId = null;
   if (section === 'design') route = cfg.splash.enabled !== false ? 'splash' : cfg.startScreen;
   if (section === 'screens') route = screenSel === 'splash' ? cfg.splash.enabled !== false ? 'splash' : cfg.startScreen : screenSel;
-  if (section === 'pricing' || section === 'texts' || section === 'addons' || section === 'help' || section === 'publish') route = 'calculator';
+  if (section === 'features' || section === 'pricing' || section === 'texts' || section === 'addons' || section === 'help' || section === 'publish') route = 'calculator';
   if (section === 'packages') {
     const ps = cfg.screens.find(s => (s.blocks || []).some(b => b.type === 'packages'));
     route = ps ? ps.id : 'calculator';
@@ -7169,7 +7352,10 @@ function Admin() {
     cfg: cfg,
     mutate: mutate,
     setToast: setToast
-  }), section === 'help' && /*#__PURE__*/React.createElement(HelpSection, null), section === 'texts' && /*#__PURE__*/React.createElement(TextsSection, {
+  }), section === 'help' && /*#__PURE__*/React.createElement(HelpSection, null), section === 'features' && /*#__PURE__*/React.createElement(FeaturesSection, {
+    cfg: cfg,
+    mutate: mutate
+  }), section === 'texts' && /*#__PURE__*/React.createElement(TextsSection, {
     cfg: cfg,
     mutate: mutate
   }), section === 'popups' && /*#__PURE__*/React.createElement(PopupsSection, {

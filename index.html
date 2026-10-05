@@ -67,6 +67,22 @@
     if (ios) { document.getElementById('iphone-tag').hidden = false; }
     if (android) { document.getElementById('android-tag').hidden = false; order.insertBefore(document.getElementById('android'), document.getElementById('iphone')); }
   })();
+  /* Anonymous visit count (Umami, no cookies). The ID comes from site.json, written by the admin when publishing. */
+  (function () {
+    function send(id, name, data) {
+      var payload = { website: id, hostname: location.hostname, url: location.pathname + location.search, title: document.title, language: navigator.language || '', screen: screen.width + 'x' + screen.height, referrer: document.referrer || '' };
+      if (name) { payload.name = name; payload.data = data || {}; }
+      try { fetch('https://cloud.umami.is/api/send', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ type: 'event', payload: payload }), keepalive: true }).catch(function () {}); } catch (e) {}
+    }
+    fetch('site.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (s) {
+      var id = String((s && s.umamiId) || '').trim();
+      if (!/^[0-9a-f-]{36}$/i.test(id)) return;
+      send(id);
+      var q = location.search;
+      document.querySelector('#android a.btn').addEventListener('click', function () { send(id, 'download', { platform: 'android', from: q }); });
+      document.querySelector('#iphone a.btn').addEventListener('click', function () { send(id, 'download', { platform: 'iphone', from: q }); });
+    }).catch(function () {});
+  })();
 </script>
 </body>
 </html>

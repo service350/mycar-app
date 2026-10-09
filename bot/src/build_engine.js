@@ -8,7 +8,7 @@ const WANT = ['PERIOD_KEYS', 'NEXT_PERIOD', 'ROLLOVER_KEY', 'applyScheduledPrici
   'packageLive', 'packageHours', 'packageCats', 'packageTracks', 'trackPrice', 'packageHasCatPrices', 'minTrackPrice', 'packageStart', 'packageHasHours',
   'hm', 'atMinutes', 'startAllowed', 'daysText', 'windowsText', 'packageWaiverPrice', 'packageYoungAllowed', 'packageYoungFee',
   'addonApplies', 'addonActive', 'addonCost', 'addonsTotal', 'pickPrice', 'extraUnitPrice', 'extraUnitWaiver', 'packageExtras', 'extraQty', 'packageQuote',
-  'trackText', 'durationText', 'ALL_DAYS', 'DEFAULT_HAPPY_WINDOWS', 'happyWindows', 'inWindow', 'happyHourCount', 'calculateCost', 'parseDT', 'dtParts', 'audienceOk', 'youngWaiverOk', 'tx'];
+  'trackText', 'durationText', 'ALL_DAYS', 'DEFAULT_HAPPY_WINDOWS', 'happyWindows', 'inWindow', 'happyHourCount', 'ymd', 'seasonsList', 'seasonsOn', 'seasonCharge', 'calculateCost', 'parseDT', 'dtParts', 'audienceOk', 'youngWaiverOk', 'tx'];
 const got = {};
 for (const st of ast.program.body) {
   let names = [];

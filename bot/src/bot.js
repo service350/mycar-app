@@ -16,7 +16,7 @@ const S = {
         km: (n) => `${n} ק"מ`,
         start: 'התחלה', assumed: '(לא צוינה שעה)',
         best: 'הכי משתלם', others: 'אפשרויות נוספות',
-        time: 'זמן', distance: 'ק"מ', waiver: 'ביטול השתתפות', young: 'תוספת נהג צעיר', addons: 'תוספות',
+        time: 'זמן', distance: 'ק"מ', season: (n) => `תוספת עונה (${n})`, waiver: 'ביטול השתתפות', young: 'תוספת נהג צעיר', addons: 'תוספות',
         tipChange: 'לשינוי כתבו למשל: _ואם 5 שעות?_ · _רכב משפחתי_ · _עם ביטול השתתפות_ · _נהג צעיר_ · _מחר ב-9_',
         disclaimer: 'הערכה בלבד, לפי המחירון באפליקציה.',
         youngNoCar: (car, list) => `🧒 ${car} לא זמין לנהג חדש/צעיר. אפשר: ${list}`,
@@ -44,7 +44,7 @@ const S = {
         km: (n) => `${n} km`,
         start: 'Start', assumed: '(no time given)',
         best: 'Best value', others: 'Other options',
-        time: 'time', distance: 'km', waiver: 'deductible waiver', young: 'young driver', addons: 'extras',
+        time: 'time', distance: 'km', season: (n) => `seasonal surcharge (${n})`, waiver: 'deductible waiver', young: 'young driver', addons: 'extras',
         tipChange: 'To change, type e.g.: _what about 5 hours?_ · _family car_ · _with waiver_ · _young driver_ · _tomorrow at 9_',
         disclaimer: 'Estimate only, based on the app\'s price list.',
         youngNoCar: (car, list) => `🧒 ${car} is not available to new/young drivers. Available: ${list}`,
@@ -210,14 +210,14 @@ function quote(st) {
         const prevUnit = { daily: 1, weekly: 24, monthly: 168 }[p];
         if (prevUnit && H <= prevUnit) return;
         const units = Math.max(1, Math.ceil(H / E.REQ_HOURS[p] - 1e-9));
-        const r = E.calculateCost(cat.id, p, units, st.km, waiverOn, young, false);
+        const r = E.calculateCost(cat.id, p, units, st.km, waiverOn, young, false, null, sd);
         opts.push({ kind: 'period', period: p, units, r, cost: withAddons(r, units * E.REQ_HOURS[p]) });
     });
     if (F.happyHour !== false && cat.happyHourRate && periods.includes('hourly') && sd) {
         const hc = E.happyHourCount(sd, H);
         const whole = (F.happyRule || 'whole') !== 'partial';
         if (whole ? hc === H : hc > 0) {
-            const r = E.calculateCost(cat.id, 'hourly', H, st.km, waiverOn, young, true, whole ? null : hc);
+            const r = E.calculateCost(cat.id, 'hourly', H, st.km, waiverOn, young, true, whole ? null : hc, sd);
             opts.push({ kind: 'happy', period: 'hourly', units: H, r, cost: withAddons(r, H) });
         }
     }
@@ -283,6 +283,7 @@ function priceReply(st, L) {
         const r = b.r, parts = [`${L.time} ${money(r.timeCost)}`, `${L.distance} ${money(r.kmCost)}`];
         if (r.waiverCost) parts.push(`${L.waiver} ${money(r.waiverCost)}`);
         if (r.youthSurcharge) parts.push(`${L.young} ${money(r.youthSurcharge)}`);
+        if (r.seasonCost) parts.push(`${L.season(r.seasonNames.join(' + '))} ${money(r.seasonCost)}`);
         const add = b.cost - r.total;
         if (add > 0.009) parts.push(`${L.addons} ${money(add)}`);
         lines.push('   ' + parts.join(' · '));

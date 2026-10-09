@@ -71,6 +71,7 @@ var TEXT_DEFS = [
   ["\u05EA\u05D5\u05E6\u05D0\u05D4 \xB7 \u05E4\u05D9\u05E8\u05D5\u05D8", "res.tierLabelLast", "\u05D4\u05E1\u05D1\u05E8 \u05D4\u05D8\u05D5\u05D5\u05D7 \u05D4\u05D0\u05D7\u05E8\u05D5\u05DF", '\u05D8\u05D5\u05D5\u05D7 {\u05DE\u05E1\u05E4\u05E8} ({\u05D8\u05D5\u05D5\u05D7} \u05E7"\u05DE) - \u05EA\u05E2\u05E8\u05D9\u05E3 \u05DE\u05D5\u05D6\u05DC \u20AA{\u05EA\u05E2\u05E8\u05D9\u05E3} \u05DC\u05E7"\u05DE'],
   ["\u05EA\u05D5\u05E6\u05D0\u05D4 \xB7 \u05E4\u05D9\u05E8\u05D5\u05D8", "res.fixedKm", "\u05D4\u05E1\u05D1\u05E8 \u05E7\u05F4\u05DE \u05D1\u05D9\u05D5\u05DD/\u05E9\u05D1\u05D5\u05E2/\u05D7\u05D5\u05D3\u05E9", '\u05EA\u05E2\u05E8\u05D9\u05E3 \u05E7\u05D1\u05D5\u05E2 \u05DC\u05DE\u05E1\u05DC\u05D5\u05DC: \u20AA{\u05EA\u05E2\u05E8\u05D9\u05E3} \u05DC\u05E7"\u05DE'],
   ["\u05EA\u05D5\u05E6\u05D0\u05D4 \xB7 \u05E4\u05D9\u05E8\u05D5\u05D8", "res.waiver", "\u05E9\u05D5\u05E8\u05EA \u05D1\u05D9\u05D8\u05D5\u05DC \u05D4\u05E9\u05EA\u05EA\u05E4\u05D5\u05EA", "\u05D1\u05D9\u05D8\u05D5\u05DC \u05D4\u05E9\u05EA\u05EA\u05E4\u05D5\u05EA \u05E2\u05E6\u05DE\u05D9\u05EA \u{1F6E1}\uFE0F:"],
+  ["\u05EA\u05D5\u05E6\u05D0\u05D4 \xB7 \u05E4\u05D9\u05E8\u05D5\u05D8", "res.season", "\u05E9\u05D5\u05E8\u05EA \u05EA\u05D5\u05E1\u05E4\u05EA \u05E2\u05D5\u05E0\u05D4 ({\u05E9\u05DD} = \u05E9\u05DD \u05D4\u05E2\u05D5\u05E0\u05D4)", "\u{1F4C5} \u05EA\u05D5\u05E1\u05E4\u05EA \u05E2\u05D5\u05E0\u05D4 ({\u05E9\u05DD}):"],
   ["\u05EA\u05D5\u05E6\u05D0\u05D4 \xB7 \u05E4\u05D9\u05E8\u05D5\u05D8", "res.youth", "\u05E9\u05D5\u05E8\u05EA \u05EA\u05D5\u05E1\u05E4\u05EA \u05E0\u05D4\u05D2 \u05E6\u05E2\u05D9\u05E8", "\u{1F9D2} \u05EA\u05D5\u05E1\u05E4\u05EA \u05E0\u05D4\u05D2 \u05E6\u05E2\u05D9\u05E8/\u05D7\u05D3\u05E9:"],
   ["\u05D7\u05D1\u05D9\u05DC\u05D5\u05EA", "pkg.hours", "\u05DE\u05E9\u05DA \u05D1\u05E9\u05E2\u05D5\u05EA", "{\u05DE\u05E1\u05E4\u05E8} \u05E9\u05E2\u05D5\u05EA"],
   ["\u05D7\u05D1\u05D9\u05DC\u05D5\u05EA", "pkg.days", "\u05DE\u05E9\u05DA \u05D1\u05D9\u05DE\u05D9\u05DD", "{\u05DE\u05E1\u05E4\u05E8} \u05D9\u05DE\u05D9\u05DD"],
@@ -429,7 +430,8 @@ var TEXT_EN = {
   "holy.pesach": "Passover",
   "holy.shavuot": "Shavuot",
   "settings.stats": "Help improve the app",
-  "settings.statsSub": "Send anonymous usage data, no personal details"
+  "settings.statsSub": "Send anonymous usage data, no personal details",
+  "res.season": "\u{1F4C5} Seasonal surcharge ({\u05E9\u05DD}):"
 };
 var APP = null;
 var LANG = "he";
@@ -758,7 +760,25 @@ function happyHourCount(start, hours) {
   }
   return n;
 }
-function calculateCost(catId, prd, dur, dist, hasWaiver, driverIsUnder24, happyHourActive, happyCount) {
+var ymd = (d) => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+var seasonsList = () => ((cfg().pricing || {}).seasons || []).filter((x) => x && x.from && x.to && x.enabled !== false);
+function seasonCharge(catId, prd, dur, start) {
+  const list = seasonsList();
+  if (!start || !list.length || !dur) return { cost: 0, units: 0, names: [] };
+  const len = (REQ_HOURS[prd] || 1) * 36e5;
+  let cost = 0, units = 0;
+  const names = [];
+  for (let i = 0; i < dur; i++) {
+    const day = ymd(new Date(start.getTime() + i * len + len / 2));
+    const se = list.find((x) => day >= x.from && day <= x.to && x.byCategory && x.byCategory[catId] && Number(x.byCategory[catId][prd]) > 0);
+    if (!se) continue;
+    cost += Number(se.byCategory[catId][prd]);
+    units++;
+    if (!names.includes(se.name)) names.push(se.name);
+  }
+  return { cost, units, names };
+}
+function calculateCost(catId, prd, dur, dist, hasWaiver, driverIsUnder24, happyHourActive, happyCount, start) {
   const c = cfg();
   const baseCat = c.pricing.categories.find((x) => x.id === catId);
   if (!baseCat) return { total: 0, timeCost: 0, kmCost: 0, rawKmCost: 0, isCapped: false, tierLabel: "", waiverCost: 0, youthSurcharge: 0 };
@@ -801,7 +821,8 @@ function calculateCost(catId, prd, dur, dist, hasWaiver, driverIsUnder24, happyH
   if (hasWaiver && baseCat.deductibleWaiver && baseCat.deductibleWaiver[prd]) waiverCost = dur * baseCat.deductibleWaiver[prd];
   let youthSurcharge = 0;
   if (driverIsUnder24) youthSurcharge = dur * (c.pricing.youthSurcharges[prd] || 0);
-  return { total: timeCost + kmCost + waiverCost + youthSurcharge, timeCost, kmCost, rawKmCost, isCapped, tierLabel, waiverCost, youthSurcharge, period: prd };
+  const season = seasonCharge(catId, prd, dur, start);
+  return { total: timeCost + kmCost + waiverCost + youthSurcharge + season.cost, timeCost, kmCost, rawKmCost, isCapped, tierLabel, waiverCost, youthSurcharge, seasonCost: season.cost, seasonUnits: season.units, seasonNames: season.names, period: prd };
 }
 var dtParts = (d) => {
   const z = (x) => String(x).padStart(2, "0");
@@ -851,6 +872,7 @@ var S = {
     others: "\u05D0\u05E4\u05E9\u05E8\u05D5\u05D9\u05D5\u05EA \u05E0\u05D5\u05E1\u05E4\u05D5\u05EA",
     time: "\u05D6\u05DE\u05DF",
     distance: '\u05E7"\u05DE',
+    season: (n) => `\u05EA\u05D5\u05E1\u05E4\u05EA \u05E2\u05D5\u05E0\u05D4 (${n})`,
     waiver: "\u05D1\u05D9\u05D8\u05D5\u05DC \u05D4\u05E9\u05EA\u05EA\u05E4\u05D5\u05EA",
     young: "\u05EA\u05D5\u05E1\u05E4\u05EA \u05E0\u05D4\u05D2 \u05E6\u05E2\u05D9\u05E8",
     addons: "\u05EA\u05D5\u05E1\u05E4\u05D5\u05EA",
@@ -899,6 +921,7 @@ var S = {
     others: "Other options",
     time: "time",
     distance: "km",
+    season: (n) => `seasonal surcharge (${n})`,
     waiver: "deductible waiver",
     young: "young driver",
     addons: "extras",
@@ -1104,14 +1127,14 @@ function quote(st) {
     const prevUnit = { daily: 1, weekly: 24, monthly: 168 }[p];
     if (prevUnit && H <= prevUnit) return;
     const units = Math.max(1, Math.ceil(H / REQ_HOURS[p] - 1e-9));
-    const r = calculateCost(cat.id, p, units, st.km, waiverOn, young, false);
+    const r = calculateCost(cat.id, p, units, st.km, waiverOn, young, false, null, sd);
     opts.push({ kind: "period", period: p, units, r, cost: withAddons(r, units * REQ_HOURS[p]) });
   });
   if (F.happyHour !== false && cat.happyHourRate && periods.includes("hourly") && sd) {
     const hc = happyHourCount(sd, H);
     const whole = (F.happyRule || "whole") !== "partial";
     if (whole ? hc === H : hc > 0) {
-      const r = calculateCost(cat.id, "hourly", H, st.km, waiverOn, young, true, whole ? null : hc);
+      const r = calculateCost(cat.id, "hourly", H, st.km, waiverOn, young, true, whole ? null : hc, sd);
       opts.push({ kind: "happy", period: "hourly", units: H, r, cost: withAddons(r, H) });
     }
   }
@@ -1172,6 +1195,7 @@ function priceReply(st, L) {
     const r = b.r, parts = [`${L.time} ${money(r.timeCost)}`, `${L.distance} ${money(r.kmCost)}`];
     if (r.waiverCost) parts.push(`${L.waiver} ${money(r.waiverCost)}`);
     if (r.youthSurcharge) parts.push(`${L.young} ${money(r.youthSurcharge)}`);
+    if (r.seasonCost) parts.push(`${L.season(r.seasonNames.join(" + "))} ${money(r.seasonCost)}`);
     const add = b.cost - r.total;
     if (add > 9e-3) parts.push(`${L.addons} ${money(add)}`);
     lines.push("   " + parts.join(" \xB7 "));

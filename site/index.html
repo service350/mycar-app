@@ -939,6 +939,20 @@ html.ax-contrast .bigword{display:none}
 .seg .thumb{background:var(--gbtn)!important}
 .seg button{color:var(--gdeep)}
 .seg button[aria-pressed="true"]{color:#fff}
+
+/* Shabbat strip */
+.sec-shabbat{padding-block:18px 0}
+.holybar{display:flex;align-items:center;gap:14px;background:var(--gsoft);border:1px solid var(--line);border-inline-start:5px solid var(--gbtn);border-radius:18px;padding:14px 18px;color:var(--ink)}
+.holybar svg{width:30px;height:30px;color:var(--gdeep);flex:none}
+.holybar p{margin:0;font-size:1.02rem;line-height:1.45}
+.holybar b{color:var(--gdeep);font-family:var(--display)}
+.holybar small{display:block;color:var(--muted);font-size:.86rem}
+.holybar.now{background:var(--gbtn);color:#fff;border-color:var(--gbtn)}
+.holybar.now b,.holybar.now svg,.holybar.now small{color:#fff}
+
+.gcards{grid-template-columns:repeat(var(--cols,3),minmax(0,1fr))}
+@media (max-width:900px){.gcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.gcards{grid-template-columns:1fr}}
 </style>
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -1125,7 +1139,7 @@ R.text=function(s){
 };
 R.cards=function(s){
   var n=Math.max(1,Math.min(4,Number(s.columns)||3));
-  return '<div class="wrap">'+head(s)+'<div class="gcards" style="grid-template-columns:repeat(auto-fit,minmax(min('+(n>=4?220:n===3?260:320)+'px,100%),1fr))">'+(s.items||[]).map(function(it){
+  return '<div class="wrap">'+head(s)+'<div class="gcards" style="--cols:'+n+'">'+(s.items||[]).map(function(it){
     return '<div class="gcard t-'+tone(it.tone)+'">'+(it.icon?'<span class="ico">'+ic(it.icon)+'</span>':'')+(it.image?'<img src="'+esc(src(it.image))+'" alt="" style="border-radius:14px">':'')+'<h3>'+esc(it.title)+'</h3><p>'+esc(it.text)+'</p>'+(it.btnLabel?btn({label:it.btnLabel,url:it.btnUrl,style:'dark'}):'')+'</div>';}).join('')+'</div>'+btns(s.buttons)+'</div>';
 };
 R.image=function(s){
@@ -1201,6 +1215,26 @@ function wireCalc(){
     fillCats();upd();
   });
 }
+
+
+/* ---------- upcoming Shabbat / holiday strip ---------- */
+var HOLY_NAMES={shabbat:'שבת',rosh_hashana:'ראש השנה',yom_kippur:'יום כיפור',sukkot:'סוכות',shmini_atzeret:'שמיני עצרת',pesach:'פסח',shavuot:'שבועות'};
+var DAYS=['ראשון','שני','שלישי','רביעי','חמישי','שישי','שבת'];
+function holyName(k){return String(k||'').split('+').map(function(x){return HOLY_NAMES[x.trim()]||x.trim();}).join(' ו');}
+function hm(d){return d.toLocaleTimeString('he-IL',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Asia/Jerusalem'});}
+function dayName(d){var w=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(new Intl.DateTimeFormat('en-US',{weekday:'short',timeZone:'Asia/Jerusalem'}).format(d));return 'יום '+DAYS[w<0?0:w];}
+function dmy(d){return d.toLocaleDateString('he-IL',{day:'numeric',month:'numeric',timeZone:'Asia/Jerusalem'});}
+R.shabbat=function(s){
+  var H=S.holy||{},W=(H.windows||[]).map(function(w){return {a:new Date(w[0]),b:new Date(w[1]),k:w[2]};}).filter(function(w){return !isNaN(w.a)&&!isNaN(w.b);});
+  var now=new Date(),cur=null,next=null;
+  W.forEach(function(w){if(now>=w.a&&now<w.b)cur=w;else if(w.a>now&&(!next||w.a<next.a))next=w;});
+  var w=cur||next;if(!w)return '';
+  var name=holyName(w.k),lab=H.label?' · '+esc(H.label):'';
+  var main=cur?'<b>'+esc(name)+' שלום!</b> השירות יחזור לפעול '+(name==='שבת'?'במוצאי שבת':'במוצאי החג')+' ב־'+hm(w.b)
+    :'<b>'+esc(name)+' הקרובה:</b> כניסה '+dayName(w.a)+' '+dmy(w.a)+' ב־'+hm(w.a)+' · יציאה '+dayName(w.b)+' '+dmy(w.b)+' ב־'+hm(w.b);
+  if(!cur&&name!=='שבת')main=main.replace(esc(name)+' הקרובה',esc(name)+' הקרוב');
+  return '<div class="wrap"><div class="holybar'+(cur?' now':'')+'">'+ic('candle')+'<p>'+main+'<small>'+esc(s.text||'')+lab+'</small></p></div></div>';
+};
 
 /* ---------- page shell ---------- */
 function brandMark(){var b=S.brand;

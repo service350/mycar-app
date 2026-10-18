@@ -102,7 +102,8 @@
     {
      "id": "shabbat",
      "type": "shabbat",
-     "text": "במיי קאר אין פעילות בשבת ובחג."
+     "text": "במיי קאר אין פעילות בשבת ובחג.",
+     "hidden": true
     },
     {
      "id": "how",
@@ -1352,7 +1353,7 @@
  },
  "floatBtn": {
   "show": true,
-  "label": "הזמנת רכב",
+  "label": "הרשמה / הזמנת רכב",
   "url": "https://app.mycar-israel.com/login",
   "color": "sky",
   "image": "cars/car01.webp"

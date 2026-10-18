@@ -1,0 +1,1300 @@
+{
+ "version": 1,
+ "brand": {
+  "name": "מיי קאר",
+  "logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAYAAACLz2ctAABUyUlEQVR42u29d5wk2XHf+Y330lRV++6xOwZrsMDCe0MKhgRBgA70Aik66UQvHU93PIkne6TuSEnU8UhRR1E6nsSjAUgCOJAiSIAiQBDeA4Qh3PpZM7Nje6Zdmcx8L+6Pl5mVWd093T07uzuz2MSnMVvdZbIy48WL+MUvfiGv/o0f5CvikPCPouBBvEFV8dZDpEgCkgh0FInApAKRqEaAMYgVVIQCD4Avf1Ts+DMUnAh4MA7EgXOCL1Qk81B4opFihg5yxRZgvCIIYEEMiIZz1a+M2xJ9RVieKuoVlWBspGA7EHUNmoJJrRJ7NBK8McFI8SiKF1B8+a+Aj8JfNTzLGdf6NCcKRpDIAIIzioKCxWsE6pEixmYCmYodOmy/IBoqychDoeGcRepF84QBXqumpVK7HhUtzc0AGgzE++BYUkfcFcw0yJSqSS3EHm8KPEqh4bXqQX0EIqgGj+cIhqQazAgJ/4po+TB4QF8+Nt6iBGNVwHstnZkHEbwoPoIsEdRYxUdYl2IKIHfEG16SNUc08ERDRTyIGEQkLAAUKY2/9pTyhAE+JoeKL2+IwaigCl493hbY1JLMQjwLUTdWYo8zDo8Ej+Y93gtqAExp0YJgggEJqEhz767/UQNeq1+VhkbraagoKuUbVe8H+OqzgnWCFxxCngg+NQymjcqBmCg32I1CkrWCzpoj6ReIF9QYjAhGQbV6e33CAB+bzTV4Ku8dgiAdSGaUZNYST6uSeJwoTl2I3VQQDUY3Nq7SQLT2U2MDROvfj8M8DYZe2aVveKNqx6838HLbLt9fG2c+fly9UfBsvjToUQz5UqxmMSEZKcl6LulKRrLmSEcmOGIBXxrjEwb4qBueUngHkSOZ8/TmLNEMqomCCA6HVylvdrU1B2dXe6yGhwqBmpSeb2xITeeiDQOl8dK2gVLGi7vzS1qek0fLxEYAg1GInOLw9BPY2JdoNJ8QZZCuO5lZHpKuZVgviNotz+UJA3yYhydkiKZKDEXwqhQ6wsSedAF6CxFx16jGQ5wzqFpUfbmrBuPTcktES4/ZMD5tbZGCL4P/psfSKnuWhpGGZLqMBUurlWBAqmPjqzxa/T6VdUt4HpgQb5bPMiI4gVxCFKlqgoU6yIEihUE31ktLEdOruUxfGNFbcaRZCCHUCKIatmjAGa5pDxld655OSiNEBe8cplPQXVS6i5HaTkgKnHp8YRuZozQDxdI7VFshE8/R2lt5aTnECfim/Ysqt9WWN5M6Fhw/j/ZWW36japsPQWgwQG0+X6WRzFTfq/xMrxRGWZmLdX0mJh04pi7mMrucMb3hwBhyG97fuGs7SbmmDdCIoj5m5AuidER3SZhesGo7Dg2bLF5DYK8SVREavsyIVcfxVdsIaCUGrX8nYj5fvnK7LbV6LeUWOhlThliz8bhOWnTCs7ZjzHbMOf6FL2PTyAmFeHIrZNOGtZmeri6lzJ4fydTFnO7QEyl4a0D1CQO8Ev9X+AKJCqYWhJn9Vm03R7WgcGGrqjLVsOUFKEYaN4oSNdkpBtPLxHMtr7QdQCzgdnmPQ+LA1pnzHuJGLyHWDVutwQmsTMdsdBNN9jsWzg5k6dyITu5RK9dsnvwYGmCJ3amtt0FTbrvOe5CcdF6ZP2iIpwstcHgHikVNWP2qphXjjWEJacdgUsZrBGxPGUMYKmHbrF9bxnJjw5Oxh6zOXKXhyRrvhdYx3hiibCQ2On5tvbXLOMbUymPqxOc3tv36c6VcXCJ4LMZRxo6Qdw3ZsWldX0hl4cyAuUs5iVMwBocnUqGQJgbwFWmAgqrBqIaalRhwEYUviKYy5g9AdylSNTm5z1CN8GLHfkKFrRCwcQxFnXCMjUjq2MrXN3P8GA1Rp6+XxHjL3OQNS2P2jaivBbtURqiVtysxxzKN9g3DbmbP0sIWdUtvLCqNCDa8iZdGJKqQidKfj3SjO82lSyPZf3rI/IYj8eBsudiVxzx7fkwN0KjBUoBG5F5RGTJ7UJk5aNV0HIUboD74RhWz/fa4yZs0fq/bwyQTu2j9t522w9JJtoxn20xeLv94u0XEDu+prfiz/VonZebrPOsRDPZ3dGMmYensUA6eHREXHsO1sS0/tluwyUMS4SDujZg/KnRmVB1Dcm/LC2wbW6q2QeMqBhRqaKSKB339fGkF9L6JAU7ifNJMFibOVhtbpDTwQGULoHmcTLS2cNli0ZTxwOTjGtTWsTduJSsCbovUyui4LGg9mDKsWO4Z+semtT8Vy4GH1llc96gJkI/VrwADDEkCGDWES2dRH5HrgJl9nqUjqEtycicoFhGPx6Jlaazey2S8zbXhls1xm9SI8jgjVZpbt9TG3XzsG8YiKo0kshlbVt/KjLPZLTLtLTOW1qKQ1jY4DgsmYkIZJ0La8l7SKPOFdzY+xHiYsEidCLEXcoGH9qd6cTbihpN9OXJmFIyviifrc9HHoweslr8iEhING+XsP2Lo7XNakOOdRaRkmmgJCrfiIJnYeppug7Yxld6nAnwrb9TE5yoguq77atO4GwnHxE0PSUflhe0mmKVZNQEpk4UmMC2N2nLDmHQMhk9m3yqb48zqO1cLpoaMNJTqvIwXqqu8u4NBknDPjZEOpoZy9GSf3tBVWDeRZ5w0PZ4MUMpimKDkTklnRiwdsyRTuWY+AzpjsHUnG2byhrRLZJOxlMrWf98tbKKT2/aOFZwJaGUPpbntzqH5vrpDvDgmU2zxdwFVhxd48GBX13qxHH9glX2XcmKB3Ppyl3q8ecDSYxR+xMx+ZeGIUYkzcmeBFJEiJBtb3OVxzCct4/M0CATbYHSqije0vAy6ecvUcYmkdNTayoDHteE2+WAr4NpPxJS+5ZUnXlfBRjoBeMsWxmeqOFdb719DUWWMMml8mwgV5WeKg7WpVO+8ZZ6NUxty/KE+kQvlO3l8GGC590nA6wocS0eU+YNeCykonC3TSW1x6FRkM2QjW3iFCs5AW9Soplest2DT3JZ1U/xXGb5v/M4jbQ9axpUV5relt61fo5ugFt+AZWhs+Z4G9qiyKcuvz1MbMeLEObRwynoL31wBGlMaBWcMxiuDOOL+Y7Pq4kiOnezTcY7ChiSmjoWvPwMUwGEECq/4KGPfMWF2yWnuCBGymBL6CIlHC3OTcMfaq3l84X2dYUr477IiUNVVvWwOnpTAvaOF0UkNJHsRvErrs1qVB6jhIF/nROX/V7Xb8u+Bgd14fgtYHl8iXxugNEgTTajIjBOd0it7kVboq82YUSZA8i0So5qT6EtvrZAJnDo8rWoTOfjQMrNDD2Lw5Rk8Uod55HyfAhGFtxAPOXSzYXpfprnP8cbgZeevNQlbTOJ8uylZ6UQcJ9v9XfYWo8kEktN8D8+VB/GTdC7fKNnBDhQwuXIjEGBkPPcfivXEjdOsdQXjPVbdjuXMa9IDioDzYJOcAzcZkrmhusIACaquZfs1hiZt8mZzC4RmAb9Z2poMyRser8Hr80xkylWMV944p1vDKKq+ZEoLUnrIUEaUcNO1ufWOa26bDVobNC1pnHeb/tVKriZIsePHE8ZH+7U7raTJmFAUfBmiiFfOzXfUGyO3nFhnapCjRjGPUFocXf1tN9wK5xTbGXH4RiWazjUvStp8SaNHTQNzkh0xtFaMuEWZrI3TyZZeru0iqhhQNlGtvIQLLhhEInLJyXyGOg9eMRgslrh8TaFKZmAkDtUIjQzWxESSgA88GR13dIw/U9hkTC1oRtq1ZY9uyoA3f99JnLMJ22xtmc6MQewQ+hjOzXdVbzZy04l1FtZznNEazbgmDTAAzY7IR3gF2xlx4CaIpjItXIQRjyvjMi+CikPV1h6gWuJtDKrhEYV27FPRsJoXXyeIA80aaTO2q+qzMmZMVywVo0qsQmaFrMjA5czT43BymJt6BziaHGIhXWAhnqZrYsRYMu9YLtY4ky3z4GiZOwYPcX9+jot+BTUdIpvijMX4jADFlTGfVJ5RG84zeFohtIxIGSOqbl5oXrXEL23boCa9OO2YcbtaoK+NQhAP52dS9ccjufXEJeb6Q3IrKIbY61XDCa+qBzTlViZJzqEblWgqU+elTDb8zviZsEUGuIcUTDZjb5eLCzedvwpGDBs6wgw8z4kP8VUHnsNzF57Dzb3jzNkukemEmMiFj/Nltlh5klwKVosN7uqf4KPLn+X9q3/Nl4bnyKOIruk1gojGvW9QtNhFnDsZuzbDFL0KPcVFFLbl2MPFWat33zQtT77XM9d3tbe8anvm1WxMVwUTDTl4E6SzuebOomJQdWXloE3GnLR/VzNRGrXdVkA+mc2VmXOj1OYnsmBt4XplRjlBj/ISWh8LcWSjEbdFN/A3D38dL973Qg4mB4gzyBQKcYhXFBveXzy2JkuErVYwJGqIDWQJnB+d54Nrn+EtD76PTwxPknVSEmIKdZsSq0kYKBiVCeFK47p5bRpfhSA0r2vbStwe3VXFtSy/Ii6CpYt9ue2eVaaGSm7lqtWPH4YBaiMXLLcRk3HDjZZ0fqC5N3gpe2FVQaPA2WvhU7a1WF2D0q6yucrRjm+CATYDei9VGavJTh4nHU5MzcWrcDVRASsM/ZC5vMu37Xs533HstRyNDuMKGOGwpeJB1Z8SkpdwRrZRD5ZyxTijWDyowYrBWlj2l3jb6Q/wn069j/ujVdIoxWvJ3i5DhZDUNOrVpQFqg0LmJ+rHgZAbFoCv91jTvk5XYICiZT+JL3tzrHL4wkCedGKd6UxLXFVrXPRR34IrD2I1mJMTz/5jQjo/1MKZ0huZel9R0bLJu41HVReuFTTXmalMVBdMyzipiKEyBrB9zSApcUFtY2R+ovKRxwrDjFvNAj9569/ipUtfjSsMg5FixWOMGXsDxn24NW+vxPmkBr3LHhaJQCBTDwXMmHl++MjreO7s0/jXJ97AB7P7kO4MpqiwuPF3HBMctoJjDKKN66DU2GV1Haj+foVU/NqQffhMo0AhnFmc0mSUyPEHLtEpclwExpuHRWC44h09NIOXcLMfsXgoY3pfrpk6nBG88Vdu2HvA+bhMTLdTXdQKMBzxXHszP/uMn+blCy8jHyrqgryGM8Jew9DJ5xokdLqpZz33PHv2yfyHZ/4Ur+8+h6K/ThEJzlAzlHfz5ltt3Y/0oSZwmB46mOgDR3oUYoi8oTA8LJzwYYSUDhEonGdmn7JwSLVwAMmmMwr1St0Sj2r+vvZ8lbTGDq9rgr41TKFbQBVCK+NUVUQMo6zPC+3N/JNn/zi3JrewkTms2hKC2VsBatN3mXgspSEOM8e+YomfffqP8p0zz8Nv9LGYsZJCE1VoXANtEvMnmt93OpeHe1S1dPEwEs/JQz29/3CXQqvoUx8NA5wEag2FV5LZjIUjRnPJMTXGJ6Dxlqd2uQxv8m/bP1da2/V2HtNPVlMCyIUxhlEx4sboED/91B/muDlC3zliJAQ95UZtHwHwNcayLp4pP8XP3fqDvKJzC9loiMGW9H7Z9d3YS1Xo4R7Wj8lKuRFO3tDTcwsxeK12/CvyhHswQD8WRkFDYJtkLB4TfJrh1ODE4EVxEFomJZTcXPmvJ/xbIOQlHuirf02o03oNcZUTgzPhx0ug5Hs1OCy+/AnvK7iqUK9Sxk9VrFc+1qrGK2Ag88KCi/npW/4Ot/RuYuQcFlM2pRso4z4vgbsoIrv2fDtDTUqEUBSOg8zzs7f+LY7SwbmSJ0n4Ph7B1XVdQ9WWoBhc3VA/vqYeE7Ru/CNQsdBA8/eN9T9IIx44Ps0gNRindZPUXo1w9waoZb4iRSnvM2LfDUI6PVTvDFLWBfaaR+seg6sWRCHbB19bXgcp8HTRrM93H3gFL557LoPCB/UpHr1DAGMMG87znPRG/sejr8XkGdBFpdhcD7+CWvUjGg8C4oWVqVRPHJ0hNwbjN/fKXF0DFA3GJwbvLLNLML2v0KKwCBYkq7lp0sTemjy3y8R87jLxUzPma8Z0fuJ5vgVVUGeX1RWx3pL5NZ6eHuDbjr6OrPCbrHWvHq3ykNv97ATcr3nHdx94Fa+eOkY2WsNqPHG9GiSHMlN+rFsprdNSc1E4ua+nDx7sYDTEqBWc9IgkIYINDUTdIftu8FqoA7EgxcO6LLpHj7lT3DPpWat0Io8Em3u+8+Br2JfsI/f+qtc293Y9w1bao8PfOfwqpp2lwG57RteKAFFImDyiHjFw8oauXpi15CXOG/lHxABLVqeMWDgCLilQDB6PU3CYUCHAUDDG4TxlPFfHMw3srmzWkAZgWiAlPmhKCrCp38eX7+HLagB1HCT1j6viRQwOoSjBaS+G3OXcGt/AS5deis+UaBdffyeP2MpUt/jZzQ0ocs9L5p/LS6aPMyqGNX4JIQauvr82Yr6AP5paKUwfRfkNj4CG665eGcYJJw9PM4qZYJtfVQM0FD5nZr+nt6Dq/BUAZJPeaQ+9Glvy4Jps4533Sigyvmbf89iXLKKuuCY0ewJtt2BOenzL4nOxbkRmpa65yjWu/VeFCufnEz27r0ukQeb4qhugeoh7MHsw0kKLTSsvIPJbCTqOYxnfwK+asZqWjzevNMWJ1mRLneD/6UTMp+PC4KbzcCiz0uUFc89EcigsLaD5sbuBQmEF5+AVs0/nuJmhcK6xUDfjgI8U3vdwtmQnhrP7pvTcjME4f3UNUERQKZg/qEhaBCGeiWxtNx6smbk2jcazfeC6U6asu3iOiJD7nGPpAW7sHsV7UImuCe9iFGIfkXnP8c4hnj99I5rngfzKdSS+q7DWjTh1qEtud78xmsvjfgaDo3CeznzO1KKod1mJA0YlJhfwOa1jvTJOweC0+m9bxi8aMt46+7U4bFA/UFvjhYWEWNCJacWRNR5YceQqnK+MhwIWZvBqS8ZKiP2cUdRlPDU5znS8QCGKUf+IsXz3ugULgbARSczzOgcR1dBYXmKrhWngqQhOA2pwzRioVkqOsDY3rcsLXXAOJz7UkS9znc1lczTxeI2RyDF/wKBm1Ogos60g8LJVD9kp+51UC9hed0V3XohbnIMgTjg8dRCLDdu9XDOOI0ArCsYIR6cOkvoq/tNKlP+a94TVeJN+LJw+2GUjMSRFqHFfoQcMZSvnHdOLSjrj1Gkx5tSxc423BaLKzpllM3aTy2Sam6yz/H2r9NboGVEFKxEH0kVs/TnmmrBBLUc3iCjqYF+8RGosHkJsKNK+DteoAdaVEOe5NJ3o2QPTeDHIDhpw5nLmh3qiNGN2v9dCPRADcblq/e5ivt1mqVcrI2tVD7TsqwCjlmnphVJv5cWvhQC+sUOohwU7R1ds0Mng+hgBYsrLWcXxuRHOHOjqas8Qucv77+hyHrDQiNlFT9IpyF2o146JoVrWJpvZbqkcVa7aSn9Oa5Tc1Ig+VH28JaujjHmqG+LLZaXSFurRVrN3pe2i7d6Qsm84ZN0G64IYZmS0IVTpcWYzDC0TkrqPfAyoWA3XBoGOWmINfEobpFzGUsPXqDlqY2COL4UGholwbqnLdH/9smdttgdYwaaOmSWjjkomrbnvbe7gb2qwbFWN2Cq208vEfdrqcptUMmhWRqSlA1OfoRqUCGfL4B1fn5OoXpOjDbz1OBNtq2N4zWKBEzczN8LyQqKrPXtZlX6zTfqBp6A3n2M7BYVv0xw2ce5UNxuFtPE+X3mViRovu+EJ1ty4xupQ3WTsXnSLHlnFGaEANnxRr1bhGhtfoIoVuKTrbEggSPi6Zfz6OqwGssJG17I8n7bq/LsywNBc5JhZFHW4so2yQC6Th26nVlqrBMgjs+raBt+uF7uyfc2qx2nOheFazai5EurQowHJnB9cZL0o2oJI19kRpjcJuTEsL6Y67GyPuZpJVF4ArwXpvBL1gpRXoF/ZgM2VPDXPmGPna+HHhsBjOexPSzWB0HBkx9ihlH0j0sT0wvO0rntWOs9S8+O8GBxt7zDOnqXmArqJWSEO4cH8QtWJhJTdcDt530dj+woc3sD4vHtwnlwKDLaUK7j+PKA2dLw3eikXZhO8FoDDldd+kwGKmjGrxTqmFi1N8k8FvTSFdHztdTazk5sK7+3/HhtJk5jAFr9TmiLj0hDekbY0L5uVoZq+Opyz5cToQYZuiFFTJiDXhn/xRlGxDLTgc4MHwCimLL9dly6wtAPjIbeG80sd8thitaG+sPUWHHox0mlIe16d+kbVQTd9yGZxn3EMVvVnNMRTtoUgtKyQtN5nEkdkq1pwO+bTOq5sgLyqqHpMHHP3xoM8kJ0mKccVbHntdsHju9rxktGCVA2n3Dk+MzwJUdpQkLs+JxH6xviJldlYL82kqA+ZfdOWTAN0AU1w6pmaF7BFeXNtDbvsFPN5NitD6U5YIWwCkP02mfVlcT82DxdskRSs5VQx4NMrn4cotJN6zGN+o1zZwtCx8KmNO7kzX0VsjCec43VpgFoz6TBOyY3hwmKX3BqqpqpNBuhFwDuijpLMihZK3V9R9QLWA1paIyWlxgB9tU1WsWFdNSl7GnS8hbatpnp/6pGqtXCQSnsrb3na8XN8GStWfRO+ugIy1o/JYuEvT3+GNd/HYLbkre02BrxanlLFI0QMJOPtpz9HZoMui6tUsK7XUaxNtM7D2nSi/U5c3t8tPGBo3lHSGY908jLBMM0r3ojVJiobygRex5goUBpfW/Cx2Uy+eV9vJjRM5N6bdV+aMZ+pF41WpMlqYagSJwmfGN7HR5c/QxpfI5MyVJiyhg9v3Ml/W70HojhIwlXN+NfrHNZaQCo86KeGldkEN8FBN03sD2PozHmUYtPKq6YHtac6hgqDl3Yf63ZeZbvt1jfEOjzj5G9T7XcLuGhLvLCJ0Jsxb1Cc5WJa8NZT72GNtXJYy5UZ4dXIlkNzj2FkhvzOQx/gfJxhy3bWx9MhCoWBldmIwrYTD9O0sLjrSaacOme27JXwE7iesrVy+2UXRUPHcbIK0lT59FfHubTwQkdBGnX4wPAu3nb6vSSpPKblYFWlmwp/vPwp3nbpi5ioW3q/x+exOm213zXl9KuWAQpOc+LpDImiVuznJ+ARGr/f1OdBo8+3jg9LLFCqvtYS69P2ezahmfozG9ALzT7iavB0E0eUpuDkOBZt6qZ4MeAjBp2Y//LgX3DX2l0kkQnDEa+GrtmuvIEElrd6Emu4KzvFL939LlaS0AfyeDQ/laCq0O9EXJpOWipnpoZtjCeeGQ/f83UsRdlo3tjWZDxpciyQ3TC2ZoxX4nC+0WQ9VoASaBhOa5gz7cqGF8qGbVptl76FD26tsVydmymb6juacqfp86/v+j1W9Tw9seTiHpUOOS+KLYQUy4pZ4R/f8Vb+KrqEtWkox+njzwArNEmxrM51UGvaBqiq2NSQTllVKUpWirQ1mZnYdndQT2wZQjVSQDeLM1YGfrmx0H6nLbn5maZtvE2TKko2TIEjTTq8O7+Lf3XX77Icb9DD4tU98gaonsQK68kK//SeN/PHg7uIoxTxHm8pVWQffwYYvrxnfTrSQWIQXxlg2eCd9EBij9cICczCzTFfoyF8x1JMlXRsASbXIHEJOJcJa2OkVgNbNGUf6mW2xzo5kjZAPWnMtlw54TsU2HSBt1z8Ev/yS7/OspwliSK8f2RcUADXPXFkOSWn+Qd3/Da/ufwZbLeDohSmIuc//o5mA+UwhpWpcfpnKpAj6lWas6Y0Et0662xAH2Mdvq3EwmXbJvI23arSO96MXjfnrbW3WKn1natUt8YWm9StMu5rxrCZDc8zXhCXw3SHt/Tv4H/+wm9w5/AuOp3S+3sfKFvNWSO7MY8SjxRtLjKHqKGbWr4wupsf/+vf4o3rd2K7U6h6CsbkCH08WmBLzdWwOpOWvAMlwgf1y3ha6tte0cAbPMMxwYDJ6d/tx9ULx0bCZjkOGkqeDWKyl3ZfiKcxPVzaCqmVoHclTO5bYxKqtVSRFsajU01JQqgZMc4Tpx3+fHQf93/hP/ETx7+Jbzz4Uma1xzAPs2SdDZ8cuShARNuh/4S6buw1qMP60KzTjSIuRUP+4OwH+Hf3/QVfsENsMo34ZmPq4/jQcYspatjopZrZviS+IPKqSOKwiaXwbjxxceJnt1fIt/HjLWGRy8EsVzSIplplurfhgNVwZ1VPJ075gmzwM/e/ifee/Su+/9jX8KK5Z9KRDlkWYOFCPOIF2abUqIDxBU4txkSkCWSa8cH+F/nPD7yHt67fzbAbk/gO3nmc9dd3tWOPSYgXUKMMOsJG1xBvQOQEOh3FRL7uYPKtwsTEvDEdD8WbNK6mWKSydRP5jsbXmofRHlzTpl+Vc9bMZkJsbew6OU9Nm7OgKQzgNYyIRelgybuGNxW38xd33M0rZ27lW/Y/nxfOPZNjdhGLCYiANkZ1lZfCSOhvEInxAufcMu9f/mvedvbT/OXGnZy2KdKdJdYijGqwlGleG459nDrAFso1Sgz9nmVuQ4lQIe5a1Cjq2URtb46xHw9OHsdYY9HxzdBLy2DYPO9XdIK2Je2B081ZaJtjR8auVhoDAJF6Yvg4XtWJ1zeMhzDcueq/wEd0bMJyt+Atgzt5+7138OR0jud3j/D82Vu5JTnK/s4M0ybFiBAZizrHhs85Xww4MTrLp1fv5t39u/jC6CKZGOj0AqXD5+WMEOUa6gx9FNPg4H00MgzTCBAig8V0HK6WApOW5/ONm+1p1m/HRASvFQ/P1NR7RWoFdd80nAmMrglWO9rJh992eHRDNV9lIkaUWgZEqr9PnkNj0UiZMFR4YQCulYiIOI5xiePTus6nVj9PevHzdCRijoSeJBBZ4jgmzzIGWrDqM1a9ZxQBUYxJe1gNCY2bnFZUCjp9RRxbDC0epSkqAyIih00CaFKTPPdYWtMdSmGX3Xb3Iko+yUHU9ntcGTA8/lcnoR0N/cNdSSjShEKUVQ+XEJQC8QWuGEKkIIIhRsViMWGle3A4njgmvKEqo9ToIEEiGyuSeBxjYZ+mCOKY5NmO+7QpCtRsAhda2+5WxjcezCdbcvk2xXyNQTSTTU+TMR/Nc2gCj5Mx4cQc363Ekaq41XiINPB6gmRwufWbQOoqR4ZQlHM1RH3ZFipPGNw2wOBGKgxTQySJQlTGSbKdUHip/dHs0W3EfMCmJKHVRtmc16ab6fO+ftXkcD3Z1uM2Y8Bm7DjRCrJlfUVbY7GkFduaCXDbieAa+sdeXBDqxJSz5XzQxa5U7jXCG9OoFFUaiNIYxC0lxviVe+SRkMeWSLpB5VTq5vDKSNuF8XqwXyPmq0SBJ/s/fAN9bA19bnIFW8zn0uuqqWGcycE1vr5xNBS2xk+e7A+up5GL1Dhg/V7SBsKdGY8FK6TcUdWgRrG4ILxkTFkyNGNPqpBruXdohIitPWys4d2dMYiGmVCumqok4Rrucrrq43AbDqIGo9gQRYkNZTDf2C4vo1rRolHJFrT4Bh7HxBDnVkq+lxR+C7jnSmPh9kDEIDVryszZiMErDFEKHK4IQ2usFiQCKYaYiCTxWATjUwwJzsAI6OcZmeZkKLkqGFNOTLIUNox4reYqmZL28RXpB8N4PbKOJbJxqMd6pV1P3YKd5CaavseikxMxGm1en1ZjRbfACS9njL4xY7PVb6yTQ5u3Hga9KZlqTdMMnXKqBqeOTD3OjegoLNkeR8wcx9M5jieLHO7t40A8z7ydYtYKvTQlkg5oUo53cOQ6YpD3WS2UM/ka57ILnB4t82C+wslsjQfyDU5rnxwAC1EMUVANEO/RryBTrExrkAqRiSRoDMhEZqgwKZnWvIl+4oa2qPMTv6/rgNuMY91OpmPS07YmYAqbpMu0EXe2zLN+XaB/eWPINaPIB0ROOGBmeEZ6A89aOMrTpo5yS+8Ih6MlZqNZuhLVI8lqmnlDud40F3Ua2g69KYFuhYyCDdfndHGR+/tn+fzwFJ9ce4DP9k9yarjKCA9RF0xcDj70dThQ9c9q46bx6NAWH/nSHJBZo/K6D36v0vF1I/l4cGDVSFR6IZlsDJIwTFC2rg17GZNBJxMCJ1VFpD1Ur8TFG1IOjWGFMp6OScPgmh1zDmmJFPmSCCkIzob4rigcUeY4Zqd4zvQRXjJ3Gy+euZVb0qNMRT2MgvPljzLRhBA8pzAWMZLJhaO+Brir/1kBa8KPKKyTc39+hs+un+BDK3fy0bV7+HJ+gYEkkEREIqhaPJUoQJjSWZc5r3PWqlHFW8Pshke+9cPfpz4pyoRhbIB1J1urijFRrWhOOK+mNsrYQB+uAVZZ7bjXeG8GGLJVGJkcN8pZ9Akv6B3itQvP5qWLz+VI9wjTRJgCRgojfCCENpLp7QhS23XEbaWRXQcpCkYdIobYWKRcFGfzi3xo7fP86YVP84GV+zipIzS1SNkf7PU6Uanc9RYckpCZoSLf9tEf0DzOEDdZpTAtA2tub77aFKo5tc0WyUkDZSJ2a2Shk4OUfT14ebzN+1bvSHs+cEXTr3BDJ2acQYlhhOKKPse0yzfMPZ9v3Pcinjl7Ewt2BldA7l1oUJfQvgkSenF3cxGvUMbNScmsKZSsZNmkRFgLfVNw98YJ3rn6Wd587tN8bnQRl3Qwxo45M48HIxQN9LQc5Ns+9gOaRRnipUV3qvszpF16C0ahZX+nGXfE1X0cm8tkWxlggHNM0z80Jn+Hv+emlHKg7JRTE+KiqnRWhQU6fj1GyHC4UcZxM8W3LD6Pbz/4cp7Su4nYG3yh5OJQhKjqXzaKqJayEeYRNUAIuKJVbWCIYbEmKiRWwMKD+TLvOPcx3njhk3xkcBZNE4yNUS0a9KZGYN4IvoMad3ntr0WSoSjWB/FK+aaPf5+q+HJ7ayibNkDj5pbagmImhkHXQ2RkDLo1KxZjfZnK5KIWDjjm6mkrsfBi6knooa/D4kzJt1MhtxV51NB3I+Zzw7fPP4cfPPZ1PGXqVmxuKArFGc+430+2KVjKI7z9bKUx0SZtiBdiI8QxnMkv8cbz7+c3Tn+Iu/wGpNOkvgxJrNTxZg0plRzDoryfBi4rj/ZYpsKxK7Y3QK0McKsttWGAnvYW/XAMUBpbfBVX5tZgNcIBhc9wXilUgaI8R4uPAv/OjHJe3nkSP3X0tbx44TkoCUXuMGqQktov1wnluKomWRFSgc+7+/n1k3/OG85/gX5cBd2+BGx9YAIZwERgEiIsqB+3PVwvBljdfF9mcL42DjPOcidjvkYW7FuP27hf5UHrZiW17UYnaVc+gkeNGRYF00XGkWSKY52DHEn207UdiIT1vM+ZwQXODi7wyn3P428f+WYOyCIbzgX4RG25fSvXZWlWw0y22MT42PP7y+/h9+7/MJ3eFE9KZllKesQ2YnXU52S2zt3DC9w+Os8lFUhSrAnjtPw1aICJ38EAQWrVKlHT2HJ13GbZaDaSXRhgW8lqswFWkI+IYZgXzBTKy6Zv5RsPvphnz9zGfDJHVzrEGkpczsBAR6yP1pmPZ8FbMi1C1UHLMhtgfVXP1qvmo5pXs2acS3sjf7ifJqoUJhAcRCJigTU2iG3ErEZlzBoSr5F4VtyALw8f4E8vfJK3Xfg8d/kBJGnpQAquGfJrZYDf+LEfVG9do1d3nAS4VgZqWjGfNzKu7Tay0pZCaXNLLWeLaDPWafL7hFIyLQoY4nDAi7rH+PHj38ZLZ15AKkJRlGzkCYqpEUMgNwepEMO4LiywBX97B7tqVHSkERuGWRhl33TZqWd1HDPbiuBqpB6Co1IqzGKIvB8TIPa0GUspJ1xiglJyHqvrIFqemxCJENtAfb9jdB//8eRf8obzn2WlazASg/PXBktn0gC9NtRNJ2Q3Jg3Ql0CzTtKlaGyxMvZ4WxlgM+Yb9w0bCjHEoyHfu++r+LEbX89B5unnSmE8UZ0+yDa3SR62V6tpqmpq5dLWzBMDVg1Ghai0UmcqbFMxLhBrnXEgShQoM3gRxEdb1mqu5Cy3+66hkuJAI5LIQAR/vPwB/vF9b+UEMbExFLg9LoJHzgAjRYNWh0hL20+3rM0253/oJsKCCm2ccIejJoOWz3fG0hkU/P0bvokfPvaduNwycA4rpsQAt79sV6OjVssb6MsKT2wMsRjEUjNYcs3I/JBcCkYuQ0SxJiaRmIQIjSNmXQQSUSgUgPMKWqDiSrzx4d67yw8+sBLCk5Hz2AL+5uLLWYq7/Pgdb+AeYxGia6KcotqYE9IiEGxRb9QJIoHf8ubtfbR883V2MOQnbvh6fuTod5JnkJs8aNWogDhAHhamJbSnarb8nioGQyoxJoWhOJZHFzk1PM09/XPcPjjDg/klzhSXWMtHDI1nvcjAWjrGMqURPSwL8RTHkiWOdPfzlM4+bk6X2J8uMSM91MPIBVhE6qYQ2cR+1IfnWMICMuWSNcr6yPG1My/kl28a8mN3/SFnO2FOnr8GUO0oDEUu6iqDU211e7Wz3kZteIKAELRbxoDoZD9JZfE1pGPAeIM3DhFhWGR819wz+MGj30buLGpzIm/rOMyobPJ/ewWDx8bnEQ0yvQKkYrExDHHcOTrDx09/kU+sneAT/TM8kK+ykg8YRq4cj2eDF3Olrk3Ah8bvPgK8RzxMS8Qh0+Xp3UVePPMkXjR7G7dN38TBaAZTCLnzFHi8kTBlvOyL2WmJ7fS9pUy0pBwi6KxjLSv4lsWX8Q+OnOZ/PfkeJJlGjcd6acX6jyYQbXyEvPajf1uLKENJyvKYbjFgRhtTu9sGWNdhpd1EVCUhrS23rHxURXVfgszOjTjCNP/3036Km+JbGaKkfucVuhcDFMLwFOs9RpUCYVoMxHBvfpqPrHyZd1/4Au/fuJf7/DAoacWBy4dUtAIasvZbQdcy1luq5ifjwRdQOOa94ZmdJb5u7lZes/gcnjPzZFKX0PdlC5bYMCLjEajCeMLskZFZ44e+9Ov8WXEaa1LwRT3B6rEoxUWBiGpqLZd2OD6O/WoX1rji47bNiVFZDf7f+EK1M94qYPZiyXzB9+x/KU/p3MpG5kjL7jrKUVqTF/pKpHEViL3He7AmeLwvDk/wxyc/yh9e+gxfKC6RRaaELGZJVEHzwN/TsdaNXhaQ0daFEcAYh5BAGnNJMj7ol/nguQ/yX85+klfN3sLrb3gZr5h6BqlGDLwrdaHtDrGT7uVel8atiHPM21l+/Mgr+NCdb2I9DdioPsrluurjrFci75XJgQXNELBOTHbBkN7VFtiotHgRMp9xq5nnmw6+gswpRjziLWoc5ipOCqpaRTsd4cToQf7LiQ/wluVPc49fhWQa250nVgclDSoEJbJJI7yZgY4vy0RUWb7GKODiEvbICbt4hE9jHhT4nfUv8Cdfup1vmHsqP3bolXz13DPwOWTqMVcJKnFGsaqIRmA8g8Lzypnn8vLeB3h7/gDWdh91goOUIubilUgLgjKTo4FvtZuO6h4PaWvwNWO8VuN5JXnkq+GDZeRVEQnKVSdi8HnB35h/KsfiGxjlihiLM+Wi2FYkaZeMFRUK6xAHXWNZN33ecPr9/PvT7+Ez+SqkKdZMgxecczix9beNFArjoIxDgTGkYkPziJoC1Ib0uNa8KxBsoON7VwLI4fs4NRRRAc5i1CLpFCsefn/9dv7i9nv47/a/gB8//mqOy342CsXIw19+UpJGqHBZVWZNj29YejbvOHkfai08yqOvqyVs3IhIi9Cqr1vU4XWL/95quOCmjHYiPqwqJpMsDgU6zvLs2VswYkqY9epNhqzEILux4fPDu/ile97BW/tfZJjEpOkshTjUG2IKlpxSiCP2hgE5q2mMdSleikAGJchppIWymDl8+cuRcfiow1QxDJIbPmI5Ct3A3kgwQJ8AA/YjSBFhEEZWWHU5IhGm0+Wc9/zbMx/hvSt38k9ufA3ftPAiipGQC1geXuZfNWaZMlYvPDxv+kYWpMuyBlbmowrKlAsrcV4izSpFBG1VQuqTr/E+uXzM12BxbtXHW1H4fV2qMmQeFiXmlvhoqHDIeA77VSnmK3RS5b+dfz//4sTb+XS0RtLrEvuEHMXiyZ3jJdEBfuG270AKQzeK+MT6Hfzj+97BStpQ8jQWP1znby48k39w5DUUeUEnTfjdc+/n42v380u3/hAmF/qx8m/v/nPePrqDOOqBGHLW+Jb0Rv7ZTd+KKSwmGfELp97Hf12+HRsH0Uojgsz0+Lhb5kdv/z1+5tBJfuRJr6OTJ+RXcUuGQL49nh7gSNRjmQ3CHOhHdzyZAbojJdJcyx4tbcV8W5ZMZW/OWmkPrm4pGWgYnzptOywk+/COq0YWCDm7wSSe/3jq7fziA+/kdBJh46mwdUqpVF228E0T8aLuLRgfYxSetO8Qf3j687wzP4mJ4/B859hHlx85+EpekNzMRgxTMXwsuZtfP/9ezhxc5XWLLwIPgyMDPnTX3ayWM0AWM+HvH/9aXtR9CsbDu1c/ywfP3gmdCOM1dOURGo9jEs7PeP7J6ffx5eFFfv6W72afmWfgHOYqgNjVO3RNj32mC24VJH6Ug8AQiiVDhzHDMd2+0lv25ZAZp2Hgi4rBSdkVJzpmq2hblFxLvb6mWHhzwE2Qzx0PL3SqxGKJo5ggSaN7/B6bh8V4fCCaRhv8m3t/j5974J2cno6xUQQ+jG6ttW4kAvHEcUGhGevOs+5GzNHju4+8kLgIlQsjEd71ec38zbxg5qmsFDmZy8gLZS7uMUhjfv7+P+bO4gwbuedVM8/k+xefhc8HuNGQ188+m6+ZfzbrI885t8bP3/t2zsc5MQm5CEU11laVXDziDX66x2+ufYafuON3OFWcI7WW7GGWG0UEU9aVYwwdJfTjPtrTmFQRLUgLh5GRovl40mRr4iVtKv72P40GdaGtfi+TA2eqv5mQhCioL65OxifhIms64ufveRO/cua9rE8nGC+o+vJcKpwzlKsooYlYUiIFS0xWKK9deDYvmNqPL4Z4I8wVlu/Z90JiDfxEi0GNMCMpvajLJ/IV/uDEe5HEULiIv3f467nJT/MkBz/6pK8DF9OzhjeefS8fye4nijqgrhxKOBE7q4JzmHSKt43u4O9++Xe4xy0zL4bi4UZrpfdRdUGIVB8DdoxAXHjizGF8rpjMBIE7bQ+VaSrUt5UmdPvtlrbOX+ho08YQmTbg08exroMrSjyaw2IUiJ3iIs8v3fWn/F/LHyObmUFc6IzzjZFd47g1xInTbgrjo9CFJgbvHUdY5PuXXkRaKOoGvGruybxy7tkUuUPElWg+pD7CFh5NpvnNC5/k9o3bwcBT0ifx3+9/AX9/39/g2enNKPDF0Z382kPvp0imUG9DErRlzXPcYRfZHn+Zn+Bn7vgtTsoy6TYjxnZ7vUIZEFa1zzk/BIkf1fG01W3ujZTuSDHqDJqpbKtoulecj80DYrbOmD1iPMv0OZdfDPavD8+txx3Db973dn7x3F9QTM0hLrAIKqles+leGzDQweEEIhNxfvQQa26Zwinfuu8lPDc6RDoY8kMHX8isTxmKcu/oLnJy0ErGA7CeEzbjV0+8g8xukOfK9x98NT945BvIcyWP+/yHB9/FPQyIZCpI+Ja9G5NZq2lcf6+C7Uzxp8Pb+Sd3vIFhtBG875UaIRAbeCg7xwNutazyPJrbb/DCnZGXbq4Y60AGvtaCaarajysiuilObM703TT/d7JpqB4+Y1saMiKWNT/ino37iMyVfRlRIVelkxjecfYj/NKpdzKaScB7cgnq857QYIpWKhDa4Pq50BQnEIlwbnSOj138K7wVDiYLvG7x6bwqOswr5p8LhXLWn+eDy5/E2BA+9OKYNCkxv2SKN2+c4E/OfZxuKiR2kZ7p0bHCu5b/ijcvfxlJuuQMQ4lONwPtrcWq4K1HvWI6c/zBypf55fv+FBv7urC+55YoVWILt/dPs+xyjH2UJuY10TVR0mEO3mGMCAw96io1eTNm2bJZeWByoPRkb24TamFi6KBO9O1aZ3A25iMXb2dFsz1DDZaQGPVi4bPDO/gXJ/6Icz1hKrf4AHC2KBMq7XhLysA1ScYj5fsCbzr5EZb9OiaD71h8Pj999JvoaA+fCH9x5hN8avUU0wS6VTedI7FJKUjuGaSGX33gXXx58AAdo0Qq3OfP8Wsn3sNKl3IGi9bCnGwjC9d+EKRrdWaWXzv9Yd527iN0Uksh+Z69l0FY1Yy/WP4iPoqxj2YMWAnaeqUzKqWevAB9jy3KSkc1LmCLQYHNAdSVXxyzcscx3yZBoYnBftVjL4r4iEHhAxa2xxXtgUiFnHV+5e4/5vPRKqlJ6VtAba32X+vQTGrdaCAEzaa9shsNojjlg8NTfPjiZ4gEjidHeenC83DOs8w6v3f+k6ySlILbQTnfZmErN+owNuVTepGPrN5OjGAjw7svfJIPZQ9ioi5yBbPgtM4clYu9mJ878TbuHJwitfGe4pYKf3Moa/kgNC3Jo7j1lkdv6On1w2Qq4wVMBm5U1KWb3fYNNAfZ+ImCzk61bUEoxDOXK99z9JXMSodikyjv5Y8CJU7gjafez5+s300UTzHAY0rGstnh3qjx4D2mSMP3McGgV5OEN134OKumX7NaZsTwwUuf5eOjM0gU4cv3j43SMeOCfxCoTBlE5bUwsOYy8jjG+itgnTQ7E53DSswX7Tq/ev+f4K3b0xWT8prNkvLDR17FUl4quD7CXlAaW7AgJJkyNQhnbkTAOIPdQNQEkLaQwGZxjeGAzWHQqu15byHma/y9lPWYHHTom8NkxDLMh3ztwlP4moUXMMxBdgBamzIhHiU1wr3Zg/z7M+9no9ch8qHrtzDhR7SBRbKZTxjMoUAKg1elwDM0DpOkvGvtXj62cjtxAk4dKybjjWc/grMaMmpPmKoUCV1jKQUOQ7+y+lLTJXitGAMalSwh3fvN02pqVJAGNvEUb730OT548bN0IkHVEfkqTtcdYZhB5nn1wrP45vmnQZaV04p0m37pq+D8Qgm9xDA9U4ORJC7AYsaUVhltaKl0oDXp1Is0BgNKPUWzMqzJ6sjkdHTPhJJp5TXFMDSeBU347iNfS9enbGYPbpdlB4aK8YKxym/f9z5u11USE5GLq9kW0hyQKLIlmV/LqerTcUzHCtMYtNR7XiXm9899iMIoC0nKh1e/wHvWHoQ4pcAhiaFjhH0yw3SUgOQopu4MTEhITVA6sJGAFoinblba885VK3MFMPqCNfz6g++nzwg1ppT80B29fhCYUKyP+YHDL2dBLd4UZSHgEWrLrwPvwCqdWx2VS0XKznAB7RdEo5QiMXU/MFtQkVp9I0rrcdtTtfWkqasPweOPihHf0H0qL51+JoNMweguGsdLKEWVNBI+v3E3f7DyWegkmMLVsz9rFo3sHEIYG/GAnuKDG58ldvBpdx8FBkkMf7ZxL288+y6e2jvGb539EMuRB0k5Z9f42PpfkWQR/ThjJD7QuKTqATXcU5zhYxtfRHzOyeIiViLySMtphPowtrMwc046U7xr4x7evfJpXrfwUgZZQYSve2d2MsO+g6+avpWvnzrOmwd3YZIe6hXxV58aWMNKBjqZMtv3Y5WxV//GD5ZVBMfwpg6jRav4MBVIJzAzVzUl1n2+zTFqQaWgSU7QCeZuIUHMSL0i2Yh/d9MP8F1LX8uac1iRXagWCMZDLgVJJ+IX73kz/9v5dxN35hDncKbURCnhje0IpNVYQCMGtcLcKMeUWlpDClaTGOMV1BIVGT1vWLcRPgJxlsQWzBaO3HiMN6xGBudtAKcpyIxhyiuJOmKvjEzMmk0QKcCxKfDXPehFS40ARBR5n++cupnfvO0nSLKEolwIIrrjLoIWdKOIP774AX7o7rcw7HXqG6pXuTRXT0qKhIPnh/KMu1YwtTZGZaWFIGsOXYxqCn5tPA0xb2kJgkuj0Wcz/aqloFA5JREyCp6THOCrZ59F5kKzpvF2F1/c40SJrOXk8Cxvu/g5SGLwUBjToIGNFRYm31LKGXbqcnyeg3qWxYYgxcZg0yBipOBtQSYpIxxCgVGDs0rfFfSbxDRvsKJ440qNG8M6ArYU8/MFaBEk9Kt5sjV334ONiIjxOLz6y26E49l9DtIO7790gk+v38HLO89ipBDJ5V8/BsSEzCsvm302z07fzcf8JWxZFbnaDOnq6xr1zK+Nwoy8kjM6NkAxJKswyJU8VoyvsEAdE1LbvijEekIN13gmxYu0FqvUUkbNIrjC8fK5J3M43cdG5jFid7XqjCqZKN1IeP+5z/H5/BxxPF3Wkis9Q2kM+gpz3Xw5CUlF8MWInnM8PVngKUsHWaJD7ITzbHDn8Dx39C9xISog7REVEQ6HLUF0LzDlCl4UHWTWJig5Iy34yOgMq1EXq3F5tTzGGDre85J4kWnt4UrDEONCHcNb1MRccuvcMVrhnPQhsaEkuOM43JKZrcL5KOcdy5/nZceehclDQ9Juen61DBf2x3O8Zu4pfOzCB5AkDjzHq4xMGwVvYWpUML86Kus4EwaICNGgIF6PJNtntVqIrVKa2bolc0fksc7kQqY55QwvWXj6nktvnsDmGNLnnRc+Q55EpCq1jIhucaeq6ZbOCHG/zzf3jvN3jr+cF8zfwj6ZwRDjxFAwYuA2+Nz6g/zm6ffwJ6t3Muj06hkgYgzeD/iq+CC//fSfpEsP8cGr/eTt/5nfH9wB6TTqQ8ujQ5n3Eb9w83fxrM7N5E5rELbiVGIMOX3u7p/nzWc/yhvOfZzlniDY3TVaqaJJxF9cupP/4cgKSzJbqkvs9noGT/fKfc/k35/7KKuqbczkKu/D0xtOugPf4t2N+4JFEW9ILhUMF2KKUoC5SSZtrr5qzON4KGHpbRoxTVPQCIQIzwZwYzrHU2dvJt8jB7AQpWMsd/Yf4mOjU5ioV1LEpBTUnJjIXgpGiYdOf8Q/3PcyfuqW1zHvewwLSEzJnAdiOqS+wytnlnjJ3FN5yen38C8f+nPWbFyO/VLSkeH7jrycQzrHRubxxtITww8cegXvuPsO1lzg9mk5+8t4IXYpSZGGHTiBKTsmG4iHoe/womSBF95yC0c78/zzk+8i704hzu1i2qeCibljeIa/XruHV889j1EuRLJ79zDK4endJ/G07hIfdStEmMYE+6tzeAHrYG61IPLBG1YbXtR6ohHMuiMexhQdaZ2pNrNYrbSSpUUjqnpEvIxfNJ5GpGAseZ7zzKnD3BAtUbg9KhooxBY+tnI3J/wGsSyW7UNbZ5bWA5HgRwN+dN9L+Zlbv50sTxk5TxQ7Pjy4l89dupvC59zaO8xzF25hny4yrR3SOMFr+IZiIlyR8cKpA3zDwnMZFR61ilUhzzwvm38ar5o6zh/1H8SkU4CrPYnRUBuyMXxp427ev/LX4Us4ww3JPC+bfwazzMLI8qOHXs27V27nz4ensDbeUddPy3hzQxwfXr2LV88/N8iF7NoAg6feb2Z4Ue8YH714Fomnro5evzS2XxF6I8fcSoZBW8PLorE7D17QDCFaUdGuUfXjTbQ5qKYWrGzVi0svRFN8aExgVVGcRBgtePb0jSRE5GgptLO7L2yMIRfHJ9fuBmvwUoqrb9ugLRRuxLPSOf7ek16L5AnWOy7Gq/zyPX/I7178POckB6PM5ZbnJQf4hzd/MxeyNf6Xe9/KRmcKW8avUZ7x/Yeex2I0S6HKxeEyWFhIFujS4XsPvJJ33vl79FPBOqnVJaTU3u4IfGr9Xn76vrdBN1RepPD83dln8X/e+iPgUma0x8tnbubP1+6HKArRrJrL+yMFTIe/WrufNR2RSlJybHa2QilFP0UML5y5Bbv88YBl4h6+CTZlKAzMrmUyNczDkBpMfXam6SZVIHVKtJphvQ2iO2ZvAwVbXlPGfELBoD40Zz9j6liAw/aUSQWPs56v8eXBObBR1Uq17eEMyCjn9UvP4aZkkaH32Ej5lXvexi9f/AjnehE2nSKOp1mZ6vJezvGD976Bnz71J2x0ulgJV8+7Ac+NF/nGxRfjcqUTC3907r38wUPvoRdb8qHn1fPP5mXTB9FiAzFS1lm1lDMury0RtjdP1Fmimy5Bb5739R/kQtEnlZBAHIim653F+N14MwUbcc/oAuezi8gV0Iq8g2dMHWXJ9CikePg6O9V0Ah9UXGPvWVoeELsyEdPNGGG5XQRvFa96umtOIgmAtEPHRAQdww/bkQzqH2nPics151DU5ebODUHNAr8nWY0YOF1c5IS7BBqD1+29X2m0Uxie170B74XEWu4aPsibL30O6S3RKQSvBQUFRh027nDRWi4YkDL2U1XMaMjrD7yQg50l1ME5v8EbN/6at1z8HBeKVVSEadPjew++kM7IB83psi7kTMjARWCgOW6wQjFcYTC8hK5e5Gu6RzkYTTMoM8OLRb+FCMgucgqjEQ+6NR4YnCHdA6+yiplzhSPxIjdGs6FicxWac6rZKoIwt5rL/NoIMRpY62yRhFQvclaICogujDDTaQCYZVxRHldVmuUt3UYxoBEjShjcciiaYTaew/m9x382gnvWz3DWZ0jUKdksl8/zenHCUmc29AYDp9xpVswIcT1GUb/sYaEUXS8wohiNUQeYBCdDbksW+NalFyCZ0kmEd6x8ns8NV8hR3n3xE7x+8evo546vn/8qXpJ+mveNHoI4AYI8m7OQe8+LOsf5t8e+BUkiCu/ZZzq8Zv45iCRYETL6fGT1Dohs6TWlHsazfYCvRALrUnBX/yFeNffcPe+UzitzySxP7e7j4+sXkOjqMF+8gcR59l0YEucOZ0JoEjWqLVGrxFOVRwxEKx47AnoWX6oVVWUebQ0CnFhxDaC6+rsvMVmXG27oLNEz3ZCA7GGlKeE9zuQXGahBrAQj2cEI80IZuQIsFA6mZQ4rFmxGUphxmIGOVWDLRvrIe3w24rsOvJibuofJ+8q62eDtpz5IxIhEC97x4Cd57cJXERNxyM7y/YdexIceeCtF0kW1rLEq5E55xtxtvGDxthCSlFW5UaHkvqCXRvz2g+/lXesPQKc3ro7sApwvN2wezM5fQfoaTsYay9HOPKz5h03Rrx2LeKb6GUurGUZC1dcqLQ8fbcde6GSe4YVcNnpWVVwdE+7EemgOBGzGjV4FcY5DnQVSY8nLgS17WqkCDw1Wa0VQ1Z0WYcyGX+eB7BICbKjjad0b+RvmKH+a3QXJEorH+ACQZzikyLA4XGTJrOVJ9Piug1+FFkHJa5TDjx79Rn7YekQdpjC4TEkjy6hQvnHxeTz/zF/ycb+OSIIzrp6sNHJ91nzGiIwe08S+gzeKsfB/3PEW/s3y+9jo9Dbp9Ox00b2E2cUPDC4xLIcv7jW+Nh4OxfPlGM+H1x9hNEy2ir1ncXkknWFRq2VMHtH2BWShd6FgY8kxmmrifY3T1vYN981hh+1gIwDBIhxNl0Kj0BUkVbnCyWydsfXJDhfCk1n480tf4FuXXorxlhmT8I9u+mbuv+MNfG54AWwaaFQFzHnhfzr6ClJJ+VcP/DlrOuQ7DryMp3WOkg2VyAjTyTRf3Xn6JMmOgYeBePbHi/ythRfy8VPvhE5K7AX1ECeGt5/+OL9y5p2M1PDVnVv4haf8APHQYm3MVHeGkQThJOfdnrxN6G0RzsqQjIKIZItuk8sGg0QOjiSLdDCMeHgj6ZyEeG5qw7F4aYQV2RYej7bPIA3xCLoXRpL3OjosQV3dDeumEQM240HjlcVopt6Wo11+yYo+79Rx3m1AqQC600USHHRS3r78Jb5z8XN8+/yLuZiPeOH00/iDZ/4kbzr9IT63cZpcPLd05/nWg8/hxXPPxhJxONnHL9/7Z7x+30tI8yB2ft6v8enztyMahXGrAt4okffcNnszh8wiZgTfvP8l/Pr5j7PMoOxD9qTOcFYHfHhwHnpLfOHSJ3j+2WN8z+FXkw0LfuzI1/PljdP8p/VPYeLgBf1erMAYLmTrrOd9FksoZg+AIKqwP5kmRRjuUcC3kWdSiUvGXlm8mMls3+HN9u+2vQdUwYnSW/ZsLEb4aQlpdeWyW3IdWgbMY2HwMKzQjFVXVeiIYTbqBskz2QvcGdQbnAxZj4aNuu/lcQpf6jhfjGP++Yl3sO8ps7x0+jbcAG4xR/mnT/pe+j5D8XTphLhsAOkUHLZdvnf+GdzWvZFLzjEVx/z+Q+/ln554G0ncLemmoUSngyH/6Oir+Oc3fh9rg4Jj3UO8fukZ/OeTH8ITFF6dQqoWYzpYEYadDr94/1/ygrmncFt0jGGm/MMbX8MnP3cfn8xXsVGCUbeJ2rb14gw4z8hnjBju3X0pZAambJfURnv2fZXaFWWM54zQGTr2nx8QBTewI1Vr6zKPQDLy9M4PJVGLK5mtpqK1NfA+GrHfdq2ciUZ0JA1D+/bYjCACmTo28hGUzO2dpUQVh8FEXb5oL/F3b/9/+M3Tf8pKdAmfBmrXjCTMmA6JgtiCi+kqv3byz/jf7/hdXnX4WczHEb1OxAV/kf/v/F/hpmcYdXuMulNk3R6jtMdodo7/euFznMrPMdOzJGL4nsMv41npArEp6KZh6pGJw7R1pw5rIr4cb/Czd72Vi9EaNoFbOkf4hdu+laNOcJKX11J2dj/lz8hqqAu1dPAu/xPkjwP7p2u69KQbBuDswQdWnrriMcQODp4dyGzfUdjL15ajyyUUwUItvQsZo/lCRvNoJecajFHbSYdWsm266Rp5lFgMiY1qKQrRyVRl+8UgKLn35H4zmHk5Lw4aGC0ScZfN+akH3sHvnv0Ur5m7jad1j9AxFoNh1Y24a/AQ71q7gw+tn+KWhYP80epHeduFv0SiiAezAZ/3K4hNKWGBesmLibhH1vlnD/wWN3XnyHyGMQnDqYj/cOad7E/eh/UZXxgtE8VRyVn0mDjhj7O7SO78DW6ZmiHzShIlzM0lPNjfQEyvHGW/Y7YFKmxozqjIIWaTAMBlr6wq3kBMTOpsAFyvhPFiBIwwtzKUA+f6AQdVqeWe92SAvnSPhYEkE3pn+wx7PQZxaem6xdBp2V62zauSGsN0JyGNhchEDa6MbBmxNN87InD+4jJgkV2UZgINKzQLObWI6VJ0OnzIXeJDZ95PhMGWoLHzllwAazAzM9wzXOUX1z9RftlwmSTuUrV3jrFDwUvOMO7x+6v3wqUGDSfq8sH+l8oLkwMxJu5hSqqReg/xFG9aOwGrflxCiDoY28Gp20WcS83YMcbSTQ1J5MvPm1zek6LCOhaIl5wOSmqqu783nbKK/zmVK4fODJjKHFkkxP7y7Klop73ZajiXqUs5w5VchvsSxQdiVCW/Nh7uIu3IpJL1KFfYJaP86r1vZ9rP4X2BUIQtppLN0CZCXwJ/Jb/PYvBRxoN+IxAM2iyJ7ZI7isZEbVUX+kkkRjtJGGCtY+6gqeonzqFiMckczXnlfpM3KkdcVPMp7QxiZXxj8Qid8lp1y8b4BmGqVOeSuFfyK8eK/U3JkZ1vvCA2Yk0dP3fyraRYnPf1OfqJcor3EybhDUYy1FjO2TyIbu6FFS0V90mYWVmXxUsDsBZbDdm+zLfYNeYdqdA9O6A7HbGWSj3ZshnzbauhLEFddE2E/3f1S2XXXVAfHQcxZjxDY0KLGl9yyEQhShBJypjD71mqp0knE21vRjqxZanuFg6pnu+3Ee30OywUneCI7CH5VQ1UfwxrCm88f+c4rYWJnsjqgroGCA1l2QeIEJvUSrh7zUR6Q8cNp4eke+j03LUBehFm1xzZ2YFsHJ/RirVbS3k0cMEmS7rBGsQZIUp6pCiFseGLa2jn9GyevLTpRpmywF2pBVyditF1fQTnHiRGnI2IzPQmY66ZxNL45s293XqMtwHQ1gLv92aAxgtWPAfOrcv+NUduDLvtgN61AdqyIDxzbkQ23ZGz+1IVV2yK3GoCK5PDYMLAwzDfN8dpYHvUqgUle6VlGpP9HCUz1qAgpfdTw1fyoWpCuECOqA+9LJMG1lysFXjgm2hzoLaJ6h6lAUoIxgpLy5nccHaAEwkspV2WWaPdrzQFMSQOZk8NWJtJ6SeWyCmZqRD5ash1W6K3KqxDgHJ8GdS7VilOd3RqzfeuV/VX/FGKLomlEZBfdp5ESw9cGGeUuzQ+U/EGyti/m2UceWiNJC8TGpVd70+7dh9VO6uIZWrdsXByXRIvZGYMy8gOkM72kza+QvfPq2yHj95blHQDUazA0ZMDWVp1ROXv8z1sSrt+qtWqwqGoFeYvjFg4OxBvpJZe0C2glyBQ2YgLn7Cc6/7wRuoJ7Tec68uRMwO0lD6uChVX3QCr6ofxpcJ5AYun1plbK8SIbB7jMKGs+oTZPX4OU+6vc+uFHDm5ji2T0Yq7uJcoctcG6GWc0QthuE0nMxy6v08yClly0diqw6xgi5fxjzMGJ9XMOYNTaf08cVyjR9lX3VRu7WQFx+9fZWroAjqhbWHTq26AzRC19mZGWLxUcOBUX2zD1RVbClTCExvw9Xu4hqBD7JUjpzZk/6UcMVJ7xCvxIVeMYZhq5JYVDp4esO9UX6xXCqNtSQzdLFD5xHH9bblSIl6pGo6c7svxhwZYkVLT7Mp3rysH0Upu/8iGnOjwqQH7zmdSsXEL+8SNe1ztwj6MDDt8JpNjJ/tE6ijEl/0dV+5crrj9pAGi462QKhw8tUEei5zZlygudCs4gdgJhQm6gOHFT3jDa9rjlZVpV8Z+ThSscuhCXw4/tE7iFR/ZgHw8TCWth1VGUBmzMQoD07ly7L4N5i5l4hrq64VliyHYTxzXrLeTQOapY/5IWLw0lJvuW2Nm5HGmQRwRHjsDbB7Wh57P3shz84k+S6tOtAxQK6D6iVjwOko4BIwPLKZ9KyO59cQG00PwxhD5q3cPr5oBSj3SVJjd8Nx0zzrzq4XkcSnm7Z+4sdfLETmC5mIkzK04ufnedWb7GZn1DYTjGjNAFcGWyvHewtxGzs0nLrFvdSR5BDkaRB6rarg84QmvnaAvMJltyekrUNTCvtWRPPm+S8xv5DgTJg9EqldVwvcRo5I4K8xvFDz57lWWLo5EbMkeLhuKrH8CeL5mPF4Js3hTtntZZd9yX558zypz/RGFDWJHj8RQr0eUy1RYYW7Dc9vdaxw+PxCsLVnnssfGvyeOR/LwaCmcGWK+/csDefKJVeY3wrQp8wg6i+iRemMh8G6dhamR40n3rZHkRh460NOR+B1bKp84Hk0DDEfqDYfPZHL4oXVmRkphTQnF6PVngDBOPHIrTGVw/P5VjCvk5OGeZpiatBh58OJ3MSnkiePqhHxakkuk1oWMvXLD6XU5dnJAxwX2ejV3RB9BV/GIGqCOOxdBoFs4br5/BZsVcurIrPbTMMW8sJTCQE8kJo/GEaZgBfFMEaGT59xwal2Onx4QqcdZW+eIj7RLiB7NL15EwRiPn+nTGzo5eWyWC7ORqpNdijE+cVyNwzoJkiFWWVjN5egDK+y7lBGJITe6Jz7fdWOAoiBqyWzYcvdfKpjuX+Lk0Sk5uX9Kc2E3k86eOK5CbO6BWD2HH+rLkVMb9EYFYoRcPJEzV0SruuYNsEqkIl9KHFmhm3tuPrFGdyOX+472tJ/GSFH2FNfkMyoJu/rhE8flDawKf8b986WcHQHv62Qjjj/Yl8PnRiUuG15lvdRjLR5/HrBlPlJKtoUt+diZPlMbIzl5eIYLi6lmtpzc1MimVZ6wvl3Fd4wXrKkb/QUfKbHzLF0YyZGH1llcc6gJQvPCnnqSrt8YcPJCWR8MsDCG+XVP5751ehu5nD/Q1dWuRdXUF9I/YX97CneqipSWycbChmP/+XXZd35IJ1O8CbIZ7lHcbq8pA6zo/b6KD0Xo5Z4nPTRgfi2X04e6XJztaT81GOfbilxPHDsaYDU+dyrzzK9syKEzQ+bXi0CfM2Pp5Mc68Yse64tVlNswCrkokQqLawVTg3UuLjh56EDKpelEi3rwX+g7VWjFK9IYLfYVFezRjvXCojZEzrO0MpTDZ4YsrAyIXQimCyPYsp6bV9f+K9kAbYNXZhkr8qdeOXxundmVAWf2d+XM/q72O0Gn2ut4jr2UAcxXVE+T0FKIDf8dZpIYFXrDnIPnBnLw/IDeyIExtc6gacgo22tgtUbX6jX2hBhmJvP0HtxgaXkoy0tTnF9Ida1nKEwtvVpq032F4NjjQfW1TLaWq3B2w7N/OZOl5Q1m+w4roWXC6LULsUbX8nWOvam77OcHnrkH19l3YSDnF2IuLnZ0tZeQG6mzaa1Hyz6+4ztE8DaQBCLv6Q1G7D8/lMWVnOmhI/JKYYM8RuyFa5l4FF3LF9sjdd9BUY69nB4qvVM5By+M5MJcyoXFDpfmYs2sCeOhdCxNNlZ5bUz8bOr2XAvQzpbnpONzbqjBVmKSlANg5ldyWVoesbA6pDMK0hjhWpUQVq3Rok8Y4JUu95amp4YYUUToZp7DZzfYd3HAynQs5xcSVue62u+EEVt4xfjxq009aFHrJmquNWxRaM6XDziejKVvjYde5pi7MJSl5RHzazlJHuatqIxFO8dg9LUfk0Rcp0fQ1ha6hae7PGLfpREbnZFcmktYmY1Zm7HaT6MwQ8NrmbCMNQ2vmc6oTc095RRSI2Wy4ZnKcmbWnMyvFsytjugNM2IviCjeynUd+0Zcx4dDUBMGYccos8OcqWHB4bMw6lq5NJewPBOz2rOapRFIGDtWe4athAwfA+MLU7VLdgqKEU+awcxaIQurIxbWRqQDh1GwlYc0hAYHfYRZxU8Y4GVOvsQDg86gDyO8gMRDspHT6xccOiMMEyOr0xGr0yn9bqL9jmGYChrLhL7wOBgbT4FoTH8SdsZ7ZCz9K0o9L28TftdQLRGvdEZKb+Tp9Ucys5Yxt+HpDH2Y4lniTc5QTvKVIPZZxYfXcX/NdW2A7VlMY8FKL9VE95AdTw89M4MRh89lZJGRfscw7Fn6qaXfjckTq8PIkEUGZ0t3ZCrb9LVBGm2I8DRssfqdVAOqy78FQoWM4zkCuzguHN2RI80K6QwKuiNPr+/ojjxp4ctB3yW8UspfSI33TejOXuf453VugDvCZbXn8iZk1B1XkGyAboQZGd5aRhYZxpY8sYwSS9axDFNDFoliIgor5JGUEmTteXiyxScbhbhQrFNM4YidSjdXopGnO8xIs4K0UNLch2nRgCm7Cr0Erl7TqT2eMfb/H9aTqXrXX9joAAAAAElFTkSuQmCC",
+  "phone": "*2138",
+  "email": "office@mycar-israel.com",
+  "colors": {
+   "green": "#1fbf6a",
+   "sky": "#0fa58c",
+   "sun": "#b9e24f",
+   "coral": "#5fcf3a",
+   "grape": "#0b7a4b",
+   "navy": "#0b3a28",
+   "bg": "#f3faf6"
+  },
+  "logoWide": "brand/logo-wordmark.png"
+ },
+ "nav": [
+  {
+   "label": "איך זה עובד",
+   "url": "#how"
+  },
+  {
+   "label": "רכבים ומחירון",
+   "url": "#prices"
+  },
+  {
+   "label": "מחשבון",
+   "url": "#calculator"
+  },
+  {
+   "label": "חבילות",
+   "url": "#packages"
+  },
+  {
+   "label": "למה אנחנו",
+   "url": "#perks"
+  },
+  {
+   "label": "ערי פעילות",
+   "url": "#cities"
+  }
+ ],
+ "navButton": {
+  "label": "*2138",
+  "url": "tel:*2138",
+  "style": "sun",
+  "icon": ""
+ },
+ "pages": [
+  {
+   "id": "home",
+   "title": "דף הבית",
+   "sections": [
+    {
+     "id": "hero",
+     "type": "hero",
+     "slides": [
+      {
+       "title": "הרכב השיתופי",
+       "accent": "שלך, לשעה או ליום.",
+       "text": "מאות רכבים בתחנות קרובות. מזמינים באפליקציה, באתר או בטלפון, פותחים עם קוד ונוסעים.",
+       "bg": "grape",
+       "image": "cars/car11.webp",
+       "scene": true,
+       "btnLabel": "להרשמה",
+       "btnUrl": "https://my-car-c135d.web.app/register",
+       "btnStyle": "sun",
+       "btn2Label": "להזמנת רכב",
+       "btn2Url": "https://app.mycar-israel.com/login",
+       "chip1": "",
+       "chip2": ""
+      },
+      {
+       "title": "יוצאים לאירוע?",
+       "accent": "7 שעות במחיר קבוע",
+       "text": "חבילת אירוע ברגוע החל מ־159 ₪, כולל 100 ק״מ ודלק.",
+       "bg": "coral",
+       "image": "cars/car09.webp",
+       "scene": true,
+       "btnLabel": "לחבילות",
+       "btnUrl": "#packages",
+       "btnStyle": "sun",
+       "btn2Label": "להזמנת רכב",
+       "btn2Url": "https://app.mycar-israel.com/login",
+       "chip1": "",
+       "chip2": ""
+      }
+     ],
+     "showBooking": false,
+     "bookingNote": "בחרו רכב וזמנים כדי לקבל הערכת מחיר.",
+     "minis": [],
+     "ctaBar": {
+      "show": false,
+      "text": "מוכנים לנסוע? בלי דמי מנוי.",
+      "label": "להרשמה",
+      "url": "https://my-car-c135d.web.app/register"
+     },
+     "showDots": false
+    },
+    {
+     "id": "how",
+     "type": "steps",
+     "kicker": "איך זה עובד",
+     "tone": "sky",
+     "title": "ארבעה צעדים ואתם בדרך",
+     "sub": "",
+     "items": [
+      {
+       "icon": "user",
+       "tone": "green",
+       "title": "מצטרפים",
+       "text": "נרשמים באתר או באפליקציה. נציג יחזור אליכם לשיחת אימות."
+      },
+      {
+       "icon": "pin",
+       "tone": "sky",
+       "title": "מזמינים",
+       "text": "בוחרים רכב בתחנה הקרובה באפליקציה, באתר או בטלפון."
+      },
+      {
+       "icon": "key",
+       "tone": "grape",
+       "title": "נוסעים",
+       "text": "פותחים עם קוד במקלדת שברכב או דרך האפליקציה."
+      },
+      {
+       "icon": "flag",
+       "tone": "coral",
+       "title": "מחזירים",
+       "text": "מחזירים לתחנת המוצא ולוחצים על סיום נסיעה."
+      }
+     ]
+    },
+    {
+     "id": "prices",
+     "type": "fleet",
+     "kicker": "הרכבים והמחירון",
+     "tone": "green",
+     "title": "בוחרים רכב, רואים מחיר",
+     "sub": "",
+     "hourlyNote": "לפי שעה, מחיר הק״מ יורד ככל שנוסעים יותר ולכל מדרגה יש תקרה. שעות מוזלות ברכב קטן: 9:00–12:00 ו־1:00–7:00.",
+     "goodToKnow": "**חשוב לדעת:** הזמנה של פחות משעה מחויבת כשעה שלמה. שבת וחג ללא עלות, עם זיכוי של 25 שעות. אסור לנסוע בשבת ובחג.\nגיל מינימום 21 ושנת רישיון. נהג עד גיל 24 או נהג חדש יכול לשכור רכב קטן בלבד, בתוספת תשלום."
+    },
+    {
+     "id": "calculator",
+     "type": "calculator",
+     "kicker": "מחשבון מחיר",
+     "tone": "green",
+     "title": "כמה זה יעלה לכם?",
+     "sub": "בוחרים רכב, זמן וק״מ, ומקבלים מחיר משוער מיד.",
+     "btnLabel": "להזמנת רכב",
+     "btnUrl": "https://app.mycar-israel.com/login"
+    },
+    {
+     "id": "packages",
+     "type": "packages",
+     "kicker": "חבילות",
+     "tone": "grape",
+     "title": "שעות וק״מ במחיר אחד",
+     "sub": "מחיר קבוע מראש, ללא החזר על שעות או ק״מ שלא נוצלו. חריגה לפי התעריף הרגיל.",
+     "showCharges": true,
+     "chargesTitle": "חיובים נוספים"
+    },
+    {
+     "id": "perks",
+     "type": "perks",
+     "kicker": "למה מיי קאר",
+     "tone": "coral",
+     "title": "כל מה שצריך, בלי מה שלא",
+     "sub": "",
+     "items": [
+      {
+       "icon": "tag",
+       "tone": "green",
+       "style": "solid",
+       "title": "ללא דמי מנוי",
+       "text": "משלמים רק על הנסיעה. פשוט נרשמים ונוסעים.",
+       "tags": ""
+      },
+      {
+       "icon": "spark",
+       "tone": "navy",
+       "style": "solid",
+       "title": "רכבים חדשים בכל הגדלים",
+       "text": "חדשים ומאובזרים בטיחותית.",
+       "tags": "קטן, משפחתי, חשמלי, מסחרי, 7 מקומות, 8 ו־9 מקומות"
+      },
+      {
+       "icon": "fuel",
+       "tone": "sun",
+       "style": "tint",
+       "title": "הדלק עלינו",
+       "text": "אין חיוב נוסף על דלק.",
+       "tags": ""
+      },
+      {
+       "icon": "nav",
+       "tone": "sky",
+       "style": "tint",
+       "title": "Waze בכל רכב*",
+       "text": "מערכת ניווט בעברית מותקנת ברכב.",
+       "tags": "",
+       "note": "* החברה אינה אחראית לתפעול הוויז ואינה מתחייבת לתקינותו בכל עת."
+      },
+      {
+       "icon": "candle",
+       "tone": "coral",
+       "style": "tint",
+       "title": "שומרים שבת",
+       "text": "במיי קאר אין פעילות כלל בימי שבת וחג.",
+       "tags": ""
+      }
+     ]
+    },
+    {
+     "id": "cities",
+     "type": "cities",
+     "kicker": "ערי פעילות",
+     "tone": "sun",
+     "title": "ערי הפעילות שלנו",
+     "sub": "מחזירים את הרכב לתחנה שממנה יצאתם.",
+     "items": [
+      {
+       "name": "בני ברק",
+       "tone": "green",
+       "soon": false
+      },
+      {
+       "name": "אלעד",
+       "tone": "sky",
+       "soon": false
+      },
+      {
+       "name": "מודיעין עילית",
+       "tone": "grape",
+       "soon": false
+      },
+      {
+       "name": "בית שמש",
+       "tone": "coral",
+       "soon": false
+      },
+      {
+       "name": "ביתר עילית",
+       "tone": "sun",
+       "soon": false
+      },
+      {
+       "name": "ירושלים",
+       "tone": "green",
+       "soon": false
+      }
+     ]
+    },
+    {
+     "id": "contact",
+     "type": "contact",
+     "title": "מזמינים, שואלים או צריכים עזרה?",
+     "text": "המוקד זמין להזמנת רכב ולמקרי חירום. שירות לקוחות בשלוחה 9. ההרשמה מתבצעת באתר או באפליקציה.",
+     "plateLabel": "",
+     "buttons": [
+      {
+       "label": "אפליקציה לאייפון",
+       "url": "https://apps.apple.com/il/app/%D7%9E%D7%99%D7%99-%D7%A7%D7%90%D7%A8/id1565741768",
+       "style": "dark",
+       "icon": ""
+      },
+      {
+       "label": "אפליקציה לאנדרואיד",
+       "url": "https://play.google.com/store/apps/details?id=mycar.codome.io",
+       "style": "dark",
+       "icon": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "parking",
+   "title": "חניה להשכיר",
+   "sections": [
+    {
+     "id": "parking-form",
+     "type": "form",
+     "kicker": "חניה להשכיר",
+     "tone": "green",
+     "title": "יש לך חניה פנויה?",
+     "sub": "",
+     "body": "מיי קאר מחפשת חניות להשכרה בירושלים ובבני ברק.\nהשאירו פרטים ונחזור אליכם.",
+     "fields": [
+      {
+       "label": "שם פרטי",
+       "type": "text",
+       "required": true
+      },
+      {
+       "label": "שם משפחה",
+       "type": "text",
+       "required": true
+      },
+      {
+       "label": "נייד",
+       "type": "tel",
+       "required": true
+      },
+      {
+       "label": "כתובת החניה",
+       "type": "textarea",
+       "required": true
+      }
+     ],
+     "submitLabel": "שליחה",
+     "whatsapp": "",
+     "email": "office@mycar-israel.com",
+     "messageTitle": "פנייה מהאתר: חניה להשכיר",
+     "doneTitle": "כמעט סיימנו",
+     "doneText": "לחצו על הכפתור כדי לשלוח לנו את הפרטים."
+    }
+   ]
+  },
+  {
+   "id": "accessibility",
+   "title": "הצהרת נגישות",
+   "sections": [
+    {
+     "id": "accessibility-text",
+     "type": "text",
+     "kicker": "נגישות",
+     "tone": "sky",
+     "title": "הצהרת נגישות",
+     "sub": "",
+     "body": "מיי קאר רואה חשיבות רבה בהנגשת האתר לכלל הציבור, ובכלל זה לאנשים עם מוגבלות. אנו פועלים כדי שהאתר יהיה נוח, ברור ושימושי לכולם.\n**מה עשינו באתר**\nהאתר בנוי בהתאם להנחיות תקן ישראלי 5568 ולהנחיות WCAG ברמה AA, ואנו פועלים לעמוד בהן במלואן.\nניתן לנווט באתר באמצעות המקלדת בלבד. הרכיב שבפוקוס מסומן במסגרת בולטת.\nהאתר מותאם לקוראי מסך: כותרות מסודרות לפי היררכיה, לכפתורים ולשדות יש תוויות, ולתמונות יש תיאור חלופי.\nהאתר מותאם לתצוגה בטלפון, בטאבלט ובמחשב, ותומך בהגדלת טקסט בדפדפן עד 200% בלי לאבד תוכן.\nהאתר מכבד את הגדרות המכשיר: מי שביקש להפחית אנימציות יראה את האתר בלי תנועה, ומי שבחר מצב כהה יקבל תצוגה כהה.\nניגודיות הצבעים בין הטקסט לרקע נבחרה כך שהטקסט יהיה קריא.\n**אם נתקלתם בבעיה**\nלמרות מאמצינו, ייתכן שחלקים באתר עדיין אינם נגישים במלואם. אם נתקלתם בקושי, נשמח שתפנו אלינו ונטפל בפנייה בהקדם.\n**פרטי רכז הנגישות**\nשם: ברוך פרנקל\nאימייל: office@mycar-israel.com\nמוקד מיי קאר: ‎*2138\n**תאריך עדכון ההצהרה**\nהצהרה זו עודכנה בתאריך 18.10.2026.",
+     "align": "right",
+     "bg": "none",
+     "buttons": []
+    }
+   ]
+  },
+  {
+   "id": "advertising",
+   "title": "פרסום ושיתופי פעולה",
+   "sections": [
+    {
+     "id": "advertising-form",
+     "type": "form",
+     "kicker": "פרסום ושיתופי פעולה",
+     "tone": "grape",
+     "title": "בואו נעבוד יחד",
+     "sub": "",
+     "body": "פניות לפרסום ולשיתופי פעולה.\nכדי שנוכל לטפל בפנייה במהירות וביעילות, מלאו את הפרטים במדויק וציינו בבירור את מהות הפנייה.",
+     "fields": [
+      {
+       "label": "שם פרטי",
+       "type": "text",
+       "required": true
+      },
+      {
+       "label": "שם משפחה",
+       "type": "text",
+       "required": true
+      },
+      {
+       "label": "נייד",
+       "type": "tel",
+       "required": true
+      },
+      {
+       "label": "אימייל",
+       "type": "email",
+       "required": true
+      },
+      {
+       "label": "מהות הפנייה",
+       "type": "textarea",
+       "required": true
+      }
+     ],
+     "submitLabel": "שליחה",
+     "whatsapp": "",
+     "email": "office@mycar-israel.com",
+     "messageTitle": "פנייה מהאתר: פרסום ושיתופי פעולה",
+     "doneTitle": "כמעט סיימנו",
+     "doneText": "לחצו על הכפתור כדי לשלוח לנו את הפרטים."
+    }
+   ]
+  },
+  {
+   "id": "info",
+   "title": "כל מה שצריך לדעת",
+   "sections": [
+    {
+     "id": "info-intro",
+     "type": "text",
+     "kicker": "כל מה שצריך לדעת",
+     "tone": "sky",
+     "title": "שאלות ותשובות",
+     "sub": "",
+     "body": "כל מה שצריך לדעת על השכרת רכב שיתופי במיי קאר. לא מצאתם תשובה? התקשרו ל־‎*2138.",
+     "align": "right",
+     "bg": "none",
+     "buttons": [
+      {
+       "label": "סרטון הדרכה ביוטיוב",
+       "url": "https://www.youtube.com/channel/UCWT_bEMsi4YgLDlE9cSBD5Q",
+       "style": "dark",
+       "icon": ""
+      },
+      {
+       "label": "למחירון",
+       "url": "#prices",
+       "style": "light",
+       "icon": ""
+      }
+     ]
+    },
+    {
+     "id": "info-about",
+     "type": "faq",
+     "kicker": "על השירות",
+     "tone": "green",
+     "title": "מה זה מיי קאר",
+     "sub": "",
+     "items": [
+      {
+       "q": "מה זה רכב שיתופי?",
+       "a": "מנויים שוכרים רכב לזמן קצר, לפי שעה או ליום, בכל שעה שנוח להם, מתחנה קרובה לבית, ומחזירים אותו לאותה תחנה."
+      },
+      {
+       "q": "למי מיועד השירות?",
+       "a": "לכולם, ובמיוחד למי שרוצה שירות איכותי ורכב זמין כשצריך אותו."
+      },
+      {
+       "q": "למה רכב שיתופי משתלם יותר?",
+       "a": "רכב פרטי עומד בחניה כ־85% מהיום, ובעליו משלמים הרבה על שימוש מועט. ברכב שיתופי משתמשים ברכב רק כשצריך, וחוסכים כסף וטרחה."
+      },
+      {
+       "q": "אילו רכבים יש במיי קאר?",
+       "a": "מגוון רכבים: קטנים, משפחתיים, חשמליים, מסחריים, רכבי 7 מקומות כולל VIP, ורכבי 8 ו־9 מקומות. את כל הדגמים אפשר לראות **במחירון**."
+      },
+      {
+       "q": "איפה אפשר למצוא את רכבי מיי קאר?",
+       "a": "בתחנות בבני ברק, אלעד, מודיעין עילית, בית שמש, ביתר עילית וירושלים. הרשימה המעודכנת נמצאת גם באפליקציה."
+      },
+      {
+       "q": "מהן שעות הפעילות?",
+       "a": "השירות פעיל 24 שעות ביממה, חוץ משבת וחג. המוקד ב־‎*2138 שלוחה 6 פעיל מ־15 דקות אחרי צאת השבת ועד 15 דקות לפני כניסתה."
+      }
+     ]
+    },
+    {
+     "id": "info-how",
+     "type": "faq",
+     "kicker": "הזמנה ונסיעה",
+     "tone": "sky",
+     "title": "איך זה עובד",
+     "sub": "",
+     "items": [
+      {
+       "q": "איך מצטרפים למיי קאר?",
+       "a": "נרשמים באתר או באפליקציה. אחרי ההרשמה נציג יחזור אליכם לשיחת אימות."
+      },
+      {
+       "q": "איך שוכרים רכב בפועל?",
+       "a": "מזמינים את הרכב הקרוב באפליקציה, באתר או בטלפון ‎*2138, פותחים את הדלתות עם קוד במקלדת שברכב או דרך האפליקציה, ונוסעים."
+      },
+      {
+       "q": "אפשר להזמין רכב מראש?",
+       "a": "כן."
+      },
+      {
+       "q": "מה עושים בסיום הנסיעה?",
+       "a": "מחזירים את הרכב לתחנה שממנה יצאתם ומסיימים את הנסיעה באפליקציה או במערכת הטלפונית."
+      },
+      {
+       "q": "אפשר להחזיר את הרכב לתחנה אחרת?",
+       "a": "כרגע לא. הרכב חייב לחזור לתחנה שממנה יצא. החזרה לתחנה אחרת מתוכננת בעתיד."
+      },
+      {
+       "q": "אפשר להאריך השכרה אחרי שהתחילה?",
+       "a": "כן, בכפוף לזמינות הרכב."
+      },
+      {
+       "q": "איך מזמינים בשבת או בחג?",
+       "a": "מזמינים כרגיל. שעות השבת והחג אינן מחויבות. אסור לנסוע ברכב בשבת ובחג."
+      },
+      {
+       "q": "נהג צעיר או חדש יכול לשכור רכב?",
+       "a": "השירות מיועד לנהגים מגיל 24 עם שנתיים ותק ברישיון. נהג מגיל 21 עם שנת ותק לפחות יכול לשכור רכב קטן בלבד, בתוספת 17 ₪ לשעה או 75 ₪ ליום."
+      }
+     ]
+    },
+    {
+     "id": "info-price",
+     "type": "faq",
+     "kicker": "מחירים ותשלום",
+     "tone": "sun",
+     "title": "כמה זה עולה",
+     "sub": "",
+     "items": [
+      {
+       "q": "יש דמי מנוי חודשיים?",
+       "a": "לא. משלמים רק על מה שנוסעים."
+      },
+      {
+       "q": "איך מתומחר השימוש ברכבים?",
+       "a": "לפי שעה או לפי יום, בתוספת מחיר לכל ק״מ. הדלק כלול, ואין עלויות נוספות. את כל המחירים אפשר לראות **במחירון**."
+      },
+      {
+       "q": "מי שצריך רכב ליום שלם משלם לפי שעות?",
+       "a": "לא. להשכרה של יותר מכמה שעות יש תעריף יומי מוזל."
+      },
+      {
+       "q": "איך מיי קאר יודעת כמה לחייב?",
+       "a": "מערכות מתקדמות מודדות את זמן הנסיעה ואת המרחק, כך שמשלמים רק על השימוש בפועל."
+      },
+      {
+       "q": "איך משלמים?",
+       "a": "בכרטיס האשראי שאיתו נרשמתם. אפשר להחליף כרטיס בכל עת."
+      },
+      {
+       "q": "מי משלם על הדלק?",
+       "a": "מיי קאר. התשלום על השימוש כולל הכל."
+      },
+      {
+       "q": "מה עושים אם חסר דלק כשמקבלים את הרכב?",
+       "a": "מתדלקים עם כרטיס הדלק שנמצא ברכב, בתחנות פז, דלק־מנטה, סונול, דור אלון, טן או אמיר (אמיר בבני ברק)."
+      },
+      {
+       "q": "מה הנוהל בכבישי אגרה?",
+       "a": "הנסיעה בכביש אגרה מחויבת בהזמנה בתוספת דמי טיפול. אפשר גם לשלם לחברת הכביש ישירות לפני הנסיעה."
+      }
+     ]
+    },
+    {
+     "id": "info-cancel",
+     "type": "faq",
+     "kicker": "ביטולים, ביטוח ותקלות",
+     "tone": "coral",
+     "title": "כשמשהו משתנה",
+     "sub": "",
+     "items": [
+      {
+       "q": "אפשר לבטל הזמנה?",
+       "a": "**כל הזמנה:** ביטול ללא עלות תוך 10 דקות מרגע ההזמנה, אם ההשכרה עוד לא התחילה.\n**הזמנה יומית ברכב קטן, משפחתי, מסחרי או חשמלי:** ביטול ללא עלות עד 3 ימים לפני תחילת ההשכרה. אחר כך יחויבו 50%.\n**הזמנה יומית ברכב 7 מקומות, 9 מקומות או VIP:** ביטול ללא עלות עד 5 ימים לפני תחילת ההשכרה. אחר כך יחויבו 50%.\n**הזמנה לפי שעה:** ביטול ללא עלות עד 5 שעות לפני תחילת ההשכרה. אחר כך יחויבו 50%.\n**אחרי שההשכרה התחילה:** אפשר לבטל, אבל הסכום המלא יחויב."
+      },
+      {
+       "q": "מה המדיניות במקרה של נזק לרכב?",
+       "a": "בתאונה משלמים השתתפות עצמית של 2,000 עד 3,500 ₪, לפי סוג הרכב."
+      },
+      {
+       "q": "אפשר לבטל את ההשתתפות העצמית?",
+       "a": "כן. אפשר לרכוש ביטול השתתפות עצמית בתוספת תשלום."
+      },
+      {
+       "q": "מה עושים כשיש תקלה ברכב?",
+       "a": "פונים למוקד ב־‎*2138 מיד, בזמן אמת."
+      },
+      {
+       "q": "מי דואג לניקיון הרכב?",
+       "a": "מיי קאר מנקה את הרכבים, ואנחנו מבקשים מכל נהג להשאיר את הרכב נקי למשתמש הבא."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "terms",
+   "title": "תנאי שימוש",
+   "sections": [
+    {
+     "id": "terms-text",
+     "type": "text",
+     "kicker": "מידע משפטי",
+     "tone": "navy",
+     "title": "תנאי שימוש",
+     "sub": "",
+     "body": "**הגדרות**\nבתנאי שימוש אלו יהיו למונחים המוגדרים כאן המשמעות שלהלן:\n\"האתר\" – ____www.mycar-israel.com____ וכן אפליקציה סולולארית.\n\"השירותים\" – שירותי האתר המאפשרים השכרת רכבים שיתופיים על בסיס שעתי ממיקום גיאוגרפי בקרבת המשתמש, קבלת מידע על בעל האתר, עסקיו ו/או על חברות קשורות אליו ושירותים משלימים אחרים.\n\"בעל האתר\" – מיי קאר (פסגות) רכב לפי שעה בע\"מ, ח.פ. 516518529.\n\"המשתמש/ים\" - מי שעושה שימוש כלשהו באתר ו/או מקבל באמצעותו את השירותים.\n\"פרטי הקשר\"– בטלפון ____*2138_______; ו/או בכתובת המייל __office@mycar-israel.co___.\n**כללי**\nהאתר מנוהל ומופעל על ידי בעל האתר ומשמש, בין היתר, לפרסום וביצוע השירותים. תנאי שימוש אלו מסדירים את מערכת היחסים בינך, המשתמש באתר, בין היתר לבין בעל האתר לשם קבלת השירותים באמצעות האתר.\nעל ידי גישה או שימוש בכל חלק של האתר ו/או השירותים, אתה מסכים לתנאי השימוש ומדיניות הפרטיות. אם אינך מסכים לתנאי שימוש אלו ו/או למדיניות הפרטיות או לכל תנאי מהם, אנא הימנע מלגשת לאתר או לקבל את השירותים.\nבעל האתר שומר לעצמו את הזכות לשנות את תנאי השימוש ו/או מדיניות הפרטיות מפעם לפעם על פי שיקול דעתו הבלעדי וזאת ללא צורך במתן התראה ו/או הודעה מוקדמת. בעל האתר יפרסם את תנאי השימוש ו/או מדיניות הפרטיות המעודכנים באתר. מומלץ כי המשתמש יתעדכן באופן תדיר באתר לגבי שינויים בתנאי שימוש אלו ו/או מדיניות פרטיות.\nכל משתמש בשירותים מצהיר, כי קרא את תנאי שימוש אלו ו/או מדיניות הפרטיות, וכי הוא מסכים לכל ההוראות והתנאים, וכי לא תהיה לו ו/או למי מטעמו כל טענה ו/או דרישה ו/או תביעה כנגד בעל האתר ו/או מי ממנהליו ו/או עובדיו, בכל הקשור להוראות של תנאי שימוש אלו ו/או למדיניות פרטיות.\nמובהר כי בעל האתר רשאי, על פי שיקול דעתו, להפסיק את פעילות האתר (לרבות מתן השירות) בכל עת וללא הודעה מראש.\nבעל האתר שומר לעצמו את הזכות למנוע את הגישה לאתר ו/או את האפשרות לקבל את השירותים ו/או לבטל השתתפות של משתמש בשירותים ושהתנהגותו אינה הולמת ו/או לא חוקית ו/או שאינה לפי תנאי שימוש אלו ו/או מדיניות הפרטיות ו/או המנסה לפגוע בניהולו התקין של האתר ו/או שאינו מאשר את תנאי השימוש (לרבות מדיניות הפרטיות) בדרך שבה בעל האתר בחר לבקש את אישורו, והכל לפי שיקול דעתו המלא והבלעדי.\nהאתר פעיל בכל ימות השבוע ובכל שעות היממה. יובהר כי ייתכן והאתר יהיה מושבת לעבודות תחזוקה ו/או עקב תקלות שאינן בשליטת בעל האתר ואשר עשויות להתרחש בכל עת ו/או מסיבות אחרות ולמשתמש לא תהיה כל טענה לבעל האתר בשל כך.\nבכל הנוגע לפעולות המתבצעות דרך האתר יהוו רישומי המחשב של בעל האתר ראיה מכרעת.\nתנאי השימוש הכלולים כאן ומדיניות הפרטיות חלים על השימוש באתר ובשירותים הכלולים בו באמצעות כל מחשב או מכשיר תקשורת אחר (דוגמת טלפון סלולארי \"טיפש\" (כשר), טלפון סלולארי חכם, מחשבי כף יד למיניהם וכיו\"ב). כמו כן הם חלים על השימוש באתר בין באמצעות רשת האינטרנט, ובין באמצעות כל רשת או אמצעי תקשורת אחרים.\nהאמור בתנאי שירות אלו מתייחס באופן שווה לשני המינים והשימוש בלשון זכר הוא מטעמי נוחות בלבד.\nכותרות הפרקים מובאות לשם נוחות והתמצאות המשתמשים ולא ישמשו בפרשנות תנאי השימוש.\n**הצהרות והתחייבויות המשתמשים**\nהמשתמש מצהיר כי הוא מעל גיל 18, כי הוא מסוגל להתקשר עם בעל האתר בהתאם לתנאי השימוש ולוקח אחריות מלאה על השימוש באתר ובכלל זה השירותים.\nהמשתמש מתחייב להימנע מלנקוט ביחס לאתר ו/או לשירותים את הפעולות כדלקמן:\nאין להשתמש בשירותים באופן בלתי חוקי או מתוך כוונה להפר כל חוק או בכל אופן אסור על פי תנאי שימוש אלו;\nאין לבצע כל שינוי בשירותים ו/או באתר ו/או בקוד המקור או רכיב כלשהו של האתר או שימוש לא מורשה בזכויות הקניין הרוחני של בעל האתר ו/או צד שלישי כלשהו;\nאין להשתמש בנתונים ו/או פרסומים כלשהם המתפרסמים באתר בניגוד להוראות תנאי שימוש אלו, מבלי לקבל את הסכמתו של בעל האתר מראש ובכתב ובכפוף לתנאי אותה הסכמה (אם וככל שתינתן) ;\nאין להעתיק, לשכפל, להפיץ, למכור, לשווק, לתרגם ולהשתמש, או לאפשר לאחרים להשתמש, בכל דרך אחרת בתכנים מתוך האתר (לרבות סימני מסחר, תמונות, טקסטים וקוד-מחשב) מבלי לקבל את רשותו המפורשת של בעל האתר מראש ובכתב;\nאין להסיר, לשנות או להסתיר כל סממן מסחרי של בעל האתר מהאתר ו/או השירותים;\nאין להפעיל או לאפשר להפעיל כל יישום מחשב או כל אמצעי אחר, לרבות תוכנות מסוג Crawlers, Robots ב\"deep-link\"/\"page-scrape\"/\"robot\"/\"spider\" או אמצעי אוטומטי אחר, אלגוריתם או מתודולוגיה, או כל הליך ידני דומה או שווה ערך, לגשת, לרכוש, להעתיק לבצע הנדסה לאחור, לפרק לסרוק או לנסות בכל דרך אחרת לפרסם כל חלק מהשירותים ו/או כל תוכן באתר.\nאין להשתמש באתר באופן אשר אינו בהתאם למדיניות הפרטיות של בעל האתר ו/או תנאי שימוש אלו ו/או כל החוקים והתקנות החלים על תנאי שימוש אלו.\n**קבלת ומסירת מידע והשירותים באתר**\nבעת ביצוע רכישות באתר יתבקש המשתמש למסור, בין השאר, פרטים מזהים כגון שם, צילום רישיון נהיגה, צילום פנים של המשתמש, אמצעי התקשרות (טלפון וכתובת מייל), כתובת, פרטי כרטיס אשראי ומספר תעודת זהות. יובהר כי כאמור המשתמש ימסור פרטים מדויקים, שלמים ומעודכנים וכל תוצאה של שימוש בפרטים לא נכונים ו/או לא מדויקים כאמור יחול על המשתמש בלבד ובאחריותו. אי ביצוע הוראה זו מהווה הפרה של תנאי שימוש אלה, אשר עלולה לגרום, בין היתר, לאי קבלת השירותים.\nבכפוף לקבוע במדיניות הפרטיות של בעל האתר, בעל האתר מתחייב כי לא יעשה שימוש בפרטי הזיהוי של משתמש אלא על מנת לאפשר את אספקת השירותים או לצרכי תפעול האתר, וכן, לצורך שמירת קשר עם המשתמש. למרות האמור לעיל, בעל האתר יהיה רשאי להעביר את פרטיו האישיים של משתמש לצד שלישי במקרים בהם המשתמש ביצע מעשה או מחדל הפוגעים ו/או העלולים לפגוע בבעל האתר ו/או בצדדים שלישיים כלשהם, וכן ככל שהמשתמש עשה שימוש בשירותים לביצוע מעשה בלתי חוקי וכן בכל מחלוקת או הליך משפטי.\nלאחר שנמסרו ואושרו הפרטים וניתנה הסכמת המשתמש לתנאי השימוש ומדיניות הפרטיות, בעל האתר רשאי, אך לא חייב, להציג או לשלוח למשתמש עדכונים באמצעות פרטי הקשר עמו, ובכלל זה דבר פרסומת, עדכוני תוכן, מידע על שירותיו ומוצריו של בעל האתר ושל צדדים שלישיים רלוונטיים, כמו גם שירותים ומוצרים של אחרים, מבצעים, חידושים באתר, כמשמעות הדברים בסעיף 30א. לחוק התקשורת (בזק ושידורים), התשמ\"ב – 1982.\nיובהר כי בעל האתר רשאי בכל עת להפסיק ו/או לגרוע שירות מסוים וכן להוסיף שירותים חדשים ו/או לבצע כל שינוי בסוג ו/או השירותים המוצעים באתר ללא מתן הודעה מוקדמת ולפי שיקול דעתו הבלעדי של בעל האתר.\nבעל האתר רשאי להציע באתר מבצעים, הטבות והנחות. בעל האתר רשאי בכל עת להפסיק מבצעים, הטבות והנחות אלה, להחליפם או לשנותם, בלא צורך לתת כל הודעה מוקדמת על כך.\nזמני אספקת השירותים משתנים מעת לעת בהתאם לזמינות השירותים ומיקומו של המשתמש ומפורסמים באתר.\nרכישה באתר מבוצעת על ידי כרטיס אשראי ישראלי או בינלאומי, ובכפוף לאישור חברת האשראי אליה משויך הכרטיס בו שולמה ההזמנה ע\"י המשתמש. בעל האתר שומר לעצמו את הזכות לשנות את אמצעי ו/או דרכי התשלום בכל עת ללא מתן הודעה מוקדמת ולפי שיקול דעתו הבלעדי.\n**רכישת שירותים באתר**\nרכישת שירותים באתר תתבצע באמצעות הרשמה לאתר ולאחר מכן הזמנה של השירותים באמצעות האתר בכפוף לזמינות השירותים או בכל דרך אחרת שיציע האתר. המשתמש יקבל פירוט של הרכבים הזמינים באזור ובשעות שבהם הוא רוצה להשתמש בשירות ולאחר מכן יוכל להזמין את הרכב שבחר. בעל האתר רשאי לעדכן את מצאי הרכבים הזמינים, שעות הפעילות, מיקומי השכרת הרכבים וכן להוסיף או להשמיט פרטים, וכן לעדכן ו/או לשנות את מחיר השירות מעת לעת. מובהר כי התמונות באתר הן להמחשה בלבד, ייתכנו שינויים בין התמונות ובין הפריטים בפועל, אשר נובעים, בין היתר, מן העובדה כי הפריטים מצולמים ומוצגים על גבי מסך מחשב.\nהמחירים המוצגים באתר כוללים מע\"מ בשיעורו כדין, אלא אם צוין אחרת במפורש.\nאספקת השירותים תעשה לכתובת שהזין המשתמש באתר במהלך הליך ההזמנה.\nבמעמד ביצוע ההזמנה יבצע בעל האתר בדיקת פרטי כרטיס האשראי ועם קבלת אישור ההזמנה ע\"י חברות כרטיסי האשראי, תימסר למשתמש הודעה מתאימה כי ההזמנה אושרה. מובהר כי חיוב המשתמש בגין עלות הפריט או השירות הנרכש על ידו, יתבצע באמצעות כרטיס האשראי מיד עם סיום ביצוע ההזמנה. כן מובהר, כי אם המשתמש לא יודיע על סיום השימוש בשירות באמצעות האפליקציה הוא עשוי להיות מחויב בתשלומים נוספים.\n**שינוי וביטול; היעדר אחריות**\nהאמור בסעיף זה כפוף לחוק הגנת הצרכן, התשמ\"א-1981 (להלן: \"החוק\").\nבעל האתר שומר לעצמו את הזכות להפסיק בכל עת, על פי שיקול דעתו הבלעדי, את הפעילות באתר ו/או לא לספק שירות מסוים, לרבות, אך לא רק, בכל אחד מהמקרים המפורטים להלן:\nלא נקלטו במערכת פרטי כרטיס האשראי ופרטיו המלאים של משתמש.\nכרטיס האשראי שברשות המשתמש נחסם או הוגבל לשימוש בדרך כלשהי.\nהמשתמש מסר בעת ביצוע ההזמנה ו/או לאחר מכן פרטים שגויים.\nהמשתמש לא מסר בעת הרישום לאתר הוכחה לכך שהוא מחזיק ברישיון נהיגה תקף ו/או לא שלח תמונה שלו המאפשרת לשייך את רישיון הנהיגה לנהג שמשתמש בשירותים.\nבכל מקרה שבו נעשתה פעולה בניגוד לתנאי שימוש אלו, בניגוד לתנאיה של מדיניות הפרטיות או תנאיו של כל שירות אחר שיציע האתר.\nהמשתמש ביצע מעשה בלתי חוקי ו/או עבר על הוראות כל דין ו/או שבעל האתר חושד בכל מעשה כאמור לפי שיקול דעתו.\nהמשתמש ביצע מעשה או מחדל שיש בו כדי לפגוע בבעל האתר ו/או במי מטעמו ו/או בפעילותו התקינה של האתר ו/או בצד ג' אחר כלשהו, לרבות משתמשים אחרים, עובדים וספקים של בעל האתר.\nכאשר בעל האתר אינו יכול לספק את השירותים מחמת מחסור במלאי.\nבכל מקרה אשר בו, מחמת \"כח עליון\", לא מתאפשר ניהול תקין ו/או רציף של האתר על ידי בעל האתר. \"כח עליון\" לעניין זה - מזג אויר, אסונות טבע ומפגעים אחרים, בעיות בסליקת אשראי, תקלות במערכת המחשוב, תקלות בשירות הדואר האלקטרוני, מצב בטחוני רגיש, כח עליון, שביתות ועיכובים בתקופות של עודף בביקוש (לדוגמה בחגים) ועוד. יובהר כי למשתמש לא יהיו טענות כנגד בעל האתר בשל כך. כן, בעל האתר לא יהיה אחראי בכל ביטול שמקורו במשתמש ו/או שאינו בשליטתו המלאה של בעל האתר, לרבות במקרים של קשיים ביצירת קשר עם המשתמש.\n**היעדר אחריות**\nבעל האתר ו/או מי מטעמו לא יהיו אחראים ולא ישאו בכל נזק ישיר, עקיף, תוצאתי או מיוחד, שיגרם למשתמש ו/או לאדם מטעמו ו/או לצד שלישי כלשהו ו/או לרכוש כלשהו, כתוצאה משימוש בשירותים באמצעות האתר - תהא עילת התביעה אשר תהא  - לרבות נזק גופני ו/או הפסד הכנסה ו/או מניעת רווח שיגרמו מכל סיבה שהיא, וכן נזק שייגרם כתוצאה מרכישה ו/או תשלום שלא בהסכמת המשתמש ו/או שלא בידיעתו ו/או כתוצאה מהקלדה שגויה של פרטי המשתמש (לרבות פרטי כרטיס אשראי) ו/או כל ביטול רכישת שירות ו/או שינוי שירות ו/או במקרים של תקלה בתקשורת בעקבות מעשה או מחדל של ספק/י תקשורת ו/או לכל נזק שייגרם כתוצאה משימוש בשירותים שלא בהתאם להוראות בעל האתר.\nכל הפרסומים, ובכללם תמונות, מלל, מידע, מצג שבוצע באתר ביחס לשירותים, לרבות בכל הקשור לטיב ו/או סוגי השירותים (להלן: \"הפרסומים\") הנם להמחשה בלבד, הם אינם מחייבים כלל את בעל האתר שרשאי לשנותם ו/או להחליפם בכל עת בשיקול דעתו הבלעדי, והוא אינו מתחייב כי פרסומים אלו יתאימו לשירות שיקבל בפועל המשתמש.\nיובהר כי היה ונפלה טעות קולמוס או כל טעות אחרת בתום לב בפרסומים, לא יחייב הדבר את בעל האתר ו/או מי מטעמו.\nבעל האתר אינו מתחייב לתקינותו של האתר לרבות לא לתקינות הקישורים (לינקים) ככל שמופיעים בו, אינו מתחייב כי קישורים אלו יובילו לדף מוצר ו/או לדף אינטרנט פעיל ובעל האתר לא יהיה אחראי בכל הקשור לכך. מובהר כי ככל שיופיעו קישורים לאתרים נוספים באתר, בעל האתר אינו מתחייב ואינו אחראי בשום אופן לתוכנם ו/או למהימנותם והמשתמש יודע כי בעל האתר אינו שולט בתוכן של אותם אתרים נוספים.\nהמשתמש מתחייב לפצות ולשפות את בעל האתר בגין כל נזק, הפסד, הוצאה, אבדן רווח או תשלום שייגרם לה, מיד עם קבלת דרישה ראשונה בכתב מאת בעל האתר בגין כל שימוש זדוני ו/או רשלני ו/או הפרה של תנאי מתנאי שימוש אלו ו/או מדיניות הפרטיות ובכלל זה הוצאות תשלום שכ\"ט עו\"ד והוצאות משפט.\nיובהר כי המידע הנמסר על ידי המזמין או שנאסף על ידי בעל האתר מאוחסן בשרתים המאובטחים של .amazon.com/. למרבה הצער, העברת מידע דרך האינטרנט אינה בטוחה לחלוטין. למרות שבעל האתר נוקט באמצעים מסחריים סבירים כדי להגן על כל מידע שמתקבל אצלו, בעל האתר אינו יכול להבטיח אבטחה מוחלטת של הנתונים והמידע שמועבר דרך האתר ומובהר כי משתמש מעביר מידע בעניינו באמצעות האתר על אחריותו ותוך הבנת הסיכון הכרוך בכך.\n**זכויות יוצרים**\nהמשתמשים מצהירים כי הם מודעים לכך כי כל זכויות הקניין הרוחני בתוצרים ובחומרים המופיעים באתר, לרבות זכויות היוצרים, סימנים המסחריים, הפטנטים, הלוגויים, השיטות והסודות המסחריים, הנם רכושו של בעל האתר בלבד. גישתם של המשתמשים לאתר והשימוש בשירותים אינה מהווה מתן רישיון או זכות לכל אחד מהמשתמשים או צדדים שלישיים כלשהם כלפי האתר ו/או זכויות היוצרים של בעל האתר. בעל האתר והחברות הקשורות לו, הזכיינים והספקים שלו שומרים לעצמם את כל הזכויות שלא הוענקו במפורש בתנאי שימוש אלה.\nלמען הספר ספק השם \"מיי קאר\" וכן שם המתחם (domain name) של האתר, סימני המסחר (בין אם נרשמו ובין אם לא) הם כולם רכושה של בעל האתר בלבד. אין לעשות בהם שימוש בלא קבלת הסכמתו בכתב ומראש.\nהמשתמשים מצהירים ומתחייבים כי: (א) ביחס לכל המידע שהם מספקים לבעל האתר, למשתמשים יש זכות מלאה וסמכות למסור פרטים אלו ולאפשר לבעל האתר להשתמש בפרטים אלו כדי לספק למשתמשים את השירותים (ב) אף פרט מהפרטים והמידע שהועברו על ידי המשתמשים ו/או מי מטעמם לבעל האתר במסגרת השימוש באתר יפגעו או יפרו זכויות של צד שלישי כלשהו.\n**פרטיות**\nמדיניות הפרטיות העדכנית של בעל האתר זמינה באתר (להלן: \"מדיניות הפרטיות\"). בעל האתר ממליץ למשתמשים לסקור את מדיניות הפרטיות בתחילת השימוש באתר. בעל האתר עשוי (אך לא חייב) לדרוש אישורים ספציפיים מהמשתמש ביחס למדיניות הפרטיות שלו כתנאי לקבלת השירותים.\n**שונות**\nהדין החל על תנאי שימוש אלו ו/או על כל פעולה ו/או על סכסוך הנובע מהם, הוא הדין הישראלי. מחלוקות הנובעות מהסכם זה שהצדדים לא הגיעו ביניהם להסכמה ידונו במסגרת בוררות ע\"י בית דין כיום בראשות הרב ניסים קרליץ שליט\"א (לעיל ולהלן: \"הבורר\") הבורר יהיה כפוף לכל הוראות החוזה ולאמור בדיני מדינת ישראל ובלבד שאלו אינם סותרים לדין תורה. חתימה על חוזה זה מהווה חתימה על שטר בוררות. לא הופיע מי מהצדדים לדיון לאחר שזומן אליו כדין, יהיה הבורר רשאי ליתן החלטות ו/או פס\"ד שלא בפניו. למרות תניית הבוררות, רשאי המוכר לנקוט בהליכים לגביית חובות נגד הקונה בגין סכומים קצובים ו/או בתביעה לסילוק יד, בתביעה בסדר דין מקוצר בבית המשפט המוסמך בירושלים ו/או בתביעה מתאימה בהוצל\"פ.\nהתנהגותה בעל האתר לא תחשב כויתור על איזו מזכויותיה על פי תקנון זה או על פי דין, ו/או כויתור או כהסכמה מצידה לאיזו הפרה או אי קיום תנאי כלשהו.",
+     "align": "right",
+     "bg": "none",
+     "buttons": []
+    }
+   ]
+  },
+  {
+   "id": "privacy",
+   "title": "מדיניות פרטיות",
+   "sections": [
+    {
+     "id": "privacy-text",
+     "type": "text",
+     "kicker": "מידע משפטי",
+     "tone": "navy",
+     "title": "מדיניות הפרטיות",
+     "sub": "",
+     "body": "**מבוא**\nלכל המונחים שלא הוגדרו במדיניות פרטיות זו תהיינה המשמעות שניתנה להם בתנאי השימוש.\nמיי קאר (פסגות) רכב לפי שעה בע\"מ, ח.פ. 516518529 (להלן: \"בעל האתר\") מנהל ומפעיל אתר בכתובת ____www.mycar-israel.com____ וכן אפליקציה סלולארית, המשמשים, בין היתר, להשכרת רכבים שיתופיים על בסיס שעתי ממיקום גיאוגרפי בקרבת המשתמש, קבלת מידע על בעל האתר, עסקיו ו/או על חברות קשורות אליו ושירותים משלימים אחרים (\"השירותים\") באופן מקוון באתר ובאפליקציה על ידי הגולשים באתר ובאפליקציה (\"המשתמש/ים\" ו- \"האתר\").\nמדיניות פרטיות זו, יחד עם תנאי השימוש, קובעת את הכללים שלפיהם בעל האתר אוסף פרטים אישיים ממשתמשים באתר שבוחרים להשתמש בשירותים או שהמשתמשים באתר מספקים לבעל האתר בדרך אחרת ואשר נשמרים ומעובדים על ידי בעל האתר (להלן: \"מדיניות הפרטיות\").\nבעל האתר מכיר בחשיבות של שמירת המידע ואבטחתו.\nמדיניות פרטיות זו חלה על האתר בלבד. באישור תנאי השימוש, המשתמש מאשר גם את תנאי מדיניות פרטיות זו. בעל האתר עשוי (אך לא חייב) לדרוש אישור מפורש של מדיניות הפרטיות (או של שינוי שלה) כתנאי לשימוש באתר.\nמדיניות פרטיות זו עשויה להתעדכן מעת לעת, מכל סיבה שהיא; כל גרסה של מדיניות הפרטיות תחול על המידע הנאסף בזמן שאותה גרסה הייתה בתוקף. בעל האתר יודיע למזמינים ביחס לכל שינוי מהותי במדיניות הפרטיות על ידי פרסום מדיניות הפרטיות החדשה במערכת. בעל האתר ממליץ למזמינים להכיר את מדיניות הפרטיות באופן קבוע.\nשימוש באתר ו/או בשירותים מהווה הסכמה של משתמש לאיסוף ושימוש במידע האישי (כהגדרתו להלן) כמתואר במדיניות פרטיות זו ו/או בתנאי השימוש ובכפוף לכל דין, לרבות שמירת המידע במאגר מידע של בעל האתר.\nעל מנת להיות מעודכן בהצעות ו/או מבצעים ו/או עדכונים החלים מדי פעם באתר, המשתמש מאשר במפורש ומסכים כי בעל האתר יהיה רשאי לפנות אל המשתמש מעת לעת באמצעות דיוור ישיר, לרבות בדואר האלקטרוני ו/או באמצעות פניה טלפונית לרבות סמס, למטרות אספקת השירותים, למטרות קידום מכירות ו/או שיווק (כאמור במדיניות זו) וכן למטרות משלוח דברי פרסומת (לרבות כהגדרתם בסעיף 30א. לחוק התקשורת (בזק ושידורים), התשמ\"ב) לפי כל דין. משתמש המעוניין להפסיק לקבל הודעות אלו כאמור מתבקש לפנות למחלקת שירות הלקוחות של בעל האתר בדואר אלקטרוני שכתובתו office@mycar-israel.co ________ ולהודיע על רצונו להסרה מרשימת התפוצה.\nהמשתמש מצהיר כי לא חלה עליו חובה חוקית למסור את המידע והוא עושה זאת מרצונו והסכמתו.\n**איזה מידע אנו אוספים וכיצד אנחנו עשויים להשתמש בו?**\nבעל האתר עשוי לאסוף ולעבד את המידע הבא אודות משתמש (להלן: \"מידע אישי\"):\nמידע שהמשתמש מספק במסגרת רישום לאתר או הזמנת השירותים (למשל - שם מלא, ת.ז., כתובת מגורים, כתובת דואר אלקטרוני, צילום רישיון נהיגה, צילום עצמי של המשתמש, תאריך לידה ומספר טלפון); יובהר כי פרטי כרטיס אשראי מסופקים לצורך רכישה בלבד והם אינם נשמרים אצל בעל האתר.\nפרטים אודות השימוש שביצע המשתמש באתר, בשירותים ואף באינטרנט לרבות, ללא הגבלה, תעבורת נתונים, קבצי ה- Cookie ונתוני תקשורת אחרים;\nבעל האתר עשוי גם לשמור מידע אודות הטלפון הנייד של המשתמש, כולל כתובת IP של המשתמש, מערכת ההפעלה ופרסומות בהן צפה המשתמש.\nבעל האתר עשוי לעשות שימוש במידע האישי על פי מדיניות הפרטיות ו/או תנאי השימוש ו/או דין, כמפורט להלן:\nלספק למשתמש את השירותים באתר ומבוקשים על ידו לרבות, אולם לא רק, יצירת קשר עמו בנוגע לשירותים;\nלאפשר את מתן השירותים בצורה נוחה ויעילה למשתמש, לרבות באמצעות האתר;\nלשפר ו/או לשנות ו/או לבטל את השירותים כל תוכן אחר באתר;\nלספק למשתמש שירותים נלווים לרבות ללא הגבלה, פרסום רלוונטי למשתמש מסוים, מידע למשתמש אודות מוצרים ואודות שירותים;\nלאכוף את תנאי השימוש ו/או מדיניות הפרטיות ו/או דין אחר;\nלצורך פיקוח על השימוש באתר והשירותים והפעילות והניהול הטכני של האתר;\nבדיקת מספר משוער של משתמשים, מועדי כניסתם לאתר ובביצוע אנליזה ובדיקת דפוסי שימוש;\nניתוח של מידע אודות דפוסי רכישה והתנהגות של משתמשים, לרבות לצורך בירור תלונות, שיפור שירות וביקורות;\nבהתאם להסכמת המשתמש, לצורך שיווק, פרסום וקידום מכירות ובין היתר, יצירת קשר עם משתמש בכל אמצעי תקשורת שבעל האתר ימצא לנכון (דואר אלקטרוני, מסרונים (SMS), ברשתות החברתיות, בטלפון ועוד) ביחס למידע בדבר מוצרים, שירותים, עדכונים ומבצעים החלים ו/או נמכרים ו/או הקשורים לגבי השירותים, לרבות דבר פרסומת כמשמעות הדברים בסעיף 30א. לחוק התקשורת (בזק ושידורים), התשמ\"ב.\nבעל האתר עשוי לשמור את המידע האישי לתקופת הזמן שלאחר סיום מתן השירותים, אם המידע נחוץ למטרות שלשמן נאסף או אם נדרש לשמור אותו על פי חוק.\nכל המידע הנמסר על ידי המשתמש או שנאסף על ידי בעל האתר אוחסן בשרתים המאובטחים של _ amazon.com למרבה הצער, העברת מידע דרך האינטרנט אינה בטוחה לחלוטין. למרות שבעל האתר נוקטת באמצעים מסחריים סבירים כדי להגן על המידע האישי, בעל האתר אינו יכול להבטיח אבטחה מוחלטת של הנתונים והמידע האישי שמועבר דרך האתר ומובהר כי המזמין מעביר את המידע האישי באמצעות האתר על אחריותו ותוך הבנת הסיכון הכרוך בכך.\n**גילוי של מידע**\nבעל האתר תהיה רשאית לגלות את המידע האישי של משתמשים לצדדים שלישיים במקרים כדלהלן:\nבמקרה שבעל האתר יהיה מחויבת על פי חוק או על פי צו שיפוטי, עם או בלי הסכמת משתמש ועם או בלי הודעה מוקדמת על כוונתה לגלות את המידע האישי ו/או על מנת לממש זכות משפטית של בעל האתר (לרבות גביית חוב שאינו שולם לבעל האתר באמצעות צד שלישי) ו/או על מנת להתגונן מפני טענות משפטיות לרבות תביעות כנגד בעל האתר בשיקול דעתו הבלעדי של בעל האתר.\nבעל האתר עשוי לחשוף את המידע האישי של משתמש אשר מבצע באמצעות האתר כל פעולה המהווה הפרה של כל דין או תנאי השימוש.\nבעל האתר יהיה רשאי לחשוף את המידע האישי בכל מקרה של מכירת בעל האתר או מיזוגו עם צד שלישי או מכירת פעילות בעל האתר ו/או האתר לצד שלישי ו/או בקשר עם עסקה תאגידית מהותית אחרת, ובלבד שצד שלישי זה יקבל על עצמו את תנאי השימוש.\nבעל האתר עשוי לחשוף את המידע האישי לצדדים שלישיים המספקים לבעל האתר שירותים מסחריים הקשורים בשירותים וזאת במידה הנדרשת על מנת לספק משתמשים את השירותים ובכפוף להתחייבות חוזית של אותם צדדים שלישיים לשמור על סודיות ואבטחת המידע האישי.\nבמקרה בו מאשר משתמש לבעל האתר להעביר את המידע האישי לצדדים שלישיים.\nבעל האתר עשוי לחשוף את מידע האישי של משתמש כדי להגן על עובדיו, מזמינים או גולשים אחרים באתר.\n**בחירות משתמש בקשר למידע**\nמכח חוק הגנת הפרטיות, תשמ\"א-1981, כל משתמש רשאי לבקש מבעל האתר לעיין במידע השמור אצלו בעניינו. משתמש שמצא כי המידע בעניינו אינו מדויק, אינו שלם או מעודכן, רשאי לפנות בהודעת מייל לשירות הלקוחות של בעל האתר בדואר אלקטרוני שכתובתו ______ office@mycar-israel.co _______ ולבקש לתקן ו/או למחוק את המידע בעניינו.\nלמשתמש עומדת גם הזכות שלא לספק מידע אישי לבעל האתר ו/או שלא לעבד, לאחסן או להשתמש במידע אישי אולם המשתמש מאשר כי הוא מודע לכך שבפניה כזו שלא לשמור או לעבד את המידע האישי שלו, יתכן שלא ניתן יהיה לספק לו את כל ו/או חלק מהשירותים והוא מוותר בבקשה זו על כל טענה ו/או דרישה כלפי בעל האתר בקשר לשירותים.\nהמשתמש יוכל לממש את זכויותיו אלו באמצעות פנייה לבעל האתר בכתובת_ office@mycar-israel.co.\n**Cookies - עוגיות**\nבעל האתר עשוי לעשות שימוש באמצעים טכנולוגיים שונים על מנת לאסוף את מידע אישי אודות המשתמש ו/או פעילותו באתר, וביניהם עוגיות (Cookies) ועזרים נוספים.\nבעל האתר עשוי להקצות עוגייה כזו (אחת או יותר) למשתמש באתר וזאת לצרכים המנויים בסעיף 2 לעיל ו/או כדי להתאים למשתמש את האתר ו/או השירותים. המידע האישי הנאסף בדרך זו עשוי להיאסף בצורה אוטומטית ועשוי לכלול מידע בקשר עם שימוש המשתמש ברשת האינטרנט לרבות דפי האינטרנט בהם מבקר, החיפושים שמבצע באתר והקישורים בהם משתמש באתר. בדפדפנים מסוימים קיימת האפשרות לבחור שלא לקבל קבצי עוגיות בצורה אוטומטית – משתמש החפץ בכך יוכל לעשות כן דרך הגדרות הדפדפן ממנו גולש לאתר, אולם ככל שיעשה כן עליו לשים לב כי הוא עשוי שלא להיחשף לתכנים מסוימים באתר ו/או שלא להיות מסוגל להשתמש בחלק ממאפייני האתר ו/או השירותים.\n**אבטחה**\nבעל האתר נוקט באמצעים מנהליים ואלקטרוניים שנועדו להגן על המידע האישי מפני גישה לא מורשית. עם זאת בעל האתר אינו מתחייב כי השירותים שהיא מציעה יהיו בלתי חדירים באופן מוחלט מפני גישה לא מורשית.\n**קישורים לאתרים אחרים**\nהאתר עשוי, מעת לעת, לכלול קישורים ויישומים של מפרסמים וחברות קשורות. הימצאותם של קישורים אלו באתר אינה מהווה אישור, הכשרה או ייצוג מצד בעל האתר של אותם צדדים שלישיים, בעלי הקישורים. אתרים אחרים אלה עשויים להציב קבצי Cookie או קבצים אחרים שלהם על הטלפון הסלולרי ו/או המחשב של המשתמש, לאסוף נתונים או לבקש מידע אישי מהמשתמש. אם המשתמש בוחר להיכנס לקישורים אלו, הוא עושה זאת על אחריותו ובכפוף לתנאי השימוש ומדיניות הפרטיות של אתרים אלו, והוא מוותר על כל טענה ו/או תביעה כנגד בעל האתר בגין שימוש זה.\nUpdate date: 14.11.2021",
+     "align": "right",
+     "bg": "none",
+     "buttons": []
+    }
+   ]
+  }
+ ],
+ "pricing": {
+  "youth": {
+   "hourly": 17,
+   "daily": 75,
+   "weekly": 300,
+   "monthly": 1200
+  },
+  "categories": [
+   {
+    "id": "small",
+    "name": "רכב קטן",
+    "description": "",
+    "tone": "green",
+    "youngAllowed": true,
+    "happyHourRate": 8.45,
+    "hourly": {
+     "time": 14.9,
+     "tiers": [
+      {
+       "max": 49,
+       "rate": 1.9,
+       "cap": 75
+      },
+      {
+       "max": 99,
+       "rate": 1.5,
+       "cap": 100
+      },
+      {
+       "max": null,
+       "rate": 1,
+       "cap": null
+      }
+     ]
+    },
+    "daily": {
+     "time": 139,
+     "km": 1
+    },
+    "weekly": {
+     "time": 700,
+     "km": 0.9
+    },
+    "monthly": {
+     "time": 2700,
+     "km": 0.85
+    },
+    "waiver": {
+     "hourly": 6.5,
+     "daily": 60,
+     "weekly": 300,
+     "monthly": 1200
+    }
+   },
+   {
+    "id": "electric",
+    "name": "רכב חשמלי",
+    "description": "",
+    "tone": "sky",
+    "youngAllowed": false,
+    "happyHourRate": null,
+    "hourly": {
+     "time": 17.9,
+     "tiers": [
+      {
+       "max": 49,
+       "rate": 1.1,
+       "cap": 45
+      },
+      {
+       "max": 99,
+       "rate": 0.9,
+       "cap": 70
+      },
+      {
+       "max": null,
+       "rate": 0.7,
+       "cap": null
+      }
+     ]
+    },
+    "daily": {
+     "time": 255,
+     "km": 0.06
+    },
+    "weekly": {
+     "time": 1300,
+     "km": 0.55
+    },
+    "monthly": {
+     "time": 5100,
+     "km": 0.5
+    },
+    "waiver": {
+     "hourly": 10,
+     "daily": 80,
+     "weekly": 480,
+     "monthly": 1920
+    }
+   },
+   {
+    "id": "family",
+    "name": "רכב משפחתי",
+    "description": "",
+    "tone": "sun",
+    "youngAllowed": false,
+    "happyHourRate": null,
+    "hourly": {
+     "time": 22.9,
+     "tiers": [
+      {
+       "max": 49,
+       "rate": 2.2,
+       "cap": 85
+      },
+      {
+       "max": 99,
+       "rate": 1.7,
+       "cap": 140
+      },
+      {
+       "max": null,
+       "rate": 1.4,
+       "cap": null
+      }
+     ]
+    },
+    "daily": {
+     "time": 209,
+     "km": 1.4
+    },
+    "weekly": {
+     "time": 1050,
+     "km": 1.3
+    },
+    "monthly": {
+     "time": 4150,
+     "km": 1.25
+    },
+    "waiver": {
+     "hourly": 6.5,
+     "daily": 60,
+     "weekly": 300,
+     "monthly": 1200
+    }
+   },
+   {
+    "id": "commercial",
+    "name": "מסחרי",
+    "description": "",
+    "tone": "coral",
+    "youngAllowed": false,
+    "happyHourRate": null,
+    "hourly": {
+     "time": 27,
+     "tiers": [
+      {
+       "max": 49,
+       "rate": 2.2,
+       "cap": 85
+      },
+      {
+       "max": 99,
+       "rate": 1.7,
+       "cap": 140
+      },
+      {
+       "max": null,
+       "rate": 1.4,
+       "cap": null
+      }
+     ]
+    },
+    "daily": {
+     "time": 250,
+     "km": 1.4
+    },
+    "weekly": {
+     "time": 1450,
+     "km": 1.75
+    },
+    "monthly": {
+     "time": 4750,
+     "km": 1.7
+    },
+    "waiver": {
+     "hourly": 10,
+     "daily": 100,
+     "weekly": 480,
+     "monthly": 2100
+    }
+   },
+   {
+    "id": "seven_seats",
+    "name": "7 מקומות",
+    "description": "",
+    "tone": "grape",
+    "youngAllowed": false,
+    "happyHourRate": null,
+    "hourly": {
+     "time": 31.9,
+     "tiers": [
+      {
+       "max": 49,
+       "rate": 2.4,
+       "cap": 110
+      },
+      {
+       "max": 99,
+       "rate": 2.2,
+       "cap": 180
+      },
+      {
+       "max": null,
+       "rate": 1.8,
+       "cap": null
+      }
+     ]
+    },
+    "daily": {
+     "time": 300,
+     "km": 1.8
+    },
+    "weekly": {
+     "time": 1150,
+     "km": 1.7
+    },
+    "monthly": {
+     "time": 4900,
+     "km": 1.65
+    },
+    "waiver": {
+     "hourly": 15,
+     "daily": 100,
+     "weekly": 480,
+     "monthly": 1920
+    }
+   },
+   {
+    "id": "vip",
+    "name": "7 מקומות VIP",
+    "description": "",
+    "tone": "sky",
+    "youngAllowed": false,
+    "happyHourRate": null,
+    "hourly": {
+     "time": 41.9,
+     "tiers": [
+      {
+       "max": 49,
+       "rate": 2.9,
+       "cap": 125
+      },
+      {
+       "max": 99,
+       "rate": 2.5,
+       "cap": 200
+      },
+      {
+       "max": null,
+       "rate": 2,
+       "cap": null
+      }
+     ]
+    },
+    "daily": {
+     "time": 400,
+     "km": 2
+    },
+    "weekly": {
+     "time": 1950,
+     "km": 1.9
+    },
+    "monthly": {
+     "time": 7850,
+     "km": 1.85
+    },
+    "waiver": {}
+   },
+   {
+    "id": "cat_muquf90vdp5k",
+    "name": "8 מקומות",
+    "description": "פרימיום",
+    "tone": "sun",
+    "youngAllowed": false,
+    "happyHourRate": null,
+    "hourly": {
+     "time": 46.9,
+     "tiers": [
+      {
+       "max": 49,
+       "rate": 2.9,
+       "cap": 125
+      },
+      {
+       "max": 99,
+       "rate": 2.5,
+       "cap": 200
+      },
+      {
+       "max": null,
+       "rate": 2,
+       "cap": null
+      }
+     ]
+    },
+    "daily": {
+     "time": 490,
+     "km": 2
+    },
+    "weekly": {
+     "time": 2800,
+     "km": 1.9
+    },
+    "monthly": {
+     "time": 8000,
+     "km": 1.85
+    },
+    "waiver": {}
+   },
+   {
+    "id": "nine_seats",
+    "name": "9 מקומות",
+    "description": "",
+    "tone": "green",
+    "youngAllowed": false,
+    "happyHourRate": null,
+    "hourly": {
+     "time": 41.9,
+     "tiers": [
+      {
+       "max": 49,
+       "rate": 2.9,
+       "cap": 127
+      },
+      {
+       "max": 99,
+       "rate": 2.5,
+       "cap": 200
+      },
+      {
+       "max": null,
+       "rate": 2,
+       "cap": null
+      }
+     ]
+    },
+    "daily": {
+     "time": 400,
+     "km": 2
+    },
+    "weekly": {
+     "time": 1950,
+     "km": 1.9
+    },
+    "monthly": {
+     "time": 7850,
+     "km": 1.85
+    },
+    "waiver": {}
+   }
+  ],
+  "packages": [
+   {
+    "name": "אירוע ברגוע · ערב",
+    "description": "7 שעות וסכום קילומטרים במחיר קבוע מראש",
+    "tone": "grape",
+    "hours": 7.0,
+    "startFrom": "18:00",
+    "startTo": "21:00",
+    "days": "א׳–ה׳",
+    "categories": [
+     "small",
+     "electric",
+     "family"
+    ],
+    "tracks": [
+     {
+      "km": 100.0,
+      "price": 159.0,
+      "byCategory": {
+       "small": 159.0,
+       "electric": 179.0,
+       "family": 219.0
+      }
+     },
+     {
+      "km": 145.0,
+      "price": 199.0,
+      "byCategory": {
+       "small": 199.0,
+       "electric": 219.0,
+       "family": 269.0
+      }
+     }
+    ],
+    "waiver": {
+     "enabled": true,
+     "price": 30.0,
+     "byCategory": {
+      "small": 30.0,
+      "electric": 40.0,
+      "family": 30.0
+     }
+    },
+    "young": {
+     "allowed": true,
+     "surcharge": null,
+     "byCategory": {
+      "small": 45.0
+     }
+    }
+   },
+   {
+    "name": "בוקר · עבודה",
+    "description": "9 שעות וסכום קילומטרים במחיר מוגדר מראש",
+    "tone": "coral",
+    "hours": 9.0,
+    "startFrom": "05:00",
+    "startTo": "09:00",
+    "days": "א׳–ה׳",
+    "categories": [
+     "small"
+    ],
+    "tracks": [
+     {
+      "km": 50.0,
+      "price": 145.0,
+      "byCategory": {}
+     },
+     {
+      "km": 90.0,
+      "price": 175.0,
+      "byCategory": {}
+     },
+     {
+      "km": 150.0,
+      "price": 220.0,
+      "byCategory": {}
+     }
+    ],
+    "waiver": {
+     "enabled": true,
+     "price": 30.0,
+     "byCategory": {}
+    },
+    "young": {
+     "allowed": true,
+     "surcharge": 50.0,
+     "byCategory": {}
+    }
+   },
+   {
+    "name": "בוקר · סידורים",
+    "description": "4 שעות וסכום קילומטרים במחיר מוגדר מראש",
+    "tone": "sky",
+    "hours": 4.0,
+    "startFrom": "05:00",
+    "startTo": "09:00",
+    "days": "א׳–ה׳",
+    "categories": [
+     "small"
+    ],
+    "tracks": [
+     {
+      "km": 50.0,
+      "price": 99.0,
+      "byCategory": {}
+     },
+     {
+      "km": 90.0,
+      "price": 125.0,
+      "byCategory": {}
+     },
+     {
+      "km": 150.0,
+      "price": 169.0,
+      "byCategory": {}
+     }
+    ],
+    "waiver": {
+     "enabled": true,
+     "price": 20.0,
+     "byCategory": {}
+    },
+    "young": {
+     "allowed": true,
+     "surcharge": 36.0,
+     "byCategory": {}
+    }
+   }
+  ],
+  "extras": [
+   {
+    "label": "איחור (לדקה)",
+    "price": "1.00 ₪",
+    "icon": "clock"
+   },
+   {
+    "label": "רכב עומד מונע מעל 10 דק׳",
+    "price": "0.80 ₪ לדקה",
+    "icon": "car"
+   },
+   {
+    "label": "רכב חשמלי עומד מונע מעל 10 דק'",
+    "price": "0.20 ₪ לדקה",
+    "icon": "bolt"
+   },
+   {
+    "label": "רכב לא נקי",
+    "price": "100 ₪",
+    "icon": "spark"
+   },
+   {
+    "label": "אי דיווח על תאונה בזמן אמת",
+    "price": "₪2,000",
+    "icon": "alert"
+   },
+   {
+    "label": "הסבת דוח / תשלום בכבישי אגרה",
+    "price": "₪60 לא כולל מע\"מ",
+    "icon": "road"
+   },
+   {
+    "label": "סגירת הזמנה ע״י המערכת",
+    "price": "₪10.00",
+    "icon": "lock"
+   },
+   {
+    "label": "אי החזרת רכב לתחנה",
+    "price": "₪500",
+    "icon": "pin"
+   },
+   {
+    "label": "החזרת רכב עם פחות מרבע מיכל דלק",
+    "price": "₪75.00",
+    "icon": "fuel"
+   },
+   {
+    "label": "החזרת רכב חשמלי עם פחות מ 25 %",
+    "price": "75.00 ₪",
+    "icon": "bolt"
+   }
+  ]
+ },
+ "cars": [
+  {
+   "name": "קיה פיקנטו",
+   "category": "small",
+   "img": "cars/car01.webp"
+  },
+  {
+   "name": "שברולט ספארק",
+   "category": "small",
+   "img": "cars/car02.webp"
+  },
+  {
+   "name": "מיצובישי ספייס סטאר",
+   "category": "small",
+   "img": "cars/car03.webp"
+  },
+  {
+   "name": "טויוטה אייגו X",
+   "category": "small",
+   "img": "cars/car04.webp"
+  },
+  {
+   "name": "מאזדה 2",
+   "category": "small",
+   "img": "cars/car05.webp"
+  },
+  {
+   "name": "אופל קורסה",
+   "category": "small",
+   "img": "cars/car06.webp"
+  },
+  {
+   "name": "אופל מוקה",
+   "category": "family",
+   "img": "cars/car07.webp"
+  },
+  {
+   "name": "פיג'ו 2008",
+   "category": "family",
+   "img": "cars/car08.webp"
+  },
+  {
+   "name": "BYD Atto 3",
+   "category": "electric",
+   "img": "cars/car09.webp"
+  },
+  {
+   "name": "סיטרואן ברלינגו",
+   "category": "commercial",
+   "img": "cars/car10.webp"
+  },
+  {
+   "name": "פיג'ו 5008",
+   "category": "seven_seats",
+   "img": "cars/car11.webp"
+  },
+  {
+   "name": "צ'רי טיגו 8",
+   "category": "seven_seats",
+   "img": "cars/car12.webp"
+  },
+  {
+   "name": "קיה קרניבל",
+   "category": "vip",
+   "img": "cars/car13.webp"
+  },
+  {
+   "name": "טויוטה סיינה",
+   "category": "cat_muquf90vdp5k",
+   "img": "cars/car14.webp"
+  },
+  {
+   "name": "יונדאי סטארייה",
+   "category": "nine_seats",
+   "img": "cars/car15.webp"
+  }
+ ],
+ "footer": {
+  "tagline": "הרכב השיתופי שלי.",
+  "columns": [
+   {
+    "title": "השירות",
+    "links": [
+     {
+      "label": "הזמנת רכב",
+      "url": "https://app.mycar-israel.com/login"
+     },
+     {
+      "label": "כל מה שצריך לדעת",
+      "url": "#info"
+     },
+     {
+      "label": "הרשמה",
+      "url": "https://my-car-c135d.web.app/register"
+     },
+     {
+      "label": "מחירון",
+      "url": "#prices"
+     }
+    ]
+   },
+   {
+    "title": "החברה",
+    "links": [
+     {
+      "label": "פרסום ושיתופי פעולה",
+      "url": "#advertising"
+     },
+     {
+      "label": "יש לך חניה להשכיר?",
+      "url": "#parking"
+     }
+    ]
+   },
+   {
+    "title": "מידע משפטי",
+    "links": [
+     {
+      "label": "תנאי שימוש",
+      "url": "#terms"
+     },
+     {
+      "label": "מדיניות פרטיות",
+      "url": "#privacy"
+     },
+     {
+      "label": "הצהרת נגישות",
+      "url": "#accessibility"
+     }
+    ]
+   },
+   {
+    "title": "עקבו אחרינו",
+    "links": [
+     {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/channel/UCWT_bEMsi4YgLDlE9cSBD5Q"
+     }
+    ]
+   }
+  ],
+  "copyright": "© 2026 My Car"
+ },
+ "floatBtn": {
+  "show": true,
+  "label": "הזמנת רכב",
+  "url": "https://app.mycar-israel.com/login",
+  "color": "sky",
+  "image": "cars/car01.webp"
+ }
+}

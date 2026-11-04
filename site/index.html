@@ -14,7 +14,7 @@
 <title>מיי קאר</title>
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800;900&family=Assistant:wght@400;600;700;800&display=swap">
+<link rel="preload" href="fonts/plex-hebrew-400.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/plex-hebrew-600.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 /* Layout: bento hero of colored tiles → steps → fleet price list → packages → bento perks → cities → plate-yellow call band. RTL. */
 :root{
@@ -25,8 +25,8 @@
   --coral:#ff5a6a;
   --grape:#7b5cff;
   --navy:#101a3d; --on-dark:#f3f5ff;
-  --display:"Rubik","Assistant",system-ui,sans-serif;
-  --body:"Assistant","Rubik",system-ui,sans-serif;
+  --display:"IBM Plex Sans Hebrew",system-ui,sans-serif;
+  --body:"IBM Plex Sans Hebrew",system-ui,sans-serif;
   --ease-out:cubic-bezier(.23,1,.32,1); --ease-io:cubic-bezier(.77,0,.175,1);
   --r-lg:28px; --r-md:20px;
   --shadow:0 1px 0 #101a3d08,0 12px 32px -12px #101a3d26;
@@ -928,7 +928,7 @@ html.ax-contrast #app :is(p,small,em,span,li){color:inherit}
 html.ax-contrast .slide .scopy :is(h1,.h1) span{background:none;color:#00431f}
 html.ax-gray #app{filter:grayscale(1)}
 html.ax-links #app a{text-decoration:underline!important;text-underline-offset:3px;outline:2px dashed currentColor;outline-offset:2px}
-html.ax-font,html.ax-font *{font-family:Arial,"Assistant",sans-serif!important;letter-spacing:0!important}
+html.ax-font,html.ax-font *{font-family:Arial,sans-serif!important;letter-spacing:0!important}
 html.ax-still *,html.ax-still *::before,html.ax-still *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 html.ax-cursor,html.ax-cursor *{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'><path d='M4 2l15 11-7 1 4 8-3 1-4-8-5 5z' fill='black' stroke='white' stroke-width='1.2'/></svg>") 4 2,auto!important}
 html.ax-focus :focus-visible,html.ax-focus :focus{outline:4px solid #ffbf00!important;outline-offset:3px!important;box-shadow:0 0 0 8px #000!important}
@@ -996,7 +996,15 @@ html.ax-contrast .deco .blob{fill:none}
 @media (max-width:760px){.deco3{width:min(700px,122%)}.art.is3d{margin-top:56px}}
 .slide:not(.on) .art.is3d img{transform:translateX(-50%) translateY(calc(var(--sink,15%) + 30px)) scale(.94)}
 html.ax-still .deco3 .fl{animation:none!important}
-.step .n{font-family:"Assistant",system-ui,sans-serif;font-weight:800;letter-spacing:-.01em}
+.step .n{font-family:var(--body);font-weight:600;letter-spacing:0}
+@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/plex-hebrew-400.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/plex-latin-400.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/plex-hebrew-500.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/plex-latin-500.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/plex-hebrew-600.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/plex-latin-600.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/plex-hebrew-700.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/plex-latin-700.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 /* =====================================================================
    MY CAR — editorial layer
    Flat, structured, restrained. Green and white, no ornaments.
@@ -1185,6 +1193,15 @@ body,#app{padding-inline:0!important}
   .slides{display:grid!important;min-height:0!important}
   .slide{position:relative!important;inset:auto!important;grid-area:1/1!important;min-height:clamp(480px,60vh,600px)!important}
 }
+
+/* ---------- type: IBM Plex Sans Hebrew ---------- */
+body{font-family:var(--body)!important;font-feature-settings:"kern" 1}
+h2{font-weight:600!important;letter-spacing:-.01em!important}
+h3{font-weight:600!important}
+.slide .scopy :is(h1,.h1){font-weight:700!important;letter-spacing:-.015em!important}
+.slide .scopy :is(h1,.h1) span{font-weight:500!important}
+.car .price .num,.pkg .phead .num,.co-total .num{font-weight:600!important}
+.btn{font-weight:600!important}
 </style>
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>

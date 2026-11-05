@@ -1202,6 +1202,72 @@ h3{font-weight:600!important}
 .slide .scopy :is(h1,.h1) span{font-weight:500!important}
 .car .price .num,.pkg .phead .num,.co-total .num{font-weight:600!important}
 .btn{font-weight:600!important}
+
+/* =====================================================================
+   Motion
+   ===================================================================== */
+:root{--ease:cubic-bezier(.22,.8,.24,1);--ease-io:cubic-bezier(.65,0,.35,1)}
+
+/* scroll progress */
+#progress{position:fixed;top:0;right:0;left:0;height:3px;background:var(--hg);transform-origin:100% 50%;transform:scaleX(0);z-index:60;pointer-events:none}
+
+/* header settles on scroll */
+.top{transition:box-shadow .3s var(--ease),background-color .3s}
+body.scrolled .top{box-shadow:0 6px 24px -14px #0b2a1b40;background:#fffffff2;backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px)}
+.navbar{transition:min-height .3s var(--ease),padding .3s var(--ease)}
+body.scrolled .navbar{min-height:58px;padding-block:6px!important}
+
+/* nav underline grows from the center */
+.navlink{position:relative}
+.navlink::after{content:"";position:absolute;inset:auto 10px 2px;height:2px;background:var(--hg);transform:scaleX(0);transition:transform .35s var(--ease)}
+@media (hover:hover) and (pointer:fine){.navlink:hover::after{transform:scaleX(1)}}
+
+/* reveal on scroll */
+html.mo [data-rv]{opacity:0;transform:translate3d(0,26px,0);transition:opacity .8s var(--ease) var(--d,0ms),transform .9s var(--ease) var(--d,0ms)}
+html.mo [data-rv].in{opacity:1;transform:none}
+html.mo .sec h2[data-rv]{transform:translate3d(0,34px,0);filter:blur(6px);transition:opacity .8s var(--ease) var(--d,0ms),transform 1s var(--ease) var(--d,0ms),filter .9s var(--ease) var(--d,0ms)}
+html.mo .sec h2[data-rv].in{filter:none;transform:none}
+html.mo .car[data-rv] .stage img.on{transform:scale(.9);transition:transform 1.1s var(--ease) calc(var(--d,0ms) + 120ms)}
+html.mo .car[data-rv].in .stage img.on{transform:none}
+/* the dark rule above the steps draws in */
+html.mo .steps[data-rv-line]{border-top-color:transparent;position:relative}
+html.mo .steps[data-rv-line]::after{content:"";position:absolute;top:-2px;right:0;left:0;height:2px;background:var(--hg-ink);transform:scaleX(0);transform-origin:100% 50%;transition:transform 1.2s var(--ease-io) .1s}
+html.mo .steps[data-rv-line].in::after{transform:scaleX(1)}
+body.editing [data-rv],html.ax-still [data-rv]{opacity:1!important;transform:none!important;filter:none!important}
+
+/* hero: copy rises line by line, car drives in */
+@keyframes hRise{from{opacity:0;transform:translate3d(0,28px,0)}to{opacity:1;transform:none}}
+@keyframes hDrive{from{opacity:0;translate:-90px 0}to{opacity:1;translate:0 0}}
+@keyframes hWipe{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0 0 0 0)}}
+@media (prefers-reduced-motion:no-preference){
+  html:not(.ax-still) .slide.on .scopy>*{animation:hRise .9s var(--ease) both}
+  html:not(.ax-still) .slide.on .scopy>:nth-child(2){animation-delay:.12s}
+  html:not(.ax-still) .slide.on .scopy>:nth-child(3){animation-delay:.24s}
+  html:not(.ax-still) .slide.on .scopy :is(h1,.h1) span{animation:hWipe 1s var(--ease-io) .25s both}
+  html:not(.ax-still) .slide.on .art img{animation:hDrive 1.2s var(--ease) .1s both}
+  .floatbook{animation:hRise .7s var(--ease) 1.4s both}
+}
+
+/* hover states that feel physical */
+@media (hover:hover) and (pointer:fine){
+  .gcard,.perk,.pkg,.car,.cities li{transition:border-color .25s,box-shadow .35s var(--ease),transform .35s var(--ease)!important}
+  .gcard:hover,.perk:hover,.pkg:hover,.car:hover,.cities li:hover{border-color:#b9dcc7!important;box-shadow:0 18px 40px -26px #0b2a1b59!important;transform:translateY(-4px)}
+  html.mo [data-rv].in:is(.gcard,.perk,.pkg,.car,.cities li):hover{transform:translateY(-4px)}
+  .car .stage img{transition:transform .6s var(--ease)!important}
+  .car:hover .stage img.on{transform:scale(1.05)!important}
+  .perk>svg,.gcard .ico svg{transition:transform .45s var(--ease)}
+  .perk:hover>svg,.gcard:hover .ico svg{transform:translateY(-3px) rotate(-6deg)}
+  .btn{transition:background-color .2s,transform .2s var(--ease),box-shadow .3s var(--ease)!important}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -12px #0b7a4299!important}
+  .slide .art img{transition:transform .8s var(--ease)!important}
+  .marquee li img{transition:transform .5s var(--ease)}
+  .marquee li:hover img{transform:translateY(-4px) scale(1.06)}
+}
+.btn:active{transform:scale(.97)!important}
+@media (prefers-reduced-motion:reduce){#progress{display:none}}
+.sec .kicker+h2{margin-top:0!important}
+.sec h2{margin-bottom:14px!important}
+.steps{margin-top:36px!important}
 </style>
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -1632,7 +1698,44 @@ function render(){
   document.body.classList.toggle('has-float',!!fl);
   app.innerHTML=navHTML()+'<main id="main">'+body+'</main>'+footHTML()+cta+fl;
   wire();
+  try{motion();}catch(e){}
   if(API.afterRender)API.afterRender();
+}
+
+/* ---------- motion: reveal on scroll, counters, header state ---------- */
+var mIO=null,mScrollBound=false;
+function motionOK(){return !reduce&&!(typeof a11y!=='undefined'&&a11y.still)&&!document.body.classList.contains('editing')&&'IntersectionObserver' in window;}
+function countUp(el){
+  if(el.dataset.counted)return;el.dataset.counted='1';
+  var raw=el.textContent.trim(),m=raw.match(/^([\d,]+)(\.(\d+))?$/);if(!m)return;
+  var dec=m[3]?m[3].length:0,target=parseFloat(raw.replace(/,/g,'')),t0=null,dur=900;
+  if(!(target>0))return;
+  function fmtN(v){var x=v.toFixed(dec);return dec?x:Number(x).toLocaleString('en-US');}
+  function step(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/dur),e=1-Math.pow(1-k,3);el.textContent=fmtN(target*e);if(k<1)requestAnimationFrame(step);else el.textContent=raw;}
+  el.textContent=fmtN(0);requestAnimationFrame(step);
+}
+function motion(){
+  var root=document.documentElement;
+  if(mIO){mIO.disconnect();mIO=null;}
+  if(!motionOK()){root.classList.remove('mo');return;}
+  root.classList.add('mo');
+  var groups=['.sec .kicker','.sec h2','.sec>.wrap>.sub','.sec .sub','.step','.gcard','.car','.pkg','.charges','.perk','.cities li','.callbox','.faq details','.calc-in','.calc-out','.formbox','.goodtoknow','.seg','.btnrow','.tbody','.sec-image img','footer .foot>*'];
+  var seen=new Set();
+  groups.forEach(function(sel){app.querySelectorAll(sel).forEach(function(el){
+    if(seen.has(el)||el.closest('.sec-hero,[hidden],.sent'))return;seen.add(el);
+    var sib=el.parentNode?[].indexOf.call(el.parentNode.children,el):0;
+    el.setAttribute('data-rv','');el.style.setProperty('--d',Math.min(sib,6)*70+'ms');
+  });});
+  app.querySelectorAll('.steps').forEach(function(el){el.setAttribute('data-rv-line','');});
+  mIO=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.classList.add('in');mIO.unobserve(el);
+    el.querySelectorAll('.price .num, .phead .num').forEach(function(n){if(n.offsetParent)countUp(n);});});},{rootMargin:'0px 0px -8% 0px',threshold:0});
+  app.querySelectorAll('[data-rv],[data-rv-line]').forEach(function(el){mIO.observe(el);});
+  if(!mScrollBound){mScrollBound=true;var tick=0;
+    window.addEventListener('scroll',function(){if(tick)return;tick=requestAnimationFrame(function(){tick=0;
+      var y=window.scrollY,h=document.documentElement.scrollHeight-innerHeight;
+      document.body.classList.toggle('scrolled',y>12);
+      var bar=document.getElementById('progress');if(bar)bar.style.transform='scaleX('+(h>0?Math.min(1,y/h):0)+')';});},{passive:true});}
+  if(!document.getElementById('progress')){var b=document.createElement('div');b.id='progress';b.setAttribute('aria-hidden','true');document.body.appendChild(b);}
 }
 var ctaClosed=false;
 function queueRender(){if(renderQueued)return;renderQueued=setTimeout(render,120);}

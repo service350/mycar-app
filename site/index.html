@@ -1727,8 +1727,7 @@ function motion(){
     el.setAttribute('data-rv','');el.style.setProperty('--d',Math.min(sib,6)*70+'ms');
   });});
   app.querySelectorAll('.steps').forEach(function(el){el.setAttribute('data-rv-line','');});
-  mIO=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.classList.add('in');mIO.unobserve(el);
-    el.querySelectorAll('.price .num, .phead .num').forEach(function(n){if(n.offsetParent)countUp(n);});});},{rootMargin:'0px 0px -8% 0px',threshold:0});
+  mIO=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.classList.add('in');mIO.unobserve(el);});},{rootMargin:'0px 0px -8% 0px',threshold:0});
   app.querySelectorAll('[data-rv],[data-rv-line]').forEach(function(el){mIO.observe(el);});
   if(!mScrollBound){mScrollBound=true;var tick=0;
     window.addEventListener('scroll',function(){if(tick)return;tick=requestAnimationFrame(function(){tick=0;

@@ -1373,6 +1373,63 @@ body{font-weight:400}
   .sarrow{top:auto!important;bottom:8px!important;margin-top:0!important;width:46px!important;height:46px!important}
 }
 @media (max-width:860px){.simg{aspect-ratio:auto!important}.simg img{height:auto!important;max-height:240px}}
+
+/* =====================================================================
+   Polish pass
+   ===================================================================== */
+/* larger, calmer section headings */
+.sec h2{font-size:clamp(2rem,3.8vw,3.1rem)!important;line-height:1.08!important}
+.sec .kicker{font-size:.95rem!important;display:inline-flex!important;align-items:center;gap:10px}
+.sec .kicker::before{content:"";width:22px;height:2px;background:currentColor;display:inline-block}
+.sec{padding-block:clamp(64px,8vw,112px)!important}
+
+/* hero: bigger car, light disc behind it */
+.slide .art::before{content:"";position:absolute;left:50%;top:50%;width:min(520px,82%);aspect-ratio:1;border-radius:50%;
+  transform:translate(-50%,-50%);background:#ffffff14;box-shadow:inset 0 0 0 1px #ffffff1f;z-index:0}
+@media (min-width:901px){.slide .art img{width:min(700px,118%)!important}}
+.slide .art img{z-index:1}
+
+/* steps: large numerals */
+.steps{counter-reset:st}
+.step{counter-increment:st}
+.step::before{content:counter(st,decimal-leading-zero);display:block;font:200 clamp(3rem,5vw,4.4rem)/1 var(--display);color:var(--hg);letter-spacing:-.04em;margin-bottom:10px}
+.step .n{color:var(--h-mute)!important;font-weight:500!important;margin-bottom:6px!important}
+
+/* cards: icon in a soft mint disc */
+.gcard .ico,.perk>svg{display:grid!important;place-items:center;width:48px!important;height:48px!important;border-radius:50%!important;background:var(--h-mint)!important;color:var(--hg-dk)!important;margin-bottom:16px!important}
+.gcard .ico svg{width:24px!important;height:24px!important}
+.perk>svg{padding:12px!important;box-sizing:border-box}
+.gcard{padding:26px!important}
+.gcard h3,.perk h3{font-size:1.18rem!important}
+
+/* perks: deep green band with dark cards */
+.sec-perks{background:var(--hg-ink)!important;border-top:0!important}
+.sec-perks .kicker{color:#7fe0a9!important}
+.sec-perks h2{color:#fff!important}
+.sec-perks .sub{color:#a9c9b6!important}
+.sec-perks .perk,.sec-perks .perk.solid,.sec-perks .perk.tint{background:#ffffff0d!important;border-color:#ffffff1f!important;color:#cfe3d7!important}
+.sec-perks .perk h3{color:#fff!important}
+.sec-perks .perk p,.sec-perks .perk small{color:#b3cfbf!important}
+.sec-perks .perk>svg{background:#ffffff14!important;color:#7fe0a9!important}
+.sec-perks .tags span{background:#ffffff14!important;color:#dff3e7!important}
+@media (hover:hover) and (pointer:fine){.sec-perks .perk:hover{border-color:#7fe0a966!important;box-shadow:none!important}}
+
+/* cities: larger, airier pills */
+.cities{gap:12px!important}
+.cities li{padding:14px 22px!important;font-size:1.08rem!important;font-weight:600!important}
+
+/* packages: green hour figure */
+.pkg .phead{padding:26px!important}
+.pkg .phead .num{font-size:3rem!important;font-weight:300!important;letter-spacing:-.04em}
+
+/* calculator result: deep green with mint accent */
+.calc-out .num,.co-total .num{font-weight:700!important}
+
+/* footer spacing */
+footer{padding-top:24px}
+.sec.sec-hero{padding:0!important}
+.step .n{display:none!important}
+.gcard .ico svg,.perk>svg{stroke-width:1.8}
 </style>
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>

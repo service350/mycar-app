@@ -1468,6 +1468,80 @@ html.mo .stops li[data-rv]:not(.in) .pin{transform:scale(.4)}
 .clist2 li::before{margin-left:12px;margin-right:0}
 .rcar{transform:none!important;width:112px!important;top:-40px!important}
 .clist2 li{box-shadow:none!important;background:none!important;border-radius:0!important}
+/* =====================================================================
+   v3 — hero on the road, package timelines, call desk, footer road
+   ===================================================================== */
+/* hero: car parked on a road at the bottom of the green */
+.slides{position:relative}
+.slides::after{content:"";position:absolute;inset:auto 0 0;height:92px;background:#26302b;z-index:1;pointer-events:none}
+.slides::before{content:"";position:absolute;inset:auto 0 44px;height:4px;z-index:2;pointer-events:none;
+  background:repeating-linear-gradient(to left,#fff 0 34px,transparent 34px 68px);opacity:.85}
+.slide{z-index:3}
+.slide-in{padding-bottom:120px!important}
+.slide .art{min-height:360px!important;align-self:stretch!important;position:relative}
+.slide .art img{position:absolute!important;bottom:-96px!important;left:50%!important;top:auto!important;transform:translateX(-50%)!important;width:min(640px,112%)!important;z-index:4}
+.slide:not(.on) .art img{transform:translateX(-30%)!important;opacity:0}
+.slide .scopy{position:relative;z-index:5}
+.slide .scopy :is(h1,.h1){font-size:clamp(2.8rem,6vw,5.4rem)!important}
+@media (prefers-reduced-motion:no-preference){
+  html:not(.ax-still) .slide.on .art img{animation:parkIn 1.3s var(--ease) .1s both!important}
+}
+@keyframes parkIn{from{opacity:0;transform:translateX(30%)}to{opacity:1;transform:translateX(-50%)}}
+@media (max-width:900px){
+  .slides::after{height:64px}.slides::before{bottom:30px}
+  .slide-in{padding-bottom:70px!important}
+  .slide .art{min-height:200px!important}
+  .slide .art img{bottom:-66px!important;width:min(380px,92%)!important}
+}
+
+/* packages: day timeline */
+.ptl{margin:16px 24px 4px}
+.ptbar{position:relative;height:12px;border-radius:999px;background:var(--h-soft);overflow:hidden}
+.ptbar i{position:absolute;top:0;bottom:0}
+.ptbar i.use{background:#b9e9cd}
+.ptbar i.go{background:var(--hg);border-radius:999px}
+.ptticks{display:flex;justify-content:space-between;direction:ltr;margin-top:6px;font:500 .74rem "Fredoka",sans-serif;color:var(--h-mute)}
+.ptleg{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:8px 0 0;font-size:.86rem;color:var(--h-text)}
+.ptleg b{width:10px;height:10px;border-radius:50%;display:inline-block}
+.ptleg b.go{background:var(--hg)}.ptleg b.use{background:#b9e9cd;margin-right:10px}
+.pkg .phead .num{font-family:"Fredoka",sans-serif!important;font-weight:600!important}
+@media (prefers-reduced-motion:no-preference){
+  html.mo .pkg[data-rv] .ptbar i{transform:scaleX(0);transform-origin:right;transition:transform 1s var(--ease) .3s}
+  html.mo .pkg[data-rv].in .ptbar i{transform:none}
+}
+
+/* contact: call desk */
+.cb2{display:grid!important;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,56px);align-items:center;background:var(--hg-ink)!important;color:#fff;border-radius:20px!important;padding:clamp(28px,5vw,64px)!important}
+.cb2 h2{color:#fff!important;font-size:clamp(2rem,3.6vw,3rem)!important}
+.cb2 p{color:#b9d3c4!important;font-size:1.08rem}
+.cb2 .apps .btn{background:#ffffff14!important;color:#fff!important;box-shadow:inset 0 0 0 1px #ffffff2e!important}
+.cbdial{background:#ffffff0a;border:1px solid #ffffff1f;border-radius:18px;padding:28px;text-align:center}
+.cbl{display:block;font:500 1rem "Fredoka",sans-serif;color:#7fe0a9;margin-bottom:6px}
+.cbnum{display:block;color:#fff;text-decoration:none;font:700 clamp(3.6rem,8vw,6.4rem)/1 "Fredoka",sans-serif;letter-spacing:.01em}
+.cbact{display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.cbact .btn{background:var(--hg)!important;color:#fff!important}
+.cbact .btn.light{background:transparent!important;color:#fff!important;box-shadow:inset 0 0 0 1px #ffffff4d!important}
+@media (max-width:860px){.cb2{grid-template-columns:1fr}}
+
+/* footer: road with a car */
+footer{position:relative;padding-top:0!important}
+.froad{position:relative;height:56px;background:#26302b;overflow:visible}
+.froad i{position:absolute;inset:50% 0 auto;height:3px;margin-top:-1.5px;background:repeating-linear-gradient(to left,#fff 0 26px,transparent 26px 52px);opacity:.7}
+.froad img{position:absolute;bottom:14px;right:8%;width:120px}
+@media (prefers-reduced-motion:no-preference){
+  html.mo footer .froad img{animation:fdrive 14s linear infinite}
+}
+@keyframes fdrive{from{right:-140px}to{right:calc(100% + 20px)}}
+footer>.wrap{padding-top:48px!important}
+footer .foot h4{font-family:"Fredoka",sans-serif!important;font-weight:500!important;color:#7fe0a9!important;font-size:1.05rem!important}
+footer a{color:#cfe3d7!important;text-decoration:none}
+@media (hover:hover) and (pointer:fine){footer a:hover{color:#fff!important}}
+.slides{background:var(--hg)!important}
+.slide,.slide.dark-text{background:transparent!important}
+.ptbar{direction:ltr}
+html.mo .pkg[data-rv] .ptbar i{transform-origin:left}
+.slide .art img{height:auto!important;max-height:none!important;object-fit:contain}
+.simg img{width:auto!important;height:auto!important;max-width:100%!important;max-height:100%!important}
 </style>
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -1758,6 +1832,17 @@ R.fleet=function(s){
       '<p class="scount" aria-live="polite"><b>1</b> / '+n+'</p></div>'+thumbs:'')+
     (s.hourlyNote?'<p class="note">'+esc(s.hourlyNote)+'</p>':'')+g+'</div>';
 };
+function hhmm(t){var m=String(t||'').match(/^(\d{1,2}):(\d{2})/);return m?Number(m[1])+Number(m[2])/60:null;}
+function pkgTimeline(p){
+  var a=hhmm(p.startFrom),b=hhmm(p.startTo),h=Number(p.hours)||0;if(a==null||b==null)return '';
+  var end=b+h,seg=[];
+  function add(x0,x1,cls){if(x1<=24){seg.push([x0,x1,cls]);}else{if(x0<24)seg.push([x0,24,cls]);seg.push([Math.max(0,x0-24),x1-24,cls]);}}
+  add(b,end,'use');add(a,b,'go');
+  var lab=function(x){x=((x%24)+24)%24;var H=Math.floor(x),M=Math.round((x-H)*60);return (H<10?'0':'')+H+':'+(M<10?'0':'')+M;};
+  return '<div class="ptl" aria-label="'+esc('יציאה בין '+p.startFrom+' ל־'+p.startTo+', החזרה עד '+lab(end))+'"><div class="ptbar">'+seg.map(function(z){return '<i class="'+z[2]+'" style="left:'+(z[0]/24*100).toFixed(2)+'%;width:'+((z[1]-z[0])/24*100).toFixed(2)+'%"></i>';}).join('')+'</div>'+
+    '<div class="ptticks"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>'+
+    '<p class="ptleg"><b class="go"></b>יציאה '+esc(p.startFrom)+'–'+esc(p.startTo)+'<b class="use"></b>החזרה עד '+lab(end)+'</p></div>';
+}
 R.packages=function(s){
   var pk=(S.pricing.packages||[]).map(function(p){
     var cs=(p.categories||[]).filter(catById);
@@ -1765,7 +1850,7 @@ R.packages=function(s){
     var notes=[];
     if(p.waiver&&p.waiver.enabled){var bc=p.waiver.byCategory||{},ks=Object.keys(bc).filter(function(k){return bc[k]!=null&&catById(k);});notes.push('ביטול השתתפות עצמית: '+(ks.length?ks.map(function(k){return catById(k).name+' '+fmt(bc[k])+' ₪';}).join(', '):fmt(p.waiver.price)+' ₪'));}
     if(p.young&&p.young.allowed){var yb=p.young.byCategory||{},yk=Object.keys(yb).filter(function(k){return yb[k]!=null&&catById(k);});if(yk.length)notes.push('נהג צעיר / חדש: '+yk.map(function(k){return catById(k).name+' +'+fmt(yb[k])+' ₪';}).join(', '));else if(p.young.surcharge)notes.push('נהג צעיר / חדש: +'+fmt(p.young.surcharge)+' ₪');}
-    return '<article class="pkg t-'+tone(p.tone)+'"><div class="phead" style="background:linear-gradient(140deg,var(--'+tone(p.tone)+'),color-mix(in srgb,var(--'+tone(p.tone)+') 60%,var(--coral)))"><p class="pdur"><span class="num">'+fmt(p.hours)+'</span> שעות</p><h3>'+esc(p.name)+'</h3><p class="pwin">'+(p.startFrom?'יציאה בין '+esc(p.startFrom)+' ל־'+esc(p.startTo)+(p.days?' · '+esc(p.days):''):esc(p.days||''))+'</p></div>'+
+    return '<article class="pkg t-'+tone(p.tone)+'"><div class="phead" style="background:linear-gradient(140deg,var(--'+tone(p.tone)+'),color-mix(in srgb,var(--'+tone(p.tone)+') 60%,var(--coral)))"><p class="pdur"><span class="num">'+fmt(p.hours)+'</span> שעות</p><h3>'+esc(p.name)+'</h3><p class="pwin">'+(p.startFrom?'יציאה בין '+esc(p.startFrom)+' ל־'+esc(p.startTo)+(p.days?' · '+esc(p.days):''):esc(p.days||''))+'</p></div>'+pkgTimeline(p)+
       (p.description?'<p style="margin:14px 24px 0;color:var(--muted)">'+esc(p.description)+'</p>':'')+
       '<div class="ptable"><table><thead><tr><th></th>'+cs.map(function(c){return '<th scope="col">'+esc(catById(c).name)+'</th>';}).join('')+'</tr></thead><tbody>'+rows+'</tbody></table></div><ul class="pnotes">'+notes.map(function(n){return '<li>'+esc(n)+'</li>';}).join('')+'</ul></article>';
   }).join('');
@@ -1782,8 +1867,10 @@ R.cities=function(s){
   return '<div class="wrap">'+head(s)+'<ul class="cities">'+(s.items||[]).map(function(c){return c.soon?'<li class="soon">'+esc(c.name)+' <small>בקרוב</small></li>':'<li style="--d:var(--'+tone(c.tone)+')"><i></i>'+esc(c.name)+'</li>';}).join('')+'</ul></div>';
 };
 R.contact=function(s){
-  return '<div class="wrap"><div class="callbox"><div><h2>'+esc(s.title)+'</h2>'+(s.text?'<p>'+esc(s.text)+'</p>':'')+'<div class="apps">'+(s.buttons||[]).map(function(b){return btn(b);}).join('')+'</div></div>'+
-    '<div class="bigplate">'+(s.plateLabel?'<b>'+esc(s.plateLabel)+'</b>':'')+plate(S.brand.phone,'phone')+'<button class="copy" id="copy" type="button"><span>העתקת המספר</span></button></div></div></div>';
+  var ph=String(S.brand.phone||''),tel=ph.replace(/[^\d*#+]/g,'');
+  return '<div class="wrap"><div class="callbox cb2"><div class="cbtext"><h2>'+esc(s.title)+'</h2>'+(s.text?'<p>'+esc(s.text)+'</p>':'')+'<div class="apps">'+(s.buttons||[]).map(function(b){return btn(b);}).join('')+'</div></div>'+
+    '<div class="cbdial">'+(s.plateLabel?'<b class="cbl">'+esc(s.plateLabel)+'</b>':'<b class="cbl">מוקד מיי קאר</b>')+'<a class="cbnum" href="tel:'+esc(tel)+'" dir="ltr"><span id="phone">'+esc(ph)+'</span></a>'+
+    '<div class="cbact"><a class="btn" href="tel:'+esc(tel)+'">לחיוג</a><button class="btn light copy" id="copy" type="button"><span>העתקת המספר</span></button></div></div></div></div>';
 };
 R.text=function(s){
   var bg=s.bg&&s.bg!=='none'?' secbg t-'+tone(s.bg):'';
@@ -1902,7 +1989,8 @@ function navHTML(){
 }
 function footHTML(){
   var f=S.footer||{},b=S.brand;
-  return '<footer><div class="wrap"><div class="foot"><div><a class="brand" href="#home">'+brandMark()+'</a><p style="margin:0">'+esc(f.tagline||'')+(b.email?' '+esc(b.email):'')+'</p></div>'+
+  var fc=(S.cars||[])[1]||(S.cars||[])[0];
+  return '<footer><div class="froad" aria-hidden="true"><i></i>'+(fc?'<img src="'+esc(src(fc.img))+'" alt="" loading="lazy">':'')+'</div><div class="wrap"><div class="foot"><div><a class="brand" href="#home">'+brandMark()+'</a><p style="margin:0">'+esc(f.tagline||'')+(b.email?' '+esc(b.email):'')+'</p></div>'+
     (f.columns||[]).map(function(c){return '<div><h4>'+esc(c.title)+'</h4><ul>'+(c.links||[]).map(function(l){return '<li><a '+href(l.url)+'>'+esc(l.label)+'</a></li>';}).join('')+'</ul></div>';}).join('')+
     '</div><div class="copyline"><span>'+esc(f.copyright||'')+'</span><span>חיוג חירום: <b class="num" dir="ltr">'+esc(b.phone)+'</b></span></div></div></footer>';
 }
@@ -2301,7 +2389,7 @@ fetch('site.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(
   S=d;
   var h=(location.hash||'').slice(1);if(pageById(h))curPage=h;
   render();a11yBuild();if(h&&!pageById(h))route();
-}).catch(function(){app.innerHTML='<div class="loading">לא הצלחנו לטעון את האתר. רעננו את הדף.</div>';});
+}).catch(function(e){console.error('BOOT',e&&e.stack);app.innerHTML='<div class="loading">לא הצלחנו לטעון את האתר. רעננו את הדף.</div>';});
 })();
 
 </script>

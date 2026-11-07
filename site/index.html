@@ -1357,6 +1357,22 @@ body{font-weight:400}
 /* no shadows on car photos */
 .simg::after{display:none!important}
 .simg img,.slide .art img,.marquee img,.sth img,.stage img,.floatbook img{filter:none!important}
+
+/* showcase: full width, no frame */
+.show{border:0!important;border-radius:0!important;background:none!important;
+  width:100vw;margin-inline:calc(50% - 50vw)!important;padding:clamp(16px,3vw,40px) clamp(72px,8vw,140px) 56px!important}
+.sslide{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)!important;max-width:1500px;margin-inline:auto;width:100%}
+.simg{aspect-ratio:16/9!important}
+.simg img{width:100%!important;height:100%!important}
+.sarrow{width:58px!important;height:58px!important;margin-top:-29px!important}
+.sprev{right:clamp(12px,2vw,32px)!important}.snext{left:clamp(12px,2vw,32px)!important}
+.sthumbs{justify-content:safe center}
+@media (max-width:860px){
+  .show{padding:8px 16px 64px!important}
+  .sslide{grid-template-columns:1fr!important}
+  .sarrow{top:auto!important;bottom:8px!important;margin-top:0!important;width:46px!important;height:46px!important}
+}
+@media (max-width:860px){.simg{aspect-ratio:auto!important}.simg img{height:auto!important;max-height:240px}}
 </style>
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>

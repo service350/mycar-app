@@ -1268,6 +1268,82 @@ body.editing [data-rv],html.ax-still [data-rv]{opacity:1!important;transform:non
 .sec .kicker+h2{margin-top:0!important}
 .sec h2{margin-bottom:14px!important}
 .steps{margin-top:36px!important}
+
+/* =====================================================================
+   Fleet showcase: one car at a time
+   ===================================================================== */
+.show{position:relative;margin-top:34px;border:1px solid var(--h-line);border-radius:16px;background:#fff;padding:clamp(20px,3vw,40px) clamp(64px,7vw,96px);outline:none}
+.show:focus-visible{box-shadow:0 0 0 3px #10a25a55}
+.sview{display:grid}
+.sslide{grid-area:1/1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:center;
+  opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility 0s .5s}
+.sslide.on{opacity:1;visibility:visible;transition:opacity .5s var(--ease),visibility 0s}
+/* first column = right side in RTL: the car */
+.simg{position:relative;aspect-ratio:16/10;display:grid;place-items:center;background:var(--h-soft);border-radius:12px;overflow:hidden}
+.simg::after{content:"";position:absolute;inset:auto 12% 9% 12%;height:18px;border-radius:50%;background:radial-gradient(closest-side,#0b2a1b33,transparent);z-index:0}
+.simg img{position:relative;z-index:1;width:92%;height:88%;object-fit:contain;filter:drop-shadow(0 16px 14px #0b2a1b2e)}
+.sinfo{min-width:0}
+.scat{display:inline-block;font:600 .9rem/1 var(--body);color:var(--hg-dk);background:var(--h-mint);padding:7px 11px;border-radius:6px;margin-bottom:12px}
+.sinfo h3{font-size:clamp(1.8rem,3.4vw,2.7rem)!important;line-height:1.08!important;margin:0 0 18px!important;letter-spacing:-.015em!important}
+.srates{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:0;border-top:1px solid var(--h-line)}
+.srates li{display:flex;align-items:baseline;gap:10px;padding:10px 0;border-bottom:1px solid var(--h-line)}
+.srates b{font:600 1.15rem/1.1 var(--body);color:var(--hg-ink);white-space:nowrap;min-width:84px}
+.srates span{color:var(--h-mute);font-size:.98rem}
+.srates li.big b{font-size:2.3rem;letter-spacing:-.02em}
+.srates li.big span{font-size:1.05rem;color:var(--h-text)}
+.skm{margin-bottom:16px}
+.skh{margin:0 0 6px;font:600 .9rem var(--body);color:var(--hg-ink)}
+.skm ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.skm li{display:flex;justify-content:space-between;gap:12px;font-size:.95rem;color:var(--h-text);max-width:340px}
+.skm li b{font-weight:600;color:var(--hg-ink)}
+.stags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 16px}
+.stags li{display:inline-flex;align-items:center;gap:6px;font-size:.94rem;color:var(--hg-dk);font-weight:600}
+.stags svg{width:17px;height:17px}
+
+/* arrows: right = previous, left = next (RTL) */
+.sarrow{position:absolute;top:50%;width:52px;height:52px;margin-top:-26px;border-radius:50%;border:1px solid var(--h-line);background:#fff;color:var(--hg-ink);
+  display:grid;place-items:center;cursor:pointer;z-index:3;transition:background-color .2s,color .2s,border-color .2s,transform .2s var(--ease)}
+.sarrow svg{width:24px;height:24px}
+.sprev{right:16px}.snext{left:16px}
+@media (hover:hover) and (pointer:fine){.sarrow:hover{background:var(--hg);border-color:var(--hg);color:#fff}}
+.sarrow:active{transform:scale(.94)}
+.scount{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);margin:0;font:500 .88rem var(--body);color:var(--h-mute);direction:ltr}
+.scount b{color:var(--hg-ink);font-weight:600}
+
+/* thumbnails */
+.sthumbs{display:flex;gap:8px;overflow-x:auto;padding:14px 2px 6px;scroll-snap-type:x proximity;scrollbar-width:thin}
+.sth{flex:none;scroll-snap-align:center;display:grid;justify-items:center;gap:4px;width:118px;padding:8px 6px;border-radius:10px;border:1px solid var(--h-line);background:#fff;cursor:pointer;
+  font:500 .8rem/1.2 var(--body);color:var(--h-mute);transition:border-color .2s,color .2s,background-color .2s}
+.sth img{width:96px;height:52px;object-fit:contain}
+.sth span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.sth.on{border-color:var(--hg);color:var(--hg-ink);background:var(--h-mint)}
+@media (hover:hover) and (pointer:fine){.sth:hover{border-color:#b9dcc7;color:var(--hg-ink)}}
+
+/* slide entrance */
+@keyframes sInNext{from{opacity:0;transform:translate3d(-60px,0,0)}to{opacity:1;transform:none}}
+@keyframes sInPrev{from{opacity:0;transform:translate3d(60px,0,0)}to{opacity:1;transform:none}}
+@keyframes sUp{from{opacity:0;transform:translate3d(0,14px,0)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+  html:not(.ax-still) .sslide.on.from-next .simg img{animation:sInNext .7s var(--ease) both}
+  html:not(.ax-still) .sslide.on.from-prev .simg img{animation:sInPrev .7s var(--ease) both}
+  html:not(.ax-still) .sslide.on:is(.from-next,.from-prev) .sinfo>*{animation:sUp .55s var(--ease) both}
+  html:not(.ax-still) .sslide.on .sinfo>:nth-child(2){animation-delay:.05s}
+  html:not(.ax-still) .sslide.on .sinfo>:nth-child(3){animation-delay:.1s}
+  html:not(.ax-still) .sslide.on .sinfo>:nth-child(4){animation-delay:.15s}
+  html:not(.ax-still) .sslide.on .sinfo>:nth-child(5){animation-delay:.2s}
+}
+
+@media (max-width:860px){
+  .show{padding:16px 16px 56px}
+  .sslide{grid-template-columns:1fr;gap:18px}
+  .sarrow{top:auto;bottom:10px;margin-top:0;width:44px;height:44px}
+  .sprev{right:12px}.snext{left:12px}
+  .scount{bottom:22px}
+  .srates li.big b{font-size:2rem}
+}
+.skm li{justify-content:flex-start!important;max-width:none!important}
+.skm li span{min-width:150px}
+.simg img{width:100%;height:96%}
 </style>
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -1515,11 +1591,36 @@ function carCard(c){
   }).join('');
   return '<article class="car t-'+t+'">'+(cl.length?'<div class="stage">'+imgs+'</div>':'')+'<div class="cbody"><div class="ctitle"><h3>'+esc(c.name+(c.description?' '+c.description:''))+'</h3>'+(c.youngAllowed?'<span class="badge">גם לנהג צעיר</span>':'')+'</div><div class="chips">'+chips+'</div><div class="pers">'+pers+'</div></div></article>';
 }
+function showList(){var out=[];cats().forEach(function(c){(S.cars||[]).forEach(function(x){if(x.category===c.id)out.push({car:x,cat:c});});});return out;}
+var CHEV_R='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+var CHEV_L='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function showSlide(o,i,n){
+  var c=o.cat,x=o.car,h=c.hourly||{},d=c.daily||{},w=c.weekly||{},m=c.monthly||{};
+  var rates='<ul class="srates">'+
+    (h.time!=null?'<li class="big"><b>'+fmt(h.time)+' ₪</b><span>לשעה</span></li>':'')+
+    (d.time!=null?'<li><b>'+fmt(d.time)+' ₪</b><span>ליום'+(d.km!=null&&d.km!==''?' + '+fmt(d.km)+' ₪ לק״מ':'')+'</span></li>':'')+
+    (w.time!=null?'<li><b>'+fmt(w.time)+' ₪</b><span>לשבוע'+(w.km!=null&&w.km!==''?' + '+fmt(w.km)+' ₪ לק״מ':'')+'</span></li>':'')+
+    (m.time!=null?'<li><b>'+fmt(m.time)+' ₪</b><span>לחודש'+(m.km!=null&&m.km!==''?' + '+fmt(m.km)+' ₪ לק״מ':'')+'</span></li>':'')+'</ul>';
+  var lo=0,tiers=(h.tiers||[]).length?'<div class="skm"><p class="skh">מחירון לק״מ, בהזמנה לפי שעה</p><ul>'+h.tiers.map(function(tr){var rng=tr.max?'מ־'+lo+' עד '+tr.max+' ק״מ':'מעל '+lo+' ק״מ';lo=(Number(tr.max)||0)+1;return '<li><span>'+rng+'</span><b>'+fmt(tr.rate)+' ₪</b></li>';}).join('')+'</ul></div>':'';
+  var tags=['<li>'+ic('check')+'הדלק עלינו</li>'];
+  if(c.happyHourRate)tags.push('<li>'+ic('clock')+'שעות מוזלות: '+fmt(c.happyHourRate)+' ₪ לשעה</li>');
+  if(c.youngAllowed)tags.push('<li>'+ic('check')+'מתאים גם לנהג צעיר / חדש</li>');
+  return '<article class="sslide'+(i===0?' on':'')+'" data-i="'+i+'" role="group" aria-roledescription="רכב" aria-label="'+(i+1)+' מתוך '+n+': '+esc(x.name)+'"'+(i?' aria-hidden="true"':'')+'>'+
+    '<div class="simg"><img src="'+esc(src(x.img))+'" alt="'+esc(x.name)+'"'+(i>1?' loading="lazy"':'')+' decoding="async"></div>'+
+    '<div class="sinfo"><span class="scat">'+esc(c.name)+'</span><h3>'+esc(x.name)+'</h3>'+rates+tiers+'<ul class="stags">'+tags.join('')+'</ul></div></article>';
+}
 R.fleet=function(s){
   var g=s.goodToKnow?'<div class="goodtoknow">'+ic('info')+'<div>'+paras(s.goodToKnow)+'</div></div>':'';
-  return '<div class="wrap"><div class="fleet-head"><div>'+head(s)+'</div><div class="seg" role="group" aria-label="תקופת השכרה"><span class="thumb" aria-hidden="true"></span>'+
-    PERIODS.map(function(p,i){return '<button type="button" data-per="'+p[0]+'" aria-pressed="'+(i===0)+'">'+p[2]+'</button>';}).join('')+'</div></div>'+
-    (s.hourlyNote?'<p class="note">'+esc(s.hourlyNote)+'</p>':'')+'<div class="fleet">'+cats().map(carCard).join('')+'</div>'+g+'</div>';
+  var L=showList(),n=L.length;
+  var slides=L.map(function(o,i){return showSlide(o,i,n);}).join('');
+  var thumbs='<div class="sthumbs" role="tablist" aria-label="בחירת רכב">'+L.map(function(o,i){return '<button type="button" role="tab" class="sth'+(i===0?' on':'')+'" data-i="'+i+'" aria-selected="'+(i===0)+'"><img src="'+esc(src(o.car.img))+'" alt="" loading="lazy" decoding="async"><span>'+esc(o.car.name)+'</span></button>';}).join('')+'</div>';
+  return '<div class="wrap">'+head(s)+
+    (n?'<div class="show" aria-roledescription="קרוסלה" aria-label="הרכבים שלנו" tabindex="0">'+
+      '<button type="button" class="sarrow sprev" aria-label="הרכב הקודם">'+CHEV_R+'</button>'+
+      '<div class="sview">'+slides+'</div>'+
+      '<button type="button" class="sarrow snext" aria-label="הרכב הבא">'+CHEV_L+'</button>'+
+      '<p class="scount" aria-live="polite"><b>1</b> / '+n+'</p></div>'+thumbs:'')+
+    (s.hourlyNote?'<p class="note">'+esc(s.hourlyNote)+'</p>':'')+g+'</div>';
 };
 R.packages=function(s){
   var pk=(S.pricing.packages||[]).map(function(p){
@@ -1719,7 +1820,7 @@ function motion(){
   if(mIO){mIO.disconnect();mIO=null;}
   if(!motionOK()){root.classList.remove('mo');return;}
   root.classList.add('mo');
-  var groups=['.sec .kicker','.sec h2','.sec>.wrap>.sub','.sec .sub','.step','.gcard','.car','.pkg','.charges','.perk','.cities li','.callbox','.faq details','.calc-in','.calc-out','.formbox','.goodtoknow','.seg','.btnrow','.tbody','.sec-image img','footer .foot>*'];
+  var groups=['.sec .kicker','.sec h2','.sec>.wrap>.sub','.sec .sub','.step','.gcard','.show','.sthumbs','.pkg','.charges','.perk','.cities li','.callbox','.faq details','.calc-in','.calc-out','.formbox','.goodtoknow','.seg','.btnrow','.tbody','.sec-image img','footer .foot>*'];
   var seen=new Set();
   groups.forEach(function(sel){app.querySelectorAll(sel).forEach(function(el){
     if(seen.has(el)||el.closest('.sec-hero,[hidden],.sent'))return;seen.add(el);
@@ -1754,6 +1855,26 @@ function wire(){
     bs.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.per);});});
     thumb.style.transition='none';set('hourly');requestAnimationFrame(function(){requestAnimationFrame(function(){thumb.style.transition='';});});
     if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){var on=seg.querySelector('[aria-pressed="true"]');if(on)place(on);});
+  });
+  app.querySelectorAll('.show').forEach(function(sh){
+    var sec=sh.closest('.sec'),sl=[].slice.call(sh.querySelectorAll('.sslide')),th=[].slice.call(sec.querySelectorAll('.sth')),cnt=sh.querySelector('.scount b'),cur=0,n=sl.length;
+    function go(i,dir){i=(i+n)%n;if(i===cur)return;var d=dir||(i>cur?1:-1);
+      sl.forEach(function(el,j){el.classList.remove('from-next','from-prev');if(j===i){el.classList.add(d>0?'from-next':'from-prev');}
+        el.classList.toggle('on',j===i);if(j===i)el.removeAttribute('aria-hidden');else el.setAttribute('aria-hidden','true');
+        var im=el.querySelector('img');if(j===i&&im)im.loading='eager';});
+      var nx=sl[(i+1)%n]&&sl[(i+1)%n].querySelector('img');if(nx)nx.loading='eager';
+      th.forEach(function(b,j){b.classList.toggle('on',j===i);b.setAttribute('aria-selected',String(j===i));});
+      if(th[i])th[i].scrollIntoView({block:'nearest',inline:'center',behavior:reduce?'auto':'smooth'});
+      cur=i;if(cnt)cnt.textContent=String(i+1);}
+    sh.__go=go;
+    sh.querySelector('.snext').addEventListener('click',function(){go(cur+1,1);});
+    sh.querySelector('.sprev').addEventListener('click',function(){go(cur-1,-1);});
+    th.forEach(function(b){b.addEventListener('click',function(){go(Number(b.dataset.i));});});
+    sh.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){e.preventDefault();go(cur+1,1);}else if(e.key==='ArrowRight'){e.preventDefault();go(cur-1,-1);}});
+    var x0=null,y0=0;
+    sh.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY;},{passive:true});
+    sh.addEventListener('touchend',function(e){if(x0==null)return;var dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;x0=null;
+      if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.3){go(dx>0?cur+1:cur-1,dx>0?1:-1);}},{passive:true});
   });
   carTimers.forEach(clearInterval);carTimers=[];
   app.querySelectorAll('.car').forEach(function(card,ci){
@@ -1933,8 +2054,7 @@ function go(e){
   setTimeout(function(){
     var sec=document.getElementById(target);if(!sec)return;var el=sec;
     if(e.act&&e.act.faq!=null){var d=sec.querySelectorAll('.faq details')[e.act.faq];if(d){d.open=true;el=d;}}
-    if(e.act&&e.act.cat){var cs=cats(),ci=-1;cs.forEach(function(c,i){if(c.id===e.act.cat)ci=i;});var card=sec.querySelectorAll('.car')[ci];
-      if(card){el=card;if(e.act.car){card.querySelectorAll('.stage img').forEach(function(im,j){if(im.alt===e.act.car){var d=card.querySelectorAll('.md')[j];if(d)d.click();}});}}}
+    if(e.act&&e.act.cat){var sh=sec.querySelector('.show');if(sh&&sh.__go){var L=showList(),idx=-1;L.forEach(function(o,i){if(idx<0&&o.cat.id===e.act.cat&&(!e.act.car||o.car.name===e.act.car))idx=i;});if(idx<0)L.forEach(function(o,i){if(idx<0&&o.cat.id===e.act.cat)idx=i;});if(idx>=0)sh.__go(idx);el=sh;}}
     if(e.act&&e.act.charges){var ch=sec.querySelector('.charges');if(ch){ch.open=true;el=ch;}}
     el.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
     el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');

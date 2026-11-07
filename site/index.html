@@ -1430,6 +1430,53 @@ footer{padding-top:24px}
 .sec.sec-hero{padding:0!important}
 .step .n{display:none!important}
 .gcard .ico svg,.perk>svg{stroke-width:1.8}
+
+/* =====================================================================
+   Rounder: soft shapes everywhere
+   ===================================================================== */
+:root{--h-r:999px}
+.btn,.navbar .pill,.srch-btn,.sarrow,.seg,.tg,.stp{border-radius:999px!important}
+.seg .thumb{border-radius:999px!important}
+.gcard,.perk,.pkg,.charges,.goodtoknow,.faq details,.calc-in,.calc-out,.formbox,.callbox{border-radius:28px!important}
+.cities li{border-radius:999px!important}
+.scat,.badge,.tags span,.perk .tags span{border-radius:999px!important;padding-inline:12px!important}
+.formbox input,.formbox textarea,.formbox select,.calc input,.calc select,.calc-in input,.calc-in select{border-radius:16px!important}
+.sth{border-radius:18px!important;border:0!important;padding:10px 8px!important}
+.sth.on{background:var(--h-mint)!important}
+.navlink[aria-current],.navlink.on{border-radius:999px!important;box-shadow:none!important;background:var(--h-mint)!important;color:var(--hg-dk)!important}
+.navlink{border-radius:999px!important;padding-inline:12px!important}
+.navlink::after{display:none}
+@media (hover:hover) and (pointer:fine){.navlink:hover{background:var(--h-soft)!important}}
+
+/* hero as a rounded panel with margins */
+.sec-hero{padding:12px clamp(8px,1.4vw,20px) 0!important}
+.slides,.slide{border-radius:36px!important;overflow:hidden}
+@media (max-width:900px){.sec-hero{padding:8px 8px 0!important}.slides,.slide{border-radius:28px!important}}
+
+/* steps: rounded tiles instead of ruled columns */
+.steps{border-top:0!important;gap:16px!important}
+html.mo .steps[data-rv-line]::after{display:none}
+.step,.step:first-child{border:0!important;border-radius:28px!important;background:var(--h-soft)!important;padding:28px 26px!important}
+.step::before{font-weight:300!important}
+@media (max-width:900px){.step{border-bottom:0!important}}
+
+/* perks band: rounded block inside the page */
+.sec-perks{background:#fff!important}
+.sec-perks>.wrap{background:var(--hg-ink);border-radius:40px;padding:clamp(36px,5vw,64px) clamp(20px,4vw,56px)!important}
+@media (max-width:900px){.sec-perks>.wrap{border-radius:28px;margin-inline:8px}}
+.sec-perks .perk{border-radius:24px!important}
+
+/* round icon discs already round; packages header softer */
+.pkg .phead{border-radius:0!important}
+.ptable th,.ptable td{border-radius:0}
+
+/* fleet arrows and counter */
+.sarrow{box-shadow:0 6px 18px -10px #0b2a1b59}
+.marquee li{border-inline-start:0!important}
+.sec.sec-hero{padding:12px clamp(8px,1.4vw,20px) 0!important}
+@media (max-width:900px){.sec.sec-hero{padding:8px 8px 0!important}}
+.marquee{border-bottom:0!important}
+.menu-btn,.srch-btn{border-radius:999px!important}
 </style>
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>

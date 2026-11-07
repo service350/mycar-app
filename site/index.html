@@ -14,7 +14,7 @@
 <title>מיי קאר</title>
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preload" href="fonts/heebo-hebrew.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/heebo-hebrew.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/fredoka-hebrew.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 /* Layout: bento hero of colored tiles → steps → fleet price list → packages → bento perks → cities → plate-yellow call band. RTL. */
 :root{
@@ -1374,6 +1374,100 @@ body{font-weight:400}
 }
 @media (max-width:860px){.simg{aspect-ratio:auto!important}.simg img{height:auto!important;max-height:240px}}
 
+/* =====================================================================
+   v2 — character: Fredoka headings, varied section layouts
+   ===================================================================== */
+@font-face{font-family:"Fredoka";font-weight:300 700;font-display:swap;src:url(fonts/fredoka-hebrew.woff2) format("woff2");unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:"Fredoka";font-weight:300 700;font-display:swap;src:url(fonts/fredoka-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+2212}
+:root{--display:"Fredoka","Heebo",system-ui,sans-serif}
+:where(h1,h2,h3,.h1),.sec h2,.slide .scopy :is(h1,.h1),.sinfo h3{font-family:"Fredoka","Heebo",sans-serif!important}
+.sec h2{font-weight:600!important;letter-spacing:-.01em!important;font-size:clamp(2rem,3.8vw,3.2rem)!important;line-height:1.05!important}
+h3{font-weight:600!important;letter-spacing:0!important}
+.slide .scopy :is(h1,.h1){font-weight:700!important;letter-spacing:-.01em!important;line-height:.98!important}
+.slide .scopy :is(h1,.h1) span{font-weight:400!important;letter-spacing:0!important}
+.srates li.big b,.sinfo h3{font-family:"Fredoka","Heebo",sans-serif!important;font-weight:600!important;letter-spacing:0!important}
+.kicker{font-family:"Fredoka","Heebo",sans-serif!important;font-weight:500!important;font-size:1rem!important}
+
+/* ---------- steps on a road ---------- */
+.sroad{position:relative;margin-top:48px}
+.asphalt{position:relative;height:64px;background:#26302b;border-radius:999px;margin:0 2px 0;overflow:visible}
+.asphalt i{position:absolute;inset:50% 32px auto;height:3px;margin-top:-1.5px;background:repeating-linear-gradient(to left,#fff 0 26px,transparent 26px 50px);opacity:.85}
+.rcar{position:absolute;top:-34px;right:-6px;width:130px;transform:scaleX(-1);filter:none!important}
+.stops{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:24px;position:relative}
+.stops{grid-template-columns:repeat(4,1fr)}
+.stops li{position:relative;padding-top:52px}
+.pin{position:absolute;top:-48px;right:calc(50% - 26px);width:52px;height:52px;border-radius:50%;background:var(--hg);color:#fff;display:grid;place-items:center;
+  font:600 1.4rem/1 "Fredoka",sans-serif;box-shadow:0 0 0 6px #fff}
+.stops li:first-child .pin{right:auto;left:calc(50% - 26px)}
+.stops li{text-align:center}
+.stops h3{font-size:1.3rem!important;margin:0 0 6px!important;color:var(--hg-ink)}
+.stops p{color:var(--h-text);max-width:28ch;margin-inline:auto}
+html.mo .sroad .rcar{transition:transform 1.6s var(--ease)}
+html.mo .stops li[data-rv]:not(.in) .pin{transform:scale(.4)}
+.pin{transition:transform .6s var(--ease) var(--d,0ms)}
+@media (prefers-reduced-motion:no-preference){
+  html.mo .sroad:has(.stops li.in) .rcar{animation:drive 6s var(--ease-io) .2s both}
+}
+@keyframes drive{from{right:-6px}to{right:calc(100% - 124px)}}
+@media (max-width:860px){
+  .asphalt{position:absolute;top:0;bottom:0;right:22px;width:44px;height:auto;margin:0}
+  .asphalt i{inset:28px 50% 28px auto;width:3px;height:auto;margin:0 -1.5px 0 0;background:repeating-linear-gradient(to bottom,#fff 0 22px,transparent 22px 42px)}
+  .rcar{display:none}
+  .stops{grid-template-columns:1fr!important;gap:28px}
+  .stops li{padding:0 92px 0 0;text-align:right;min-height:52px}
+  .stops li .pin,.stops li:first-child .pin{top:-4px;right:18px;left:auto;width:52px;height:52px;margin-right:-4px}
+  .stops p{margin:0}
+  .sroad{margin-top:32px}
+}
+
+/* ---------- registration checklist ---------- */
+.clist{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,80px);align-items:start}
+.clhead{position:sticky;top:100px}
+.clhead .btnrow{margin-top:24px}
+.checks{list-style:none;margin:0;padding:0;border-top:1px solid var(--h-line)}
+.checks li{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--h-line)}
+.tick{width:44px;height:44px;border-radius:50%;background:var(--h-mint);color:var(--hg-dk);display:grid;place-items:center}
+.tick svg{width:22px;height:22px}
+.checks h3{font-size:1.25rem!important;margin:4px 0 4px!important;color:var(--hg-ink)}
+.checks p{color:var(--h-text);margin:0}
+@media (max-width:860px){.clist{grid-template-columns:1fr}.clhead{position:static}}
+
+/* ---------- perks as big rows on green ---------- */
+.sec-perks{background:var(--hg)!important;border-top:0!important}
+.sec-perks .kicker{color:#c9f3da!important}
+.sec-perks h2{color:#fff!important}
+.prows{list-style:none;margin:36px 0 0;padding:0;border-top:1px solid #ffffff40}
+.prows li{display:grid;grid-template-columns:70px minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:baseline;padding:26px 0;border-bottom:1px solid #ffffff40;color:#fff}
+.pnum{font:500 1rem "Fredoka",sans-serif;color:#c9f3da}
+.prows h3{color:#fff!important;font-size:clamp(1.6rem,3vw,2.4rem)!important;margin:0!important;line-height:1.1!important}
+.ptext p{margin:0;color:#eafaf1;font-size:1.08rem}
+.ptext .ptags{margin-top:6px;color:#c9f3da;font-size:.95rem}
+.ptext small{display:block;margin-top:8px;color:#c9f3da;opacity:.85;font-size:.82rem}
+@media (hover:hover) and (pointer:fine){.prows li h3{transition:transform .4s var(--ease)}.prows li:hover h3{transform:translateX(-8px)}}
+@media (max-width:760px){.prows li{grid-template-columns:44px 1fr;gap:6px 14px}.ptext{grid-column:2}}
+
+/* ---------- cities with a map ---------- */
+.cwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.clist2{list-style:none;margin:28px 0 0;padding:0;columns:2;column-gap:32px}
+.clist2 li{break-inside:avoid;padding:12px 0;border-bottom:1px solid var(--h-line);font:500 1.25rem "Fredoka",sans-serif;color:var(--hg-ink)}
+.clist2 li::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--hg);margin-left:12px;vertical-align:middle}
+.clist2 small{font-size:.8rem;color:var(--h-mute)}
+.cmap{width:100%;max-width:480px;justify-self:center;background:radial-gradient(closest-side,var(--h-mint),#fff);border-radius:50%;overflow:visible}
+.mroute{fill:none;stroke:#b9dcc7;stroke-width:2;stroke-dasharray:6 8}
+.mh{fill:#10a25a26}.mc{fill:var(--hg);stroke:#fff;stroke-width:3}
+.cmap text{font:500 17px "Fredoka","Heebo",sans-serif;fill:var(--hg-ink)}
+@media (prefers-reduced-motion:no-preference){
+  html.mo .cmap .mh{transform-box:fill-box;transform-origin:center;animation:ping 2.6s ease-out infinite;animation-delay:calc(var(--i)*.35s)}
+}
+@keyframes ping{0%{transform:scale(.4);opacity:1}100%{transform:scale(1.6);opacity:0}}
+@media (max-width:860px){.cwrap{grid-template-columns:1fr}.cmap{max-width:360px}}
+
+/* fewer generic icons elsewhere */
+.gcard .ico{display:none!important}
+.cmap{border-radius:32px;background:var(--h-soft)}
+.clist2 li::before{margin-left:12px;margin-right:0}
+.rcar{transform:none!important;width:112px!important;top:-40px!important}
+.clist2 li{box-shadow:none!important;background:none!important;border-radius:0!important}
 </style>
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -1862,7 +1956,7 @@ function motion(){
   if(mIO){mIO.disconnect();mIO=null;}
   if(!motionOK()){root.classList.remove('mo');return;}
   root.classList.add('mo');
-  var groups=['.sec .kicker','.sec h2','.sec>.wrap>.sub','.sec .sub','.step','.gcard','.show','.sthumbs','.pkg','.charges','.perk','.cities li','.callbox','.faq details','.calc-in','.calc-out','.formbox','.goodtoknow','.seg','.btnrow','.tbody','.sec-image img','footer .foot>*'];
+  var groups=['.sec .kicker','.sec h2','.sec>.wrap>.sub','.sec .sub','.stops li','.checks li','.prows li','.cmap','.clist2','.gcard','.show','.sthumbs','.pkg','.charges','.perk','.cities li','.callbox','.faq details','.calc-in','.calc-out','.formbox','.goodtoknow','.seg','.btnrow','.tbody','.sec-image img','footer .foot>*'];
   var seen=new Set();
   groups.forEach(function(sel){app.querySelectorAll(sel).forEach(function(el){
     if(seen.has(el)||el.closest('.sec-hero,[hidden],.sent'))return;seen.add(el);
@@ -1882,6 +1976,42 @@ function motion(){
 var ctaClosed=false;
 function queueRender(){if(renderQueued)return;renderQueued=setTimeout(render,120);}
 
+/* ---------- v2 section layouts ---------- */
+R.steps=function(s){
+  var it=s.items||[],car=(S.cars||[])[0];
+  return '<div class="wrap">'+head(s)+'<div class="sroad">'+
+    '<div class="asphalt" aria-hidden="true"><i></i>'+(car?'<img class="rcar" src="'+esc(src(car.img))+'" alt="">':'')+'</div>'+
+    '<ol class="stops">'+it.map(function(x,i){return '<li><span class="pin">'+(i+1)+'</span><h3>'+esc(x.title)+'</h3><p>'+esc(x.text)+'</p></li>';}).join('')+'</ol></div></div>';
+};
+R.cards=function(s){
+  var items=s.items||[],hasImg=items.some(function(x){return x.image;});
+  if(hasImg){
+    var n=Math.max(1,Math.min(4,Number(s.columns)||3));
+    return '<div class="wrap">'+head(s)+'<div class="gcards" style="--cols:'+n+'">'+items.map(function(it){return '<div class="gcard"><img src="'+esc(src(it.image||''))+'" alt=""><h3>'+esc(it.title)+'</h3><p>'+esc(it.text)+'</p>'+(it.btnLabel?btn({label:it.btnLabel,url:it.btnUrl,style:'dark'}):'')+'</div>';}).join('')+'</div>'+btns(s.buttons)+'</div>';
+  }
+  return '<div class="wrap"><div class="clist"><div class="clhead">'+head(s)+btns(s.buttons)+'</div><ol class="checks">'+items.map(function(it){
+    return '<li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>'+esc(it.title)+'</h3><p>'+esc(it.text)+'</p>'+(it.btnLabel?btn({label:it.btnLabel,url:it.btnUrl,style:'dark'}):'')+'</div></li>';}).join('')+'</ol></div></div>';
+};
+R.perks=function(s){
+  return '<div class="wrap">'+head(s)+'<ul class="prows">'+(s.items||[]).map(function(it,i){
+    var tags=(it.tags||'').split(',').map(function(x){return x.trim();}).filter(Boolean);
+    return '<li><span class="pnum">'+String(i+1).padStart(2,'0')+'</span><h3>'+esc(it.title)+'</h3><div class="ptext"><p>'+esc(it.text)+'</p>'+(tags.length?'<p class="ptags">'+tags.map(esc).join(' · ')+'</p>':'')+(it.note?'<small>'+esc(it.note)+'</small>':'')+'</div></li>';}).join('')+'</ul></div>';
+};
+var GEO={'בני ברק':[32.084,34.834],'אלעד':[32.052,34.951],'מודיעין עילית':[31.933,35.042],'בית שמש':[31.747,34.988],'ביתר עילית':[31.698,35.116],'ירושלים':[31.778,35.214],'מעלה עמוס':[31.613,35.256],'אשדוד':[31.804,34.655],'מירון':[32.98,35.44],'תל אביב':[32.08,34.78],'חיפה':[32.79,34.99],'צפת':[32.96,35.5],'נתניה':[32.32,34.85],'פתח תקווה':[32.09,34.88],'רמת גן':[32.07,34.82],'אשקלון':[31.67,34.57],'קריית גת':[31.61,34.76],'רחובות':[31.89,34.81],'מודיעין':[31.9,35.01],'קרית ספר':[31.933,35.042]};
+R.cities=function(s){
+  var it=(s.items||[]).filter(function(c){return c.name;}),pts=it.map(function(c){return {c:c,g:GEO[c.name.trim()]};}).filter(function(p){return p.g;});
+  var map='';
+  if(pts.length>=2){
+    var la=pts.map(function(p){return p.g[0];}),lo=pts.map(function(p){return p.g[1];});
+    var a0=Math.min.apply(0,la),a1=Math.max.apply(0,la),o0=Math.min.apply(0,lo),o1=Math.max.apply(0,lo);
+    var W=560,H=560,P=90,k=Math.min((W-2*P)/((o1-o0)||1)/0.85,(H-2*P)/((a1-a0)||1));
+    function xy(g){return [W/2+((g[1]-(o0+o1)/2)*0.85*k), H/2-((g[0]-(a0+a1)/2)*k)];}
+    var dots=pts.map(function(p,i){var q=xy(p.g),lx=q[0]>W/2;return '<g class="mdot" style="--i:'+i+'"><circle cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="22" class="mh"/><circle cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="8" class="mc"/><text direction="ltr" x="'+(q[0]+(lx?16:-16)).toFixed(1)+'" y="'+(q[1]+6).toFixed(1)+'" text-anchor="'+(lx?'start':'end')+'">'+esc(p.c.name)+'</text></g>';}).join('');
+    var path='M'+pts.map(function(p){var q=xy(p.g);return q[0].toFixed(1)+' '+q[1].toFixed(1);}).join(' L');
+    map='<svg class="cmap" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="מפת ערי הפעילות"><path d="'+path+'" class="mroute"/>'+dots+'</svg>';
+  }
+  return '<div class="wrap"><div class="cwrap"><div class="ctext">'+head(s)+'<ul class="clist2">'+it.map(function(c){return '<li'+(c.soon?' class="soon"':'')+'>'+esc(c.name)+(c.soon?' <small>בקרוב</small>':'')+'</li>';}).join('')+'</ul></div>'+map+'</div></div>';
+};
 /* ---------- behaviors ---------- */
 function wire(){
   var sb=app.querySelector('.srch-btn');if(sb)sb.addEventListener('click',openSearch);

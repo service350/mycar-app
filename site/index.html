@@ -1542,6 +1542,74 @@ footer a{color:#cfe3d7!important;text-decoration:none}
 html.mo .pkg[data-rv] .ptbar i{transform-origin:left}
 .slide .art img{height:auto!important;max-height:none!important;object-fit:contain}
 .simg img{width:auto!important;height:auto!important;max-width:100%!important;max-height:100%!important}
+/* =====================================================================
+   v4 — calculator ticket, parking-bay car strip, header type
+   ===================================================================== */
+/* header in the display face */
+.navlink{font-family:"Fredoka","Heebo",sans-serif!important;font-weight:500!important;font-size:1.02rem!important}
+.navbar .pill{font-family:"Fredoka",sans-serif!important;font-weight:600!important;border-radius:10px!important}
+
+/* calculator: result as a parking ticket */
+.calc-out{position:relative;background:var(--hg-ink)!important;color:#e6f3ea!important;border:0!important;border-radius:18px!important;
+  padding:30px 30px 26px!important;overflow:visible!important}
+.calc-out::before{display:block!important;content:""!important;position:absolute;inset:auto 0 0;top:auto;height:auto}
+.calc-out::before,.calc-out::after{display:block!important;content:""!important;position:absolute;width:28px;height:28px;border-radius:50%;background:var(--h-soft);top:118px}
+.calc-out::before{right:-14px}.calc-out::after{left:-14px}
+.calc-out .co-l{color:#7fe0a9!important;font:500 .95rem "Fredoka",sans-serif!important;letter-spacing:.02em}
+.calc-out .co-total{color:#fff!important;padding-bottom:20px;margin-bottom:18px;border-bottom:2px dashed #ffffff33}
+.calc-out .co-total .num{font:600 clamp(3.4rem,6vw,4.6rem)/1 "Fredoka",sans-serif!important;color:#fff!important}
+.calc-out .co-total .cur{color:#7fe0a9!important}
+.calc-out .co-sub{color:#b9d3c4!important}
+.calc-out .co-rows{border-color:#ffffff22!important}
+.calc-out .co-rows *{color:#d9ebe0!important;border-color:#ffffff22!important}
+.calc-out .co-rows b{color:#fff!important}
+.calc-out .co-note{color:#9db3a6!important}
+.calc-out .btn{background:var(--hg)!important;color:#fff!important}
+.calc-out .co-pkg{background:#ffffff12!important;color:#e6f3ea!important;border-radius:12px!important;border:0!important}
+.calc-in{background:#fff!important;border:1px solid var(--h-line)!important;border-radius:18px!important}
+.calc .tg,.calc .stp,.calc-in .seg{border-radius:12px!important}
+.calc-in label,.calc-in .cl{font-family:"Fredoka","Heebo",sans-serif!important;font-weight:500!important}
+
+/* car strip as parking bays */
+.marquee{background:#eef1ef!important;padding-block:0!important;border-bottom:0!important}
+.marquee li{border-inline-start:4px solid #fff!important;padding:18px 14px 12px!important;position:relative}
+.marquee li::after{content:"";position:absolute;inset:auto 0 0;height:4px;background:#fff}
+.marquee li span{font-family:"Fredoka","Heebo",sans-serif!important;color:var(--hg-ink)!important;font-weight:500!important}
+@media (max-width:860px){.calc-out{margin-top:0!important;position:relative!important;top:auto!important}.calc{gap:16px!important}}
+/* =====================================================================
+   v4 — calculator ticket, parking-bay car strip, header type
+   ===================================================================== */
+/* header in the display face */
+.navlink{font-family:"Fredoka","Heebo",sans-serif!important;font-weight:500!important;font-size:1.02rem!important}
+.navbar .pill{font-family:"Fredoka",sans-serif!important;font-weight:600!important;border-radius:10px!important}
+
+/* calculator: result as a parking ticket */
+.calc-out{position:relative;background:var(--hg-ink)!important;color:#e6f3ea!important;border:0!important;border-radius:18px!important;
+  padding:30px 30px 26px!important;overflow:visible!important}
+.calc-out::before{display:block!important;content:""!important;position:absolute;inset:auto 0 0;top:auto;height:auto}
+.calc-out::before,.calc-out::after{display:block!important;content:""!important;position:absolute;width:28px;height:28px;border-radius:50%;background:var(--h-soft);top:118px}
+.calc-out::before{right:-14px}.calc-out::after{left:-14px}
+.calc-out .co-l{color:#7fe0a9!important;font:500 .95rem "Fredoka",sans-serif!important;letter-spacing:.02em}
+.calc-out .co-total{color:#fff!important;padding-bottom:20px;margin-bottom:18px;border-bottom:2px dashed #ffffff33}
+.calc-out .co-total .num{font:600 clamp(3.4rem,6vw,4.6rem)/1 "Fredoka",sans-serif!important;color:#fff!important}
+.calc-out .co-total .cur{color:#7fe0a9!important}
+.calc-out .co-sub{color:#b9d3c4!important}
+.calc-out .co-rows{border-color:#ffffff22!important}
+.calc-out .co-rows *{color:#d9ebe0!important;border-color:#ffffff22!important}
+.calc-out .co-rows b{color:#fff!important}
+.calc-out .co-note{color:#9db3a6!important}
+.calc-out .btn{background:var(--hg)!important;color:#fff!important}
+.calc-out .co-pkg{background:#ffffff12!important;color:#e6f3ea!important;border-radius:12px!important;border:0!important}
+.calc-in{background:#fff!important;border:1px solid var(--h-line)!important;border-radius:18px!important}
+.calc .tg,.calc .stp,.calc-in .seg{border-radius:12px!important}
+.calc-in label,.calc-in .cl{font-family:"Fredoka","Heebo",sans-serif!important;font-weight:500!important}
+
+/* car strip as parking bays */
+.marquee{background:#eef1ef!important;padding-block:0!important;border-bottom:0!important}
+.marquee li{border-inline-start:4px solid #fff!important;padding:18px 14px 12px!important;position:relative}
+.marquee li::after{content:"";position:absolute;inset:auto 0 0;height:4px;background:#fff}
+.marquee li span{font-family:"Fredoka","Heebo",sans-serif!important;color:var(--hg-ink)!important;font-weight:500!important}
+@media (max-width:860px){.calc-out{margin-top:0!important;position:relative!important;top:auto!important}.calc{gap:16px!important}}
 </style>
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -2021,7 +2089,10 @@ function render(){
   var fb=S.floatBtn,fl='';
   if(fb&&fb.show!==false&&fb.label)fl='<a class="floatbook bg-'+tone(fb.color||'sky')+'" '+href(fb.url)+' aria-label="'+esc(fb.label)+'">'+(fb.image?'<img src="'+esc(src(fb.image))+'" alt="">':'')+'<span>'+esc(fb.label)+'</span></a>';
   document.body.classList.toggle('has-float',!!fl);
-  app.innerHTML=navHTML()+'<main id="main">'+body+'</main>'+footHTML()+cta+fl;
+  var ph='';
+  if(!hero&&secs.length){ph='<div class="phero"><div class="wrap"><nav class="crumbs" aria-label="מיקום באתר"><a href="#home">ראשי</a><span aria-hidden="true">/</span><span>'+esc(p.title)+'</span></nav><h1>'+esc(p.title)+'</h1></div><div class="proad" aria-hidden="true"><i></i></div></div>';}
+  app.innerHTML=navHTML()+'<main id="main">'+ph+body+'</main>'+footHTML()+cta+fl;
+  if(ph){var f=app.querySelector('main .sec');if(f){var h=f.querySelector('h2');if(h&&h.textContent.trim()===p.title.trim())h.classList.add('dup');}}
   wire();
   try{motion();}catch(e){}
   if(API.afterRender)API.afterRender();

@@ -14,7 +14,7 @@
 <title>מיי קאר</title>
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preload" href="fonts/plex-hebrew-400.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/plex-hebrew-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/heebo-hebrew.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 /* Layout: bento hero of colored tiles → steps → fleet price list → packages → bento perks → cities → plate-yellow call band. RTL. */
 :root{
@@ -25,8 +25,8 @@
   --coral:#ff5a6a;
   --grape:#7b5cff;
   --navy:#101a3d; --on-dark:#f3f5ff;
-  --display:"IBM Plex Sans Hebrew",system-ui,sans-serif;
-  --body:"IBM Plex Sans Hebrew",system-ui,sans-serif;
+  --display:"Heebo",system-ui,sans-serif;
+  --body:"Heebo",system-ui,sans-serif;
   --ease-out:cubic-bezier(.23,1,.32,1); --ease-io:cubic-bezier(.77,0,.175,1);
   --r-lg:28px; --r-md:20px;
   --shadow:0 1px 0 #101a3d08,0 12px 32px -12px #101a3d26;
@@ -997,14 +997,8 @@ html.ax-contrast .deco .blob{fill:none}
 .slide:not(.on) .art.is3d img{transform:translateX(-50%) translateY(calc(var(--sink,15%) + 30px)) scale(.94)}
 html.ax-still .deco3 .fl{animation:none!important}
 .step .n{font-family:var(--body);font-weight:600;letter-spacing:0}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/plex-hebrew-400.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/plex-latin-400.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/plex-hebrew-500.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/plex-latin-500.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/plex-hebrew-600.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/plex-latin-600.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/plex-hebrew-700.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/plex-latin-700.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Heebo";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/heebo-hebrew.woff2) format("woff2-variations"),url(fonts/heebo-hebrew.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:"Heebo";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/heebo-latin.woff2) format("woff2-variations"),url(fonts/heebo-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 /* =====================================================================
    MY CAR — editorial layer
    Flat, structured, restrained. Green and white, no ornaments.
@@ -1194,7 +1188,7 @@ body,#app{padding-inline:0!important}
   .slide{position:relative!important;inset:auto!important;grid-area:1/1!important;min-height:clamp(480px,60vh,600px)!important}
 }
 
-/* ---------- type: IBM Plex Sans Hebrew ---------- */
+/* ---------- type: Heebo ---------- */
 body{font-family:var(--body)!important;font-feature-settings:"kern" 1}
 h2{font-weight:600!important;letter-spacing:-.01em!important}
 h3{font-weight:600!important}
@@ -1344,6 +1338,22 @@ body.editing [data-rv],html.ax-still [data-rv]{opacity:1!important;transform:non
 .skm li{justify-content:flex-start!important;max-width:none!important}
 .skm li span{min-width:150px}
 .simg img{width:100%;height:96%}
+
+/* Heebo tuning */
+h2{font-weight:700!important;letter-spacing:-.02em!important}
+h3,.sinfo h3{font-weight:700!important;letter-spacing:-.015em!important}
+.slide .scopy :is(h1,.h1){font-weight:800!important;letter-spacing:-.03em!important}
+.slide .scopy :is(h1,.h1) span{font-weight:300!important;letter-spacing:-.02em!important}
+.srates li.big b{font-weight:700!important;letter-spacing:-.03em}
+.btn{font-weight:600!important}
+body{font-weight:400}
+/* car photos without boxes */
+.simg{background:none!important;border-radius:0!important;overflow:visible!important}
+.simg::after{inset:auto 14% 7% 14%!important;height:22px!important;background:radial-gradient(closest-side,#0b2a1b2e,transparent)!important}
+.sth,.sth.on{background:none!important}
+.sth{border-color:transparent!important;border-bottom:2px solid transparent!important;border-radius:0!important}
+.sth.on{border-bottom-color:var(--hg)!important}
+@media (hover:hover) and (pointer:fine){.sth:hover{border-bottom-color:#b9dcc7!important}}
 </style>
 <style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
